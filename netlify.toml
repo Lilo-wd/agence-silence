@@ -1,0 +1,36 @@
+# Configuration Netlify — Agence Silence
+# Site 100 % statique : aucune commande de build, on publie le dossier tel quel.
+
+[build]
+  publish = "."
+  command = ""
+
+# Les URL propres (/contact/ plutot que /contact/index.html) fonctionnent
+# nativement grace a la structure en dossiers + index.html.
+
+[[redirects]]
+  from = "/tools/*"
+  to   = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to   = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/prestations/mariage/"
+  to   = "/prestations/dj-mariage/"
+  status = 301
+
+[[redirects]]
+  from = "/dj-toulouse/"
+  to   = "/dj-mariage-toulouse/"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to   = "/404.html"
+  status = 404

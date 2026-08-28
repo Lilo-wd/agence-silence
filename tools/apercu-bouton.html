@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aperçu — bouton d’en-tête | Agence Silence</title>
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" media="print" onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap">
+<style>
+  body{background:var(--ecru)}
+  .etiquette{background:var(--ink);color:#fff;padding:1.4rem var(--gutter)}
+  .etiquette h2{color:#fff;font-family:var(--sans);font-size:.76rem;font-weight:500;
+    letter-spacing:.2em;text-transform:uppercase;margin:0 0 .45rem}
+  .etiquette p{color:rgba(255,255,255,.68);font-size:.92rem;margin:0;max-width:88ch}
+  .etiquette .reco{color:var(--lavande);font-weight:500}
+  .demo{border-bottom:1px solid var(--line-soft)}
+  .demo .site-header{position:static}
+  .mesure{padding:.9rem var(--gutter) 2rem;font-size:.83rem;color:var(--ink-60)}
+  .mesure b{color:var(--ink)}
+
+  /* --- B : plein violet --- */
+  .vB .nav a.header-cta{background:var(--lavande-deep);border-color:var(--lavande-deep);color:#fff}
+  .vB .nav a.header-cta:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+
+  /* --- C : plein noir (l'intention d'origine, corrigee) --- */
+  .vC .nav a.header-cta{background:var(--ink);border-color:var(--ink);color:#fff}
+  .vC .nav a.header-cta:hover{background:var(--lavande-deep);border-color:var(--lavande-deep);color:#fff}
+
+  /* --- D : lien souligne, sans cadre --- */
+  .vD .nav a.header-cta{
+    background:transparent;border:0;padding:.4rem 0;color:var(--ink);
+    border-bottom:1px solid var(--lavande);letter-spacing:.09em;
+    display:inline-flex;align-items:center;gap:.5rem;
+  }
+  .vD .nav a.header-cta::after{
+    display:inline;content:"\2192";position:static;width:auto;height:auto;background:none;
+  }
+  .vD .nav a.header-cta:hover{color:var(--lavande-deep);background:transparent;gap:.85rem}
+
+  /* --- E : le bug d'origine, pour memoire --- */
+  .vE .nav a.header-cta{
+    background:var(--ink);border:1px solid var(--ink);color:var(--ink-80);
+    padding:.85rem 1.5rem;font-size:.76rem;letter-spacing:.09em;
+  }
+</style>
+</head>
+<body>
+
+<div class="etiquette">
+  <h2>Aperçu privé — bouton « Vérifier ma date » de l’en-tête</h2>
+  <p>Page de comparaison, non publiée. Survole chaque bouton pour voir son état actif.
+     Dis-moi simplement A, B, C ou D.</p>
+</div>
+
+<!-- ============================================================== A ==== -->
+<div class="etiquette">
+  <h2>Variante A — Contour violet, remplissage au survol <span class="reco">· recommandée · en place actuellement</span></h2>
+  <p>Amène la couleur de la marque dans l’en-tête, qui n’en avait aucune en dehors du logo.
+     Léger, sans bloc noir massif, et se remplit au survol pour confirmer que c’est bien un bouton.</p>
+</div>
+<div class="demo vA">
+  <header class="site-header"><div class="wrap site-header__inner">
+    <a class="brand" href="#"><img src="/assets/img/logo.webp" width="430" height="120" alt="Agence Silence"></a>
+    <nav class="nav" aria-label="démo A">
+      <a href="#">Le DJ</a><a href="#">Prestations</a><a href="#">Galerie</a>
+      <a href="#">Témoignages</a><a href="#">Journal</a>
+      <a class="btn header-cta" href="#">Vérifier ma date</a>
+    </nav>
+  </div></header>
+</div>
+<p class="mesure">Contraste texte / fond : <b>5,3:1</b> au repos, <b>7,3:1</b> au survol. Conforme AA dans les deux états.</p>
+
+<!-- ============================================================== B ==== -->
+<div class="etiquette">
+  <h2>Variante B — Plein violet</h2>
+  <p>Le plus visible des quatre. Assume complètement la couleur de marque, au risque
+     d’attirer l’œil davantage que le logo lui-même.</p>
+</div>
+<div class="demo vB">
+  <header class="site-header"><div class="wrap site-header__inner">
+    <a class="brand" href="#"><img src="/assets/img/logo.webp" width="430" height="120" alt="Agence Silence"></a>
+    <nav class="nav" aria-label="démo B">
+      <a href="#">Le DJ</a><a href="#">Prestations</a><a href="#">Galerie</a>
+      <a href="#">Témoignages</a><a href="#">Journal</a>
+      <a class="btn header-cta" href="#">Vérifier ma date</a>
+    </nav>
+  </div></header>
+</div>
+<p class="mesure">Contraste : <b>7,3:1</b>. Conforme AA.</p>
+
+<!-- ============================================================== C ==== -->
+<div class="etiquette">
+  <h2>Variante C — Plein noir</h2>
+  <p>L’intention d’origine, cette fois avec le texte réellement en blanc. Très contrasté,
+     mais un rectangle noir dans un en-tête écru reste lourd, et il fait doublon avec les
+     boutons noirs de la page.</p>
+</div>
+<div class="demo vC">
+  <header class="site-header"><div class="wrap site-header__inner">
+    <a class="brand" href="#"><img src="/assets/img/logo.webp" width="430" height="120" alt="Agence Silence"></a>
+    <nav class="nav" aria-label="démo C">
+      <a href="#">Le DJ</a><a href="#">Prestations</a><a href="#">Galerie</a>
+      <a href="#">Témoignages</a><a href="#">Journal</a>
+      <a class="btn header-cta" href="#">Vérifier ma date</a>
+    </nav>
+  </div></header>
+</div>
+<p class="mesure">Contraste : <b>17,4:1</b>. Conforme AA.</p>
+
+<!-- ============================================================== D ==== -->
+<div class="etiquette">
+  <h2>Variante D — Lien souligné avec flèche</h2>
+  <p>Le plus discret et le plus éditorial. Mais le cahier des charges demandait
+     explicitement des appels à l’action forts, là où le concurrent se contente
+     de « En savoir plus » — un simple lien affaiblirait précisément cet avantage.</p>
+</div>
+<div class="demo vD">
+  <header class="site-header"><div class="wrap site-header__inner">
+    <a class="brand" href="#"><img src="/assets/img/logo.webp" width="430" height="120" alt="Agence Silence"></a>
+    <nav class="nav" aria-label="démo D">
+      <a href="#">Le DJ</a><a href="#">Prestations</a><a href="#">Galerie</a>
+      <a href="#">Témoignages</a><a href="#">Journal</a>
+      <a class="btn header-cta" href="#">Vérifier ma date</a>
+    </nav>
+  </div></header>
+</div>
+<p class="mesure">Contraste : <b>16,4:1</b>, mais ne se lit plus comme un bouton.</p>
+
+<!-- ============================================================== E ==== -->
+<div class="etiquette">
+  <h2>Pour mémoire — le bug que tu as repéré</h2>
+  <p>Texte anthracite <code>#3A3A3A</code> sur fond noir <code>#1A1A1A</code>.
+     La règle <code>.nav a{color:var(--ink-80)}</code> est plus spécifique que
+     <code>.btn{color:white}</code> : elle gagnait la cascade et repeignait le texte
+     du bouton en gris foncé.</p>
+</div>
+<div class="demo vE">
+  <header class="site-header"><div class="wrap site-header__inner">
+    <a class="brand" href="#"><img src="/assets/img/logo.webp" width="430" height="120" alt="Agence Silence"></a>
+    <nav class="nav" aria-label="démo E">
+      <a href="#">Le DJ</a><a href="#">Prestations</a><a href="#">Galerie</a>
+      <a href="#">Témoignages</a><a href="#">Journal</a>
+      <a class="btn header-cta" href="#">Vérifier ma date</a>
+    </nav>
+  </div></header>
+</div>
+<p class="mesure">Contraste : <b>1,53:1</b>. Le minimum exigé est 4,5:1.</p>
+
+<div class="etiquette" style="padding-block:2.2rem">
+  <h2>Autre piste possible</h2>
+  <p>Je peux aussi changer le libellé. « Vérifier ma date » est clair, mais
+     « Vérifier ma disponibilité », « Demander un devis » ou « Réserver ma date »
+     sont des alternatives — dis-moi si tu veux les comparer.</p>
+</div>
+
+</body>
+</html>

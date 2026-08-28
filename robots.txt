@@ -1,0 +1,11 @@
+# robots.txt — Agence Silence
+#
+# PREPRODUCTION : le site est en ligne mais volontairement ferme aux moteurs.
+# Les temoignages, l'adresse et le telephone sont encore des exemples ; laisser
+# Google indexer un NAP faux abimerait le referencement local avant meme de
+# l'avoir commence.
+#
+# Pour ouvrir le site : PREPROD=0 en haut de tools/common.sh, puis relancer
+# la generation. Ce fichier et les balises meta robots basculent ensemble.
+User-agent: *
+Disallow: /

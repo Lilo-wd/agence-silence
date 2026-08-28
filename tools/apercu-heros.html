@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aperçu — 3 rendus de hero | Agence Silence</title>
+<meta name="robots" content="noindex, nofollow">
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" media="print" onload="this.media='all'"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap">
+<style>
+  .etiquette{
+    background:var(--ink);color:#fff;
+    padding:1.5rem var(--gutter);
+    font-family:var(--sans);
+  }
+  .etiquette h2{color:#fff;font-family:var(--sans);font-size:.78rem;font-weight:500;
+    letter-spacing:.2em;text-transform:uppercase;margin:0 0 .5rem}
+  .etiquette p{color:rgba(255,255,255,.68);font-size:.92rem;margin:0;max-width:80ch}
+  .etiquette .reco{color:var(--lavande);font-weight:500}
+
+  /* --- Variante C : photo encadree sur fond ecru --- */
+  .hero-cadre{background:var(--ecru);padding:clamp(3rem,7vw,5.5rem) 0 clamp(2.5rem,5vw,4rem);text-align:center}
+  .hero-cadre h1{max-width:17ch;margin-inline:auto;margin-bottom:1.4rem}
+  .hero-cadre .lead{max-width:52ch;margin-inline:auto}
+  .hero-cadre .eyebrow{justify-content:center}
+  .hero-cadre .eyebrow::after{content:"";width:2.2rem;height:1px;background:var(--lavande);flex:none}
+  .hero-cadre .btn-row{justify-content:center}
+  .hero-cadre__media{margin-top:clamp(2.5rem,5vw,4rem);overflow:hidden;background:var(--ecru-deep)}
+  .hero-cadre__media img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:center 45%}
+</style>
+</head>
+<body>
+
+<div class="etiquette">
+  <h2>Aperçu privé — 3 rendus de hero</h2>
+  <p>Page de comparaison, non publiée (bloquée en 404 sur Netlify, exclue du sitemap).
+     Les visuels sont les dégradés d’attente : c’est la <strong>mise en page</strong> et
+     la <strong>lisibilité</strong> qu’il faut juger, pas les images. Réduis la fenêtre
+     pour voir le comportement mobile.</p>
+</div>
+
+<!-- ====================================================== VARIANTE A ==== -->
+<div class="etiquette">
+  <h2>Variante A — Éditorial clair <span class="reco">· recommandée · actuellement en ligne sur l’accueil</span></h2>
+  <p>Typographie sur fond écru à gauche, photo pleine hauteur à droite. Aucun voile sur
+     la photo : elle est vue telle quelle. Lisible quelle que soit l’exposition du cliché,
+     ce qui évite de dépendre des photos que fournira Léo. Sur mobile, le texte passe
+     au-dessus et la photo suit.</p>
+</div>
+<section class="hero-ed">
+  <div class="hero-ed__text">
+    <div class="hero-ed__inner">
+      <p class="eyebrow">Agence Silence &middot; DJ Léo &middot; Toulouse</p>
+      <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
+      <p class="hero-ed__lead">
+        Pas de néons, pas d’animateur au micro. Une lecture fine de votre soirée, un son
+        irréprochable et une piste qui ne se vide pas.
+      </p>
+      <div class="btn-row">
+        <a class="btn" href="#">Vérifier la disponibilité de ma date</a>
+        <a class="btn btn--ghost" href="#">Voir les prestations passées</a>
+      </div>
+      <p class="hero-ed__meta">
+        <span>+150 mariages</span><span>Toulouse &amp; toute la France</span><span>Devis sous 24&nbsp;h</span>
+      </p>
+    </div>
+  </div>
+  <div class="hero-ed__media">
+    <img src="/assets/img/hero-mariage-toulouse.svg" width="2000" height="1250"
+         alt="DJ mariage Toulouse — Léo, Agence Silence, en fin de soirée dans un domaine de Haute-Garonne">
+  </div>
+</section>
+
+<!-- ====================================================== VARIANTE B ==== -->
+<div class="etiquette">
+  <h2>Variante B — Photo pleine largeur, voile clair <span class="reco">· actuellement en ligne sur les 4 pages villes</span></h2>
+  <p>La structure d’origine, mais le dégradé éclaircit au lieu d’assombrir : écru opaque à
+     gauche derrière le texte, puis dégressif vers la droite pour laisser respirer la photo.
+     Plus cinématographique que la variante A, mais le rendu dépend de la photo :
+     un cliché très sombre obligerait à renforcer le voile.</p>
+</div>
+<section class="hero hero--clair" style="min-height:min(68svh,600px)">
+  <div class="hero__media">
+    <img src="/assets/img/ville-toulouse.svg" width="1800" height="1000"
+         alt="DJ mariage Toulouse — soirée de mariage en Haute-Garonne">
+  </div>
+  <div class="hero__inner">
+    <p class="eyebrow">Agence Silence &middot; Haute-Garonne</p>
+    <h1>DJ mariage à Toulouse et en Haute-Garonne</h1>
+    <p class="hero__lead">
+      Basé à Toulouse depuis 2015. Les domaines du Lauragais, les coteaux du nord et les
+      bastides de la Garonne, Léo les connaît un par un.
+    </p>
+    <div class="btn-row">
+      <a class="btn" href="#">Vérifier ma date à Toulouse</a>
+      <a class="btn btn--ghost" href="#">06 12 34 56 78</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== VARIANTE C ==== -->
+<div class="etiquette">
+  <h2>Variante C — Photo encadrée, composition centrée</h2>
+  <p>Typographie centrée sur fond écru, puis une photo panoramique en dessous, bord à bord.
+     Le plus proche d’une couverture de magazine ; c’est aussi le plus sobre des trois.
+     Inconvénient : les boutons d’appel à l’action remontent haut et la photo passe sous
+     la ligne de flottaison sur petit écran.</p>
+</div>
+<section class="hero-cadre">
+  <div class="wrap">
+    <p class="eyebrow">Agence Silence &middot; DJ Léo &middot; Toulouse</p>
+    <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
+    <p class="lead">
+      Pas de néons, pas d’animateur au micro. Une lecture fine de votre soirée,
+      un son irréprochable et une piste qui ne se vide pas.
+    </p>
+    <div class="btn-row">
+      <a class="btn" href="#">Vérifier la disponibilité de ma date</a>
+      <a class="btn btn--ghost" href="#">Voir les prestations passées</a>
+    </div>
+  </div>
+  <div class="hero-cadre__media">
+    <img src="/assets/img/hero-mariage.svg" width="2000" height="1250"
+         alt="DJ mariage Toulouse — piste de danse en fin de soirée dans un domaine de Haute-Garonne">
+  </div>
+</section>
+
+<!-- ====================================================== ANCIEN ======== -->
+<div class="etiquette">
+  <h2>Pour mémoire — l’ancien rendu sombre</h2>
+  <p>Celui que tu trouvais trop sombre. Le voile devait couvrir jusqu’à 86 % d’opacité en bas
+     pour que le texte blanc reste lisible, ce qui écrasait la photo et tirait l’ensemble
+     vers l’univers « boîte de nuit » que le brief voulait éviter.</p>
+</div>
+<section class="hero" style="min-height:min(60svh,520px)">
+  <div class="hero__media">
+    <img src="/assets/img/galerie-02.svg" width="900" height="1200"
+         alt="Ancien rendu sombre du hero">
+  </div>
+  <div class="hero__inner">
+    <p class="eyebrow">Agence Silence &middot; DJ Léo &middot; Toulouse</p>
+    <h1>DJ de mariage à Toulouse</h1>
+    <p class="hero__lead">Pas de néons, pas d’animateur au micro.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="#">Vérifier ma date</a>
+      <a class="btn btn--outline-light" href="#">Voir la galerie</a>
+    </div>
+  </div>
+</section>
+
+<div class="etiquette" style="padding-block:2.5rem">
+  <h2>Comment choisir</h2>
+  <p>Dis-moi simplement A, B ou C. Je peux aussi appliquer la même variante partout
+     (accueil + pages villes) si tu préfères une seule écriture visuelle.</p>
+</div>
+
+</body>
+</html>

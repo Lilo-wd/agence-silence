@@ -1,0 +1,16 @@
+# Fichiers systeme
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editeurs
+.vscode/
+.idea/
+
+# Documents de travail internes — ne jamais publier
+/_travail/
+*.odt
+*.pdf
+*.docx
+*.xlsx
+Questionnaire*
