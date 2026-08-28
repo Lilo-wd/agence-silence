@@ -167,6 +167,24 @@
     });
   }
 
+  /* ----------------------------------------- Reserve sous le bandeau preprod
+     Le bandeau est fixe et se replie sur deux ou trois lignes selon la
+     largeur : une reserve figee en CSS finirait toujours par recouvrir le
+     pied de page. On la cale sur la hauteur reellement mesuree.
+     Ce bloc devient inerte des que PREPROD=0 : le bandeau n existe plus. */
+  var bandeau = document.querySelector('.bandeau-apercu');
+  if (bandeau) {
+    var calerBandeau = function () {
+      document.body.style.paddingBottom = bandeau.offsetHeight + 'px';
+    };
+    calerBandeau();
+    window.addEventListener('resize', calerBandeau, { passive: true });
+    // Les polices arrivent apres coup et changent la hauteur du texte.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(calerBandeau).catch(function () {});
+    }
+  }
+
   /* ------------------------------------------------------- Annee dynamique */
   Array.prototype.forEach.call(document.querySelectorAll('[data-annee]'), function (el) {
     el.textContent = String(new Date().getFullYear());
