@@ -129,6 +129,19 @@ HDR
 echo "  ecrit  _headers"
 
 
+# ============================================================== VERSION ====
+# Permet de verifier d'un coup d'oeil quelle generation est reellement en
+# ligne : https://agence-silence.netlify.app/version.txt
+# Utile quand on doute qu'un deploiement soit bien passe.
+cat > version.txt <<TXT
+Agence Silence — site statique
+Genere le : $(date -u +"%Y-%m-%d %H:%M UTC")
+Preprod   : $PREPROD $([ "$PREPROD" = "1" ] && echo "(ferme aux moteurs)" || echo "(ouvert aux moteurs)")
+Pages     : $(find "$ROOT" -name "*.html" -not -path "*/tools/*" | wc -l | tr -d ' ')
+TXT
+echo "  ecrit  version.txt"
+
+
 # ============================================================ GITIGNORE ====
 cat > .gitignore <<'GIT'
 # Fichiers systeme
