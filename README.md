@@ -149,6 +149,31 @@ Si le domaine diffère, modifier la variable `SITE` en haut de
 
 ---
 
+## 1 bis. Le mode PRÉPRODUCTION — à désactiver le jour J
+
+`PREPROD=1` en haut de `tools/common.sh`. Tant qu'il vaut 1 :
+
+- toutes les pages portent `<meta name="robots" content="noindex, nofollow">` ;
+- `robots.txt` contient `Disallow: /` ;
+- un bandeau fixe en bas de page annonce que le contenu est provisoire.
+
+**Pourquoi.** Laisser Google indexer un NAP faux (12 rue de la Pomme,
+06 12 34 56 78), puis le corriger, crée une incohérence entre l'index et la
+future fiche Google Business Profile. C'est exactement le signal sur lequel
+repose tout le référencement local du projet : l'abîmer au départ coûte plus
+cher que d'attendre que le contenu réel arrive.
+
+**Pour ouvrir le site aux moteurs**, une fois les vraies infos en place :
+
+```bash
+cd "C:/Users/lilos/OneDrive/Documents/agence-silence/tools" && sed -i 's/^PREPROD=${PREPROD:-1}$/PREPROD=${PREPROD:-0}/' common.sh && for s in p1-accueil p2-prestations p3-villes p4-pages p5-blog p6-technique; do bash $s.sh; done
+```
+
+Les balises `robots`, le `robots.txt` et le bandeau basculent ensemble.
+Ne pas oublier de redéployer après.
+
+---
+
 ## 2. Déploiement sur Netlify
 
 Même procédure que les sites de garage :
