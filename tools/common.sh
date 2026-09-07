@@ -27,6 +27,21 @@ VILLE="Toulouse"
 # relancer la generation (voir README §4).
 PREPROD=${PREPROD:-1}
 
+# ------------------------------------------------------- CACHE DES ASSETS --
+# _headers sert /assets/* avec `immutable, max-age=31536000` : un navigateur
+# qui a deja charge style.css ne le redemandera pas pendant un an. Sans
+# empreinte dans l'URL, toute modification du CSS ou du JS reste invisible
+# pour les visiteurs deja venus — le HTML se met a jour, la mise en forme non.
+#
+# On accroche donc une empreinte du contenu a l'URL : elle change des que le
+# fichier change, ce qui force le rechargement, tout en gardant le cache long
+# tant que rien ne bouge.
+empreinte () {
+  if [ -f "$1" ]; then md5sum "$1" | cut -c1-8; else echo "0"; fi
+}
+CSS_V=$(empreinte "$ROOT/assets/css/style.css")
+JS_V=$(empreinte "$ROOT/assets/js/main.js")
+
 if [ "$PREPROD" = "1" ]; then
   ROBOTS="noindex, nofollow"
   BANDEAU='<aside class="bandeau-apercu">
@@ -67,7 +82,7 @@ cat <<HTML
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=$CSS_V">
 <link rel="stylesheet" media="print" onload="this.media='all'"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap"></noscript>
@@ -221,7 +236,7 @@ cat <<HTML
 
 $BANDEAU
 
-<script src="/assets/js/main.js" defer></script>
+<script src="/assets/js/main.js?v=$JS_V" defer></script>
 </body>
 </html>
 HTML
