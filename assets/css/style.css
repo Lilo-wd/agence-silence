@@ -407,6 +407,91 @@ em{font-style:italic}
 .hero--clair .hero__lead{color:var(--ink-80)}
 .hero--clair .hero__meta{border-top-color:var(--line);color:var(--ink-40)}
 
+/* ---- Bande a image fixe -------------------------------------------------
+   L'image reste immobile pendant que le contenu defile par-dessus, puis la
+   section suivante la recouvre. Composant reutilisable : dupliquer le bloc
+   et changer le fichier suffit pour poser une autre image plus bas.
+
+   Technique : le conteneur porte clip-path:inset(0), ce qui decoupe ses
+   descendants sans devenir leur bloc conteneur. L'image en position:fixed
+   reste donc ancree au viewport, mais n'est visible que dans la fenetre
+   que dessine la bande.
+
+   Pourquoi pas background-attachment:fixed : ignore ou saccade sur iOS
+   Safari et Android Chrome. Le clip-path fonctionne partout. */
+.bande-fixe{
+  position:relative;
+  clip-path:inset(0);
+  display:flex;align-items:center;
+  min-height:min(90svh,820px);
+  padding-block:clamp(5rem,12vw,8rem);
+  overflow:hidden;
+}
+.bande-fixe__media{position:fixed;inset:0;z-index:0;pointer-events:none}
+.bande-fixe__media img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
+.bande-fixe__media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(250,248,244,.90) 0%,
+    rgba(250,248,244,.82) 45%,
+    rgba(250,248,244,.62) 100%);
+}
+@media (min-width:820px){
+  .bande-fixe__media::after{
+    background:linear-gradient(100deg,
+      rgba(250,248,244,.94) 0%,
+      rgba(250,248,244,.86) 34%,
+      rgba(250,248,244,.42) 66%,
+      rgba(250,248,244,.10) 100%);
+  }
+}
+.bande-fixe__contenu{position:relative;z-index:1;width:100%}
+.bande-fixe h1{max-width:16ch;margin-bottom:1.5rem}
+.bande-fixe__lead{
+  font-size:clamp(1.05rem,.98rem + .42vw,1.28rem);
+  line-height:1.6;font-weight:300;color:var(--ink-80);max-width:46ch;
+}
+.bande-fixe__meta{
+  display:flex;flex-wrap:wrap;gap:.65rem 2.1rem;
+  margin-top:clamp(2.25rem,4vw,3.25rem);padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);
+}
+@supports not (clip-path:inset(0)){
+  .bande-fixe__media{position:absolute}
+}
+
+/* Variante sombre : pour une image a faible luminance. Celle de l'accueil
+   a une luminance moyenne de 0,031 — un voile ecru la rendrait laiteuse,
+   il faut inverser le traitement. Le texte est aussi resserre : le sujet
+   est au centre du cadre et un titre large lui passerait sur le visage. */
+.bande-fixe--sombre .bande-fixe__media::after{
+  background:linear-gradient(180deg,
+    rgba(16,16,20,.80) 0%, rgba(16,16,20,.62) 45%, rgba(16,16,20,.42) 100%);
+}
+/* Plage intermediaire : le texte finit tres pres du sujet (19 px de
+   degagement mesures a 900 px), on prolonge donc la zone dense du voile. */
+@media (min-width:820px) and (max-width:1100px){
+  .bande-fixe--sombre .bande-fixe__media::after{
+    background:linear-gradient(100deg,
+      rgba(16,16,20,.88) 0%, rgba(16,16,20,.80) 42%,
+      rgba(16,16,20,.46) 70%, rgba(16,16,20,.14) 100%);
+  }
+}
+@media (min-width:1101px){
+  .bande-fixe--sombre .bande-fixe__media::after{
+    background:linear-gradient(100deg,
+      rgba(16,16,20,.86) 0%, rgba(16,16,20,.70) 30%,
+      rgba(16,16,20,.34) 58%, rgba(16,16,20,.10) 100%);
+  }
+}
+.bande-fixe--sombre h1{color:#fff;max-width:10ch;font-size:clamp(2.1rem,1.5rem + 2.4vw,3.4rem)}
+.bande-fixe--sombre .bande-fixe__lead{color:rgba(255,255,255,.86);max-width:30ch}
+.bande-fixe--sombre .eyebrow{color:#fff}
+.bande-fixe--sombre .eyebrow::before{background:var(--lavande)}
+.bande-fixe--sombre .bande-fixe__meta{
+  border-top-color:rgba(255,255,255,.18);color:rgba(255,255,255,.72)}
+
 /* Hero secondaire (pages internes) */
 .page-hero{
   background:var(--ecru-deep);

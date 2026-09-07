@@ -1,9 +1,8 @@
 <!doctype html>
-<html lang="fr" class="no-js">
-<head>
+<html lang="fr" class="no-js"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DJ mariage Toulouse &amp; événementiel — Agence Silence, DJ Léo</title>
+<title>Démo — fond fixe | Agence Silence</title>
 <meta name="description" content="DJ mariage à Toulouse et dans toute la France. Agence Silence signe des mariages haut de gamme, des événements d’entreprise et des soirées privées. Vérifiez la disponibilité de votre date.">
 <link rel="canonical" href="https://agence-silence.fr/">
 <meta name="robots" content="noindex, nofollow">
@@ -16,16 +15,15 @@
 <meta property="og:title" content="DJ mariage Toulouse &amp; événementiel — Agence Silence, DJ Léo">
 <meta property="og:description" content="DJ mariage à Toulouse et dans toute la France. Agence Silence signe des mariages haut de gamme, des événements d’entreprise et des soirées privées. Vérifiez la disponibilité de votre date.">
 <meta property="og:url" content="https://agence-silence.fr/">
-<meta property="og:image" content="https://agence-silence.fr/assets/img/hero-dj-platines.webp">
+<meta property="og:image" content="https://agence-silence.fr/assets/img/hero-mariage-toulouse.svg">
 <meta name="twitter:card" content="summary_large_image">
 
 <script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="/assets/css/style.css">
-<link rel="stylesheet" media="print" onload="this.media='all'"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap">
+<link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400;500&amp;display=swap"></noscript>
 <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
@@ -43,7 +41,7 @@
       "telephone": "+33612345678",
       "email": "contact@agence-silence.fr",
       "priceRange": "€€€",
-      "image": "https://agence-silence.fr/assets/img/hero-dj-platines.webp",
+      "image": "https://agence-silence.fr/assets/img/hero-mariage-toulouse.svg",
       "logo": "https://agence-silence.fr/assets/img/logo-empile.png",
       "address": {
         "@type": "PostalAddress",
@@ -100,7 +98,96 @@
   ]
 }
 </script>
-</head>
+<style>
+/* =========================================================================
+   BANDE A IMAGE FIXE — composant de demonstration
+   A deplacer dans assets/css/style.css une fois valide.
+
+   Technique : le conteneur porte clip-path:inset(0), ce qui en fait le
+   bloc conteneur de ses descendants position:fixed. L'image est donc fixe
+   par rapport a l'ecran, mais visible uniquement dans la fenetre que
+   decoupe la bande. En defilant, la bande passe devant l'image immobile.
+
+   Pourquoi pas background-attachment:fixed : cette propriete est ignoree
+   ou saccadee sur iOS Safari et Android Chrome. Le clip-path fonctionne
+   partout, y compris sur mobile.
+   ========================================================================= */
+.bande-fixe{
+  position:relative;
+  clip-path:inset(0);
+  display:flex;align-items:center;
+  min-height:min(90svh,820px);
+  padding-block:clamp(5rem,12vw,8rem);
+  overflow:hidden;
+}
+.bande-fixe__media{position:fixed;inset:0;z-index:0;pointer-events:none}
+.bande-fixe__media img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
+/* Voile : ecru dense a gauche derriere le texte, quasi nul a droite pour
+   laisser la photo respirer. Vertical sur petit ecran, ou le texte occupe
+   toute la largeur. */
+.bande-fixe__media::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(250,248,244,.90) 0%,
+    rgba(250,248,244,.82) 45%,
+    rgba(250,248,244,.62) 100%);
+}
+@media (min-width:820px){
+  .bande-fixe__media::after{
+    background:linear-gradient(100deg,
+      rgba(250,248,244,.94) 0%,
+      rgba(250,248,244,.86) 34%,
+      rgba(250,248,244,.42) 66%,
+      rgba(250,248,244,.10) 100%);
+  }
+}
+.bande-fixe__contenu{position:relative;z-index:1;width:100%}
+.bande-fixe h1{max-width:16ch;margin-bottom:1.5rem}
+.bande-fixe__lead{
+  font-size:clamp(1.05rem,.98rem + .42vw,1.28rem);
+  line-height:1.6;font-weight:300;color:var(--ink-80);max-width:46ch;
+}
+.bande-fixe__meta{
+  display:flex;flex-wrap:wrap;gap:.65rem 2.1rem;
+  margin-top:clamp(2.25rem,4vw,3.25rem);padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);
+}
+/* Sans clip-path (navigateur tres ancien), on retombe sur une image normale */
+@supports not (clip-path:inset(0)){
+  .bande-fixe__media{position:absolute}
+}
+
+/* ---- Variante sombre : pour une image a faible luminance ----------------
+   L'image du DJ a une luminance moyenne de 0,031. Un voile ecru la
+   transforme en gris laiteux ; il faut inverser le traitement.
+   Le texte est aussi resserre : le sujet est au centre du cadre et le
+   titre lui passait sur le visage. */
+.bande-fixe--sombre .bande-fixe__media::after{
+  background:linear-gradient(180deg,
+    rgba(16,16,20,.80) 0%, rgba(16,16,20,.62) 45%, rgba(16,16,20,.42) 100%);
+}
+@media (min-width:820px){
+  .bande-fixe--sombre .bande-fixe__media::after{
+    background:linear-gradient(100deg,
+      rgba(16,16,20,.86) 0%, rgba(16,16,20,.70) 30%,
+      rgba(16,16,20,.34) 58%, rgba(16,16,20,.10) 100%);
+  }
+}
+.bande-fixe--sombre h1{color:#fff;max-width:10ch;font-size:clamp(2.1rem,1.5rem + 2.4vw,3.4rem)}
+.bande-fixe--sombre .bande-fixe__lead{color:rgba(255,255,255,.86);max-width:30ch}
+.bande-fixe--sombre .eyebrow{color:#fff}
+.bande-fixe--sombre .eyebrow::before{background:var(--lavande)}
+.bande-fixe--sombre .bande-fixe__meta{
+  border-top-color:rgba(255,255,255,.18);color:rgba(255,255,255,.72)}
+
+/* Reperes de la demo, a retirer */
+.repere{
+  position:absolute;top:0;left:0;z-index:2;
+  font-family:var(--sans);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+  background:var(--lavande-deep);color:#fff;padding:.3rem .6rem;
+}
+</style></head>
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu principal</a>
 
@@ -110,8 +197,7 @@
          Dimensions natives 430x120, affiche a 46 px de haut (2,6x pour les
          ecrans haute densite). Fichier maitre : tools/logo-source/ -->
     <a class="brand" href="/" aria-label="Agence Silence, retour à l’accueil">
-      <img src="/assets/img/logo.webp" width="430" height="120"
-           alt="Agence Silence, DJ mariage et événementiel à Toulouse">
+      <img src="/assets/img/logo.webp" width="430" height="120" alt="Agence Silence, DJ mariage et événementiel à Toulouse">
     </a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-principal">
@@ -131,29 +217,27 @@
 </header>
 
 <main id="contenu">
+
 <section class="bande-fixe bande-fixe--sombre">
+  <span class="repere">Bande 1</span>
   <div class="bande-fixe__media" aria-hidden="true">
-    <img src="/assets/img/hero-dj-platines.webp"
-         alt="DJ mariage Toulouse — DJ aux platines pendant une soirée"
-         width="1376" height="768" fetchpriority="high" decoding="async">
+    <img src="/tools/demo-assets/dj-demo.jpg" alt="DJ aux platines" fetchpriority="high" decoding="async">
   </div>
   <div class="wrap bande-fixe__contenu">
-    <p class="eyebrow">Agence Silence &middot; DJ Léo &middot; Toulouse</p>
-    <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
-    <p class="bande-fixe__lead">
-      Pas de néons, pas d’animateur au micro. Une lecture fine de votre soirée, un son
-      irréprochable et une piste qui ne se vide pas.
-    </p>
-    <div class="btn-row">
-      <a class="btn btn--light" href="/contact/">Vérifier la disponibilité de ma date</a>
-      <a class="btn btn--outline-light" href="/galerie/">Voir les prestations passées</a>
-    </div>
-    <p class="bande-fixe__meta">
-      <span>+150 mariages</span>
-      <span>Toulouse &amp; toute la France</span>
-      <span>Devis sous 24&nbsp;h</span>
-    </p>
-  </div>
+      <p class="eyebrow">Agence Silence · DJ Léo · Toulouse</p>
+      <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
+      <p class="bande-fixe__lead">
+        Pas de néons, pas d’animateur au micro. Une lecture fine de votre soirée, un son
+        irréprochable et une piste qui ne se vide pas. Mariages, événements d’entreprise
+        et soirées privées, à Toulouse comme partout en France.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn--light" href="/contact/">Vérifier la disponibilité de ma date</a>
+        <a class="btn btn--outline-light" href="/galerie/">Voir les prestations passées</a>
+      </div>
+      <p class="bande-fixe__meta">
+        <span>+150 mariages</span><span>Toulouse &amp; toute la France</span><span>Devis sous 24&nbsp;h</span>
+      </p></div>
 </section>
 
 <!-- ===================================================== INTRO / APPROCHE -->
@@ -198,8 +282,7 @@
     <div class="grid grid--3">
       <article class="service-card reveal">
         <div class="service-card__media">
-          <img src="/assets/img/prestation-mariage.svg" loading="lazy" decoding="async" width="1400" height="1050"
-               alt="DJ mariage Toulouse — table dressée et piste de danse d’un mariage en Haute-Garonne">
+          <img src="/assets/img/prestation-mariage.svg" loading="lazy" decoding="async" width="1400" height="1050" alt="DJ mariage Toulouse — table dressée et piste de danse d’un mariage en Haute-Garonne">
         </div>
         <div class="service-card__body">
           <h3>Mariages</h3>
@@ -215,8 +298,7 @@
 
       <article class="service-card reveal">
         <div class="service-card__media">
-          <img src="/assets/img/prestation-corporate.svg" loading="lazy" decoding="async" width="1400" height="1050"
-               alt="DJ événementiel Toulouse — soirée d’entreprise sonorisée par Agence Silence">
+          <img src="/assets/img/prestation-corporate.svg" loading="lazy" decoding="async" width="1400" height="1050" alt="DJ événementiel Toulouse — soirée d’entreprise sonorisée par Agence Silence">
         </div>
         <div class="service-card__body">
           <h3>Événements d’entreprise</h3>
@@ -232,8 +314,7 @@
 
       <article class="service-card reveal">
         <div class="service-card__media">
-          <img src="/assets/img/prestation-privee.svg" loading="lazy" decoding="async" width="1400" height="1050"
-               alt="DJ soirée privée Toulouse — anniversaire sonorisé dans une propriété près de Toulouse">
+          <img src="/assets/img/prestation-privee.svg" loading="lazy" decoding="async" width="1400" height="1050" alt="DJ soirée privée Toulouse — anniversaire sonorisé dans une propriété près de Toulouse">
         </div>
         <div class="service-card__body">
           <h3>Soirées privées</h3>
@@ -291,24 +372,20 @@
     </div>
     <div class="gallery reveal">
       <figure>
-        <img src="/assets/img/galerie-01.svg" loading="lazy" decoding="async" width="900" height="1200"
-             alt="DJ mariage Toulouse — ouverture de bal dans un domaine de Haute-Garonne">
-        <figcaption>Mariage &middot; Domaine, Haute-Garonne</figcaption>
+        <img src="/assets/img/galerie-01.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Toulouse — ouverture de bal dans un domaine de Haute-Garonne">
+        <figcaption>Mariage · Domaine, Haute-Garonne</figcaption>
       </figure>
       <figure>
-        <img src="/assets/img/galerie-02.svg" loading="lazy" decoding="async" width="900" height="1200"
-             alt="DJ mariage Gers — piste de danse pleine en fin de soirée près d’Auch">
-        <figcaption>Mariage &middot; Gers</figcaption>
+        <img src="/assets/img/galerie-02.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Gers — piste de danse pleine en fin de soirée près d’Auch">
+        <figcaption>Mariage · Gers</figcaption>
       </figure>
       <figure>
-        <img src="/assets/img/galerie-03.svg" loading="lazy" decoding="async" width="900" height="1200"
-             alt="DJ mariage Tarn — cocktail sonorisé dans un château près d’Albi">
-        <figcaption>Mariage &middot; Tarn</figcaption>
+        <img src="/assets/img/galerie-03.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Tarn — cocktail sonorisé dans un château près d’Albi">
+        <figcaption>Mariage · Tarn</figcaption>
       </figure>
       <figure>
-        <img src="/assets/img/galerie-04.svg" loading="lazy" decoding="async" width="900" height="1200"
-             alt="DJ événementiel Toulouse — soirée de gala d’entreprise sonorisée par Agence Silence">
-        <figcaption>Corporate &middot; Toulouse</figcaption>
+        <img src="/assets/img/galerie-04.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ événementiel Toulouse — soirée de gala d’entreprise sonorisée par Agence Silence">
+        <figcaption>Corporate · Toulouse</figcaption>
       </figure>
     </div>
     <div class="btn-row">
@@ -326,19 +403,19 @@
     </div>
     <div class="grid grid--3">
       <figure class="quote reveal">
-        <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="stars" aria-label="Note de 5 sur 5">★★★★★</p>
         <blockquote><p>Léo a compris notre mariage mieux que nous. La piste ne s’est pas vidée une seule fois entre 22&nbsp;h et 4&nbsp;h du matin.</p></blockquote>
-        <figcaption><strong>Camille &amp; Antoine</strong>Mariage &middot; Domaine de Bordeneuve, Haute-Garonne &middot; Juin 2025</figcaption>
+        <figcaption><strong>Camille &amp; Antoine</strong>Mariage · Domaine de Bordeneuve, Haute-Garonne · Juin 2025</figcaption>
       </figure>
       <figure class="quote reveal">
-        <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="stars" aria-label="Note de 5 sur 5">★★★★★</p>
         <blockquote><p>Discret toute la journée, décisif le soir. Aucun micro intempestif, exactement ce que nous cherchions.</p></blockquote>
-        <figcaption><strong>Marie &amp; Julien</strong>Mariage &middot; Château, Gers &middot; Septembre 2025</figcaption>
+        <figcaption><strong>Marie &amp; Julien</strong>Mariage · Château, Gers · Septembre 2025</figcaption>
       </figure>
       <figure class="quote reveal">
-        <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="stars" aria-label="Note de 5 sur 5">★★★★★</p>
         <blockquote><p>Nous faisons appel à l’Agence Silence pour notre soirée annuelle depuis trois ans. Zéro incident technique.</p></blockquote>
-        <figcaption><strong>Sophie D.</strong>Responsable événementiel &middot; Groupe toulousain</figcaption>
+        <figcaption><strong>Sophie D.</strong>Responsable événementiel · Groupe toulousain</figcaption>
       </figure>
     </div>
     <div class="btn-row btn-row--center">
@@ -372,12 +449,12 @@
           <li><a href="/dj-mariage-bordeaux/">DJ mariage Bordeaux</a></li>
           <li><a href="/dj-mariage-montpellier/">DJ mariage Montpellier</a></li>
           <li><a href="/dj-mariage-paris/">DJ mariage Paris</a></li>
-          <li><span>Albi &middot; Tarn</span></li>
-          <li><span>Auch &middot; Gers</span></li>
-          <li><span>Carcassonne &middot; Aude</span></li>
-          <li><span>Agen &middot; Lot-et-Garonne</span></li>
-          <li><span>Castres &middot; Tarn</span></li>
-          <li><span>Montauban &middot; Tarn-et-Garonne</span></li>
+          <li><span>Albi · Tarn</span></li>
+          <li><span>Auch · Gers</span></li>
+          <li><span>Carcassonne · Aude</span></li>
+          <li><span>Agen · Lot-et-Garonne</span></li>
+          <li><span>Castres · Tarn</span></li>
+          <li><span>Montauban · Tarn-et-Garonne</span></li>
         </ul>
       </div>
     </div>
@@ -422,9 +499,23 @@
     </div>
   </div>
 </section>
-<section class="section cta-band">
+
+<section class="bande-fixe">
+  <span class="repere">Bande 2</span>
+  <div class="bande-fixe__media" aria-hidden="true">
+    <img src="/assets/img/ville-toulouse.svg" alt="Deuxième image de démonstration" fetchpriority="high" decoding="async">
+  </div>
+  <div class="wrap bande-fixe__contenu">
+      <p class="eyebrow">Deuxième bande</p>
+      <h2 style="font-size:clamp(1.9rem,1.35rem + 2.4vw,3.1rem);max-width:18ch;margin-bottom:1.2rem">Une autre image, le même composant</h2>
+      <p class="bande-fixe__lead">
+        Il suffit de dupliquer le bloc et de changer le fichier image. On peut en
+        placer autant qu’on veut dans la page&nbsp;: chacune reste fixe pendant que
+        son contenu défile par-dessus.
+      </p></div>
+</section><section class="section cta-band">
   <div class="wrap">
-    <p class="eyebrow" style="justify-content:center">Disponibilités 2026 &middot; 2027</p>
+    <p class="eyebrow" style="justify-content:center">Disponibilités 2026 · 2027</p>
     <h2>Votre date est-elle encore libre&nbsp;?</h2>
     <p>Donnez-nous la date et le lieu de votre événement : nous vous répondons sous 24 heures ouvrées, avec une proposition chiffrée si le créneau est disponible.</p>
     <div class="btn-row btn-row--center">
@@ -441,8 +532,7 @@
       <div class="footer-brand">
         <!-- Version empilee, parties noires passees en blanc pour le fond sombre.
              Le violet est conserve : 4,8:1 sur #1A1A1A, conforme AA. -->
-        <img src="/assets/img/logo-empile-blanc.webp" width="284" height="230"
-             alt="Agence Silence, DJ mariage et événementiel à Toulouse" loading="lazy" decoding="async">
+        <img src="/assets/img/logo-empile-blanc.webp" width="284" height="230" alt="Agence Silence, DJ mariage et événementiel à Toulouse" loading="lazy" decoding="async">
         <p>DJ événementiel à Toulouse. Mariages, événements d’entreprise et soirées privées, partout en France.</p>
       </div>
 
@@ -480,7 +570,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p style="margin:0">&copy; <span data-annee>2026</span> Agence Silence &mdash; DJ mariage et événementiel, Toulouse.</p>
+      <p style="margin:0">© <span data-annee="">2026</span> Agence Silence — DJ mariage et événementiel, Toulouse.</p>
       <nav aria-label="Liens de bas de page">
         <a href="/contact/">Contact</a>
         <a href="/faq/">FAQ</a>
@@ -495,6 +585,7 @@
   <span>Site en cours de construction. Les photos, témoignages, tarifs et coordonnées sont des exemples provisoires&nbsp;: aucun n’est réel.</span>
 </aside>
 
-<script src="/assets/js/main.js" defer></script>
-</body>
-</html>
+<script src="/assets/js/main.js" defer=""></script>
+
+
+</body></html>

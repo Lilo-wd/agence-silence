@@ -160,5 +160,8 @@ desktop.ini
 *.docx
 *.xlsx
 Questionnaire*
+
+# Images de demonstration trouvees sur le web — ne pas publier
+/tools/demo-assets/
 GIT
 echo "  ecrit  .gitignore"

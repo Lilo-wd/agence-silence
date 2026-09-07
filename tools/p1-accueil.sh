@@ -7,7 +7,7 @@ source "$(dirname "$0")/common.sh"
 page_open \
  "DJ mariage Toulouse &amp; événementiel — Agence Silence, DJ Léo" \
  "DJ mariage à Toulouse et dans toute la France. Agence Silence signe des mariages haut de gamme, des événements d’entreprise et des soirées privées. Vérifiez la disponibilité de votre date." \
- "/" "hero-mariage-toulouse.svg"
+ "/" "hero-dj-platines.webp"
 
 cat <<'HTML'
 <script type="application/ld+json">
@@ -24,7 +24,7 @@ cat <<'HTML'
       "telephone": "+33612345678",
       "email": "contact@agence-silence.fr",
       "priceRange": "€€€",
-      "image": "https://agence-silence.fr/assets/img/hero-mariage-toulouse.svg",
+      "image": "https://agence-silence.fr/assets/img/hero-dj-platines.webp",
       "logo": "https://agence-silence.fr/assets/img/logo-empile.png",
       "address": {
         "@type": "PostalAddress",
@@ -86,31 +86,28 @@ HTML
 page_head_close
 
 cat <<'HTML'
-<section class="hero-ed">
-  <div class="hero-ed__text">
-    <div class="hero-ed__inner">
-      <p class="eyebrow">Agence Silence &middot; DJ Léo &middot; Toulouse</p>
-      <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
-      <p class="hero-ed__lead">
-        Pas de néons, pas d’animateur au micro. Une lecture fine de votre soirée, un son
-        irréprochable et une piste qui ne se vide pas. Mariages, événements d’entreprise
-        et soirées privées, à Toulouse comme partout en France.
-      </p>
-      <div class="btn-row">
-        <a class="btn" href="/contact/">Vérifier la disponibilité de ma date</a>
-        <a class="btn btn--ghost" href="/galerie/">Voir les prestations passées</a>
-      </div>
-      <p class="hero-ed__meta">
-        <span>+150 mariages</span>
-        <span>Toulouse &amp; toute la France</span>
-        <span>Devis sous 24&nbsp;h</span>
-      </p>
-    </div>
+<section class="bande-fixe bande-fixe--sombre">
+  <div class="bande-fixe__media" aria-hidden="true">
+    <img src="/assets/img/hero-dj-platines.webp"
+         alt="DJ mariage Toulouse — DJ aux platines pendant une soirée"
+         width="1376" height="768" fetchpriority="high" decoding="async">
   </div>
-  <div class="hero-ed__media">
-    <img src="/assets/img/hero-mariage-toulouse.svg"
-         alt="DJ mariage Toulouse — Léo, Agence Silence, en fin de soirée dans un domaine de Haute-Garonne"
-         width="2000" height="1250" fetchpriority="high" decoding="async">
+  <div class="wrap bande-fixe__contenu">
+    <p class="eyebrow">Agence Silence &middot; DJ Léo &middot; Toulouse</p>
+    <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
+    <p class="bande-fixe__lead">
+      Pas de néons, pas d’animateur au micro. Une lecture fine de votre soirée, un son
+      irréprochable et une piste qui ne se vide pas.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="/contact/">Vérifier la disponibilité de ma date</a>
+      <a class="btn btn--outline-light" href="/galerie/">Voir les prestations passées</a>
+    </div>
+    <p class="bande-fixe__meta">
+      <span>+150 mariages</span>
+      <span>Toulouse &amp; toute la France</span>
+      <span>Devis sous 24&nbsp;h</span>
+    </p>
   </div>
 </section>
 
