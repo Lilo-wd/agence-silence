@@ -469,24 +469,23 @@ em{font-style:italic}
   background:linear-gradient(180deg,
     rgba(16,16,20,.80) 0%, rgba(16,16,20,.62) 45%, rgba(16,16,20,.42) 100%);
 }
-/* Plage intermediaire : le texte finit tres pres du sujet (19 px de
-   degagement mesures a 900 px), on prolonge donc la zone dense du voile. */
-@media (min-width:820px) and (max-width:1100px){
+/* Le titre garde sa pleine largeur : le resserrer pour eviter le sujet le
+   cassait sur huit lignes. On le laisse passer devant le DJ et on assume,
+   en prolongeant la zone dense du voile jusqu'au deux tiers du cadre.
+   Le sujet reste lisible dessous, le texte reste net par-dessus. */
+@media (min-width:820px){
   .bande-fixe--sombre .bande-fixe__media::after{
     background:linear-gradient(100deg,
-      rgba(16,16,20,.88) 0%, rgba(16,16,20,.80) 42%,
-      rgba(16,16,20,.46) 70%, rgba(16,16,20,.14) 100%);
+      rgba(16,16,20,.84) 0%, rgba(16,16,20,.76) 34%,
+      rgba(16,16,20,.56) 62%, rgba(16,16,20,.20) 100%);
   }
 }
-@media (min-width:1101px){
-  .bande-fixe--sombre .bande-fixe__media::after{
-    background:linear-gradient(100deg,
-      rgba(16,16,20,.86) 0%, rgba(16,16,20,.70) 30%,
-      rgba(16,16,20,.34) 58%, rgba(16,16,20,.10) 100%);
-  }
+.bande-fixe--sombre h1{
+  color:#fff;
+  max-width:22ch;
+  font-size:clamp(2.2rem,1.35rem + 3.05vw,3.75rem);
 }
-.bande-fixe--sombre h1{color:#fff;max-width:10ch;font-size:clamp(2.1rem,1.5rem + 2.4vw,3.4rem)}
-.bande-fixe--sombre .bande-fixe__lead{color:rgba(255,255,255,.86);max-width:30ch}
+.bande-fixe--sombre .bande-fixe__lead{color:rgba(255,255,255,.86);max-width:42ch}
 .bande-fixe--sombre .eyebrow{color:#fff}
 .bande-fixe--sombre .eyebrow::before{background:var(--lavande)}
 .bande-fixe--sombre .bande-fixe__meta{
