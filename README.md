@@ -37,25 +37,30 @@ Quand ces deux points sont réglés, passer en production (§ 2).
 Sans JavaScript, le formulaire poste directement et affiche `/contact/merci/`.
 Avec JavaScript, il envoie sans quitter la page et valide les champs avant.
 
-### À confirmer avec Léo
+### Réponses complémentaires de Léo (intégrées)
 
-- **Déplacement** : il a écrit « 0,60 € du kilomètre, 100 km aller ». Le site dit
-  « gratuit dans 50 km, puis 0,60 € du kilomètre » sans préciser aller seul ou
-  aller-retour. À préciser.
-- **Hébergement au-delà d'1 h 20 de route** : il dort sur place la veille. Qui paie ?
-  Le site dit seulement que le client n'a pas de nuit à prévoir.
-- **SACEM** : réponse « Personne ». Les mentions SACEM ont été retirées plutôt que
+- **Déplacement** : gratuit dans 50 km, puis **0,60 € du kilomètre aller-retour**.
+- **Hébergement** : au-delà d'1 h 20 de route, le DJ dort à proximité la veille,
+  **à la charge des clients**.
+- **Profils** : Instagram `@agencesilence` et
+  [Mariages.net](https://www.mariages.net/musique-mariage/leo-malhie--e274959),
+  reliés en pied de page et dans les données structurées (`sameAs`).
+- **Château de la Baronnie** : 1854 route de Molières, 82130 Lafrançaise
+  (Tarn-et-Garonne), cité sur la page Zone d'intervention.
+- **SACEM** : réponse « Personne ». Les mentions SACEM restent retirées plutôt que
   d'afficher une information juridique incertaine.
-- **Instagram et Mariages.net** : il faut l'**adresse exacte** des deux profils
-  pour les relier au site (`sameAs` et liens). Rien n'a été inventé.
-- **Domaine de la Baronnie** : plusieurs lieux portent ce nom en France. Il est cité
-  sans localisation (Preissac et Montjoie, eux, ont été vérifiés).
-- **Logo vectoriel** : section 12 du questionnaire restée vide.
 
-### Plus tard
+**Note corrigée** : le questionnaire indiquait 5/5, mais le profil Mariages.net affiche
+**4,9/5 sur 59 avis**, avec **3 Wedding Awards (2024, 2025, 2026)**. Le site reprend
+les chiffres publics, vérifiables par n'importe quel visiteur. Si la note évolue,
+la mettre à jour dans `p1-accueil.sh`, `p2-prestations.sh` et `p4-pages.sh`.
 
-- **Vidéos** : Léo a des extraits MP4 4K de 20 s à 2 min. Les réencoder en 1080p
-  avant de les ajouter (commentaire en bas de `galerie/index.html`).
+### Dossier suivant attendu de Léo
+
+- **Le logo vectoriel** (`.svg`, `.ai`, `.eps` ou `.pdf`) et sa version blanche.
+- **Les photos** : section 13 du questionnaire.
+- **Vidéos** : extraits MP4 4K de 20 s à 2 min, à réencoder en 1080p avant ajout
+  (commentaire en bas de `galerie/index.html`).
 - **Brochure des options** : les tarifs des options y figurent, le site y renvoie.
 
 ---

@@ -102,7 +102,7 @@ read -r -d '' PACK <<'HTML' || true
           <li><span>Rallonges et multiprises fournies</span></li>
         </ul>
         <p style="margin-top:1.5rem;font-size:.9rem;color:var(--ink-40)">
-          Hors déplacement&nbsp;: gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre.
+          Hors déplacement&nbsp;: gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour.
         </p>
 HTML
 
@@ -188,7 +188,7 @@ read -r -d '' C_CAS <<HTML || true
         </p>
         <p>
           Selon votre lieu de réception, le trajet peut dépasser le rayon de 50&nbsp;km
-          inclus&nbsp;: le déplacement est alors facturé 0,60&nbsp;€ du kilomètre, et
+          inclus&nbsp;: le déplacement est alors facturé 0,60&nbsp;€ du kilomètre aller-retour, et
           figure dès le devis.
         </p>
       </div>

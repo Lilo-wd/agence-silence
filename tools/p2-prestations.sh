@@ -115,8 +115,9 @@ cat <<'HTML'
       <div class="stat"><span class="stat__value">500+</span><span class="stat__label">Mariages</span></div>
       <div class="stat"><span class="stat__value">200+</span><span class="stat__label">Événements d’entreprise</span></div>
       <div class="stat"><span class="stat__value">7</span><span class="stat__label">Ans d’activité</span></div>
-      <div class="stat"><span class="stat__value">5/5</span><span class="stat__label">Sur Mariages.net</span></div>
+      <div class="stat"><span class="stat__value">4,9/5</span><span class="stat__label">Sur 59 avis Mariages.net</span></div>
       <div class="stat"><span class="stat__value">100&nbsp;%</span><span class="stat__label">Dates honorées</span></div>
+      <div class="stat"><span class="stat__value">3</span><span class="stat__label">Wedding Awards</span></div>
     </div>
   </div>
 </section>
@@ -295,7 +296,7 @@ read -r -d '' CONDITIONS <<'HTML' || true
         <h3>Réservation et paiement</h3>
         <p>Un acompte de 30&nbsp;% bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p>
         <p>En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif.</p>
-        <p>Déplacement gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre. TVA non applicable, article 293&nbsp;B du CGI.</p>
+        <p>Déplacement gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour. Au-delà d’1&nbsp;h&nbsp;20 de route, l’hébergement de la veille est à la charge des clients. TVA non applicable, article 293&nbsp;B du CGI.</p>
       </article>
 HTML
 
@@ -474,7 +475,7 @@ read -r -d '' CORPS_CORPO <<HTML || true
       <h2>Ce qu’il faut savoir avant de réserver</h2>
     </div>
     <div class="grid grid--3">
-      <article class="card reveal"><h3>À partir de 500&nbsp;€</h3><p>Le tarif varie selon la durée, la saison et le jour. Déplacement gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre.</p></article>
+      <article class="card reveal"><h3>À partir de 500&nbsp;€</h3><p>Le tarif varie selon la durée, la saison et le jour. Déplacement gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour.</p></article>
       <article class="card reveal"><h3>Micro-entreprise immatriculée</h3><p>SIRET $SIRET_AFF. TVA non applicable, article 293&nbsp;B du CGI.</p></article>
       <article class="card reveal"><h3>Paiement</h3><p>Un acompte bloque la date, le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p></article>
       <article class="card reveal"><h3>Matériel assuré</h3><p>Attestation d’assurance fournie sur demande.</p></article>

@@ -60,7 +60,7 @@ page_close
 {
 page_open \
  "Avis des mariés — Agence Silence, DJ mariage Toulouse" \
- "Les 8 avis des mariés sur l’Agence Silence, tous notés 5/5 sur Mariages.net : ambiance, piste pleine, préparation, photobooth. Reproduits en entier." \
+ "Les avis des mariés sur l’Agence Silence : 4,9/5 sur 59 avis Mariages.net et trois Wedding Awards. Une sélection d’avis reproduits en entier." \
  "/temoignages/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Témoignages|/temoignages/')</script>"
 cat <<'HTML'
@@ -81,8 +81,9 @@ cat <<'HTML'
     <p class="eyebrow">Témoignages</p>
     <h1>Les avis des mariés</h1>
     <p class="lead">
-      Huit avis publiés sur Mariages.net, tous notés 5&nbsp;sur&nbsp;5. Reproduits en entier,
-      tels que leurs auteurs les ont écrits, avec leur accord.
+      4,9&nbsp;sur&nbsp;5 sur 59 avis Mariages.net, et trois Wedding Awards (2024, 2025, 2026).
+      Voici une sélection de huit avis, reproduits en entier tels que leurs auteurs les ont
+      écrits, avec leur accord.
     </p>
   </div>
 </section>
@@ -191,6 +192,9 @@ cat <<'HTML'
     <p class="form-note" style="margin-top:2.5rem">
       Avis publiés sur Mariages.net et reproduits sans modification, avec l’accord de leurs auteurs.
     </p>
+    <div class="btn-row">
+      <a class="btn btn--ghost" href="https://www.mariages.net/musique-mariage/leo-malhie--e274959" target="_blank" rel="noopener">Voir les 59 avis sur Mariages.net</a>
+    </div>
   </div>
 </section>
 HTML
@@ -203,7 +207,7 @@ page_close
 {
 page_open \
  "Zone d’intervention — DJ Toulouse, Tarn, Aude" \
- "L’Agence Silence intervient en Haute-Garonne, dans le Tarn et l’Aude depuis Lauzerville, près de Toulouse. Déplacement gratuit dans 50 km, puis 0,60 € du kilomètre." \
+ "L’Agence Silence intervient en Haute-Garonne, dans le Tarn et l’Aude depuis Lauzerville, près de Toulouse. Déplacement gratuit dans 50 km, puis 0,60 € du kilomètre aller-retour." \
  "/zone-intervention/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Zone d’intervention|/zone-intervention/')</script>"
 page_head_close
@@ -231,7 +235,8 @@ cat <<'HTML'
         <p>
           Les mariages de l’agence se déroulent principalement en Haute-Garonne, dans le
           Tarn et dans l’Aude. Les trois secteurs qui génèrent le plus de demandes&nbsp;:
-          Toulouse, Castres et Ramonville.
+          Toulouse, Castres et Ramonville. L’équipe joue aussi régulièrement en
+          Tarn-et-Garonne, au Château de la Baronnie.
         </p>
         <h3 style="font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);margin-top:2.5rem">Pages dédiées</h3>
         <ul class="city-list" style="margin-top:1.25rem;columns:1">
@@ -242,7 +247,7 @@ cat <<'HTML'
         <ul class="city-list" style="margin-top:1.25rem;columns:1">
           <li><span>Domaine de Preissac &middot; Castelmaurou</span></li>
           <li><span>Domaine de Montjoie &middot; Ramonville-Saint-Agne</span></li>
-          <li><span>Domaine de la Baronnie</span></li>
+          <li><span>Château de la Baronnie &middot; Lafrançaise</span></li>
         </ul>
       </div>
 
@@ -254,14 +259,15 @@ cat <<'HTML'
           Budapest, Tenerife et Singapour, notamment pour des événements d’entreprise.
         </p>
         <p>
-          Au-delà d’une heure vingt de route, le DJ dort à proximité la veille. Vous n’avez
-          pas à prévoir de nuit sur le lieu de réception.
+          Au-delà d’une heure vingt de route, le DJ dort à proximité la veille&nbsp;;
+          l’hébergement est alors à la charge des clients.
         </p>
 
         <div class="card" style="margin-top:2.5rem;background:var(--ecru-deep);border-color:var(--line)">
           <h3>Comment le déplacement est facturé</h3>
           <p><strong>Jusqu’à 50&nbsp;km&nbsp;:</strong> gratuit.</p>
-          <p><strong>Au-delà&nbsp;:</strong> 0,60&nbsp;€ du kilomètre, indiqué dans le devis.</p>
+          <p><strong>Au-delà&nbsp;:</strong> 0,60&nbsp;€ du kilomètre aller-retour, indiqué dans le devis.</p>
+          <p><strong>Au-delà d’1&nbsp;h&nbsp;20 de route&nbsp;:</strong> le DJ dort à proximité la veille, hébergement à la charge des clients.</p>
         </div>
       </div>
     </div>
@@ -293,7 +299,7 @@ cat <<'HTML'
     { "@type": "Question", "name": "Combien coûte un DJ pour un anniversaire ou une entreprise ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Un anniversaire de 20 h à 2 h est à partir de 600 €. Une soirée d’entreprise est à partir de 500 €. Le pack son et lumière est toujours complet." } },
     { "@type": "Question", "name": "Y a-t-il des frais de déplacement ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Le déplacement est gratuit dans un rayon de 50 km. Au-delà, il est facturé 0,60 € du kilomètre et figure dans le devis." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Le déplacement est gratuit dans un rayon de 50 km. Au-delà, il est facturé 0,60 € du kilomètre aller-retour et figure dans le devis." } },
     { "@type": "Question", "name": "Combien de temps à l’avance faut-il réserver ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Idéalement un à deux ans à l’avance, les dates de haute saison partant très vite." } },
     { "@type": "Question", "name": "Quel acompte faut-il verser ?",
@@ -315,7 +321,7 @@ cat <<'HTML'
     { "@type": "Question", "name": "Le DJ vient-il seul ou accompagné ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Seul : un DJ est présent pour votre soirée." } },
     { "@type": "Question", "name": "Faut-il prévoir une nuit sur place pour le DJ ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Non, il n’y a jamais de nuit à prévoir sur le lieu de réception." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas sur le lieu de réception. En revanche, au-delà d’1 h 20 de route, le DJ dort à proximité la veille et l’hébergement est à la charge des clients." } },
     { "@type": "Question", "name": "Le DJ a-t-il des allergies alimentaires ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Aucune." } },
     { "@type": "Question", "name": "Assurez-vous la cérémonie laïque ?",
@@ -348,7 +354,7 @@ cat <<'HTML'
     <div class="faq reveal" style="margin-bottom:4rem">
       <details><summary>Combien coûte un DJ de mariage&nbsp;?</summary><div class="faq__answer"><p>Le pack mariage — cocktail, dîner et soirée, avec son, lumière, micros, vidéoprojecteur et écran — est à 1&nbsp;600&nbsp;€, hors déplacement. Le prix varie selon la durée, la saison et le jour.</p><p>TVA non applicable, article 293&nbsp;B du CGI. Les tarifs des options figurent dans la brochure envoyée avec le devis. <a href="/prestations/dj-mariage/">Voir le pack mariage</a></p></div></details>
       <details><summary>Et pour un anniversaire ou une entreprise&nbsp;?</summary><div class="faq__answer"><p>Un anniversaire de 20&nbsp;h à 2&nbsp;h est à partir de 600&nbsp;€. Une soirée d’entreprise est à partir de 500&nbsp;€. Le pack son et lumière est toujours complet.</p></div></details>
-      <details><summary>Y a-t-il des frais de déplacement&nbsp;?</summary><div class="faq__answer"><p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre et figure dans le devis. <a href="/zone-intervention/">Voir la zone d’intervention</a></p></div></details>
+      <details><summary>Y a-t-il des frais de déplacement&nbsp;?</summary><div class="faq__answer"><p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre aller-retour et figure dans le devis. <a href="/zone-intervention/">Voir la zone d’intervention</a></p></div></details>
       <details><summary>Combien de temps à l’avance faut-il réserver&nbsp;?</summary><div class="faq__answer"><p>Idéalement un à deux ans à l’avance&nbsp;: les dates de haute saison partent très vite.</p></div></details>
       <details><summary>Quel acompte faut-il verser&nbsp;?</summary><div class="faq__answer"><p>Un acompte de 30&nbsp;% bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p></div></details>
       <details><summary>Que se passe-t-il en cas d’annulation ou de report&nbsp;?</summary><div class="faq__answer"><p>En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif.</p></div></details>
@@ -371,7 +377,7 @@ cat <<'HTML'
       <details><summary>Faut-il prévoir des rallonges&nbsp;?</summary><div class="faq__answer"><p>Non. Rallonges et multiprises sont comprises dans la prestation&nbsp;: une prise 16&nbsp;A suffit, il n’y a rien à prévoir.</p></div></details>
       <details><summary>Notre salle a un limiteur de son, est-ce un problème&nbsp;?</summary><div class="faq__answer"><p>Non&nbsp;: la limite de décibels de la salle est respectée.</p></div></details>
       <details><summary>Le DJ vient-il seul ou accompagné&nbsp;?</summary><div class="faq__answer"><p>Seul&nbsp;: un DJ est présent pour votre soirée.</p></div></details>
-      <details><summary>Faut-il prévoir une nuit sur place pour le DJ&nbsp;?</summary><div class="faq__answer"><p>Non, il n’y a jamais de nuit à prévoir sur le lieu de réception.</p></div></details>
+      <details><summary>Faut-il prévoir une nuit sur place pour le DJ&nbsp;?</summary><div class="faq__answer"><p>Pas sur le lieu de réception. En revanche, au-delà d’1&nbsp;h&nbsp;20 de route, le DJ dort à proximité la veille et l’hébergement est à la charge des clients.</p></div></details>
       <details><summary>Le DJ a-t-il des allergies alimentaires&nbsp;?</summary><div class="faq__answer"><p>Aucune.</p></div></details>
       <details><summary>Le matériel est-il assuré&nbsp;?</summary><div class="faq__answer"><p>Oui. L’attestation d’assurance est fournie sur demande.</p></div></details>
     </div>
@@ -692,7 +698,7 @@ cat <<'HTML'
   <div class="wrap">
     <div class="grid grid--3">
       <article class="card"><h3>Prestations</h3><p>Mariage, entreprise, soirée privée.</p><a class="link-arrow" href="/prestations/">Voir</a></article>
-      <article class="card"><h3>Avis des mariés</h3><p>Huit avis, tous notés 5 sur 5.</p><a class="link-arrow" href="/temoignages/">Voir</a></article>
+      <article class="card"><h3>Avis des mariés</h3><p>4,9/5 sur 59 avis Mariages.net.</p><a class="link-arrow" href="/temoignages/">Voir</a></article>
       <article class="card"><h3>Zone d’intervention</h3><p>Toulouse, Tarn, Aude et au-delà.</p><a class="link-arrow" href="/zone-intervention/">Voir</a></article>
     </div>
   </div>

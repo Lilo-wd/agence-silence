@@ -235,7 +235,7 @@ read -r -d '' A2 <<'HTML' || true
 <ul>
   <li><strong>La durée</strong>&nbsp;: prolonger au-delà de l’heure de fin se paie en heures supplémentaires.</li>
   <li><strong>La saison et le jour</strong>&nbsp;: un samedi de juin ne se négocie pas comme un vendredi de novembre.</li>
-  <li><strong>Le déplacement</strong>&nbsp;: gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre.</li>
+  <li><strong>Le déplacement</strong>&nbsp;: gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour.</li>
   <li><strong>Les options</strong>&nbsp;: cérémonie laïque, photobooth, livre d’or audio, fumée lourde pour l’ouverture de bal, éclairage dynamique, musiciens.</li>
 </ul>
 

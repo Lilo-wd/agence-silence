@@ -6,7 +6,7 @@ source "$(dirname "$0")/common.sh"
 {
 page_open \
  "DJ mariage Toulouse &amp; événementiel — Agence Silence" \
- "Agence Silence, DJ mariage à Toulouse depuis 2019 : plus de 500 mariages, note 5/5 sur Mariages.net. Pack cocktail, dîner et soirée à 1 600 €, son et lumière compris." \
+ "Agence Silence, DJ mariage à Toulouse depuis 2019 : plus de 500 mariages, note de 4,9/5 sur 59 avis Mariages.net. Pack cocktail, dîner et soirée à 1 600 €, son et lumière compris." \
  "/" "og-agence-silence.jpg"
 
 # Pas de balisage AggregateRating / Review : les avis viennent de Mariages.net
@@ -45,7 +45,8 @@ cat <<HTML
         { "@type": "City", "name": "Ramonville-Saint-Agne" },
         { "@type": "AdministrativeArea", "name": "Haute-Garonne" },
         { "@type": "AdministrativeArea", "name": "Tarn" },
-        { "@type": "AdministrativeArea", "name": "Aude" }
+        { "@type": "AdministrativeArea", "name": "Aude" },
+        { "@type": "AdministrativeArea", "name": "Tarn-et-Garonne" }
       ],
       "knowsLanguage": ["fr", "en"],
       "openingHoursSpecification": [{
@@ -54,6 +55,11 @@ cat <<HTML
         "opens": "10:00", "closes": "22:00"
       }],
       "founder": { "@id": "$SITE/#leo" },
+      "sameAs": [
+        "https://www.instagram.com/agencesilence/",
+        "https://www.mariages.net/musique-mariage/leo-malhie--e274959"
+      ],
+      "award": ["Wedding Awards Mariages.net 2024", "Wedding Awards Mariages.net 2025", "Wedding Awards Mariages.net 2026"],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Prestations DJ",
@@ -113,8 +119,8 @@ cat <<'HTML'
     </div>
     <p class="bande-fixe__meta">
       <span>+500 mariages depuis 2019</span>
-      <span>5/5 sur Mariages.net</span>
-      <span>Réponse sous 24&nbsp;h</span>
+      <span>4,9/5 sur 59 avis Mariages.net</span>
+      <span>Wedding Awards 2024, 2025, 2026</span>
     </p>
   </div>
 </section>
@@ -284,7 +290,7 @@ cat <<'HTML'
     <div class="section-head section-head--center reveal">
       <p class="eyebrow">Ils ont dansé</p>
       <h2>Ce que disent les mariés</h2>
-      <p>Avis publiés sur Mariages.net, tous notés 5&nbsp;sur&nbsp;5.</p>
+      <p>4,9&nbsp;sur&nbsp;5 sur 59 avis Mariages.net, et trois Wedding Awards consécutifs.</p>
     </div>
     <div class="grid grid--3">
       <figure class="quote reveal">
@@ -304,7 +310,7 @@ cat <<'HTML'
       </figure>
     </div>
     <div class="btn-row btn-row--center">
-      <a class="btn btn--outline-light" href="/temoignages/">Lire les 8 avis en entier</a>
+      <a class="btn btn--outline-light" href="/temoignages/">Lire les avis en entier</a>
     </div>
   </div>
 </section>
@@ -323,7 +329,7 @@ cat <<'HTML'
         </p>
         <p>
           Déplacement gratuit dans un rayon de 50&nbsp;km. Au-delà, 0,60&nbsp;€ du
-          kilomètre, indiqué dès le devis.
+          kilomètre aller-retour, indiqué dès le devis.
         </p>
         <p><a class="link-arrow" href="/zone-intervention/">Voir la zone détaillée</a></p>
       </div>
@@ -334,7 +340,7 @@ cat <<'HTML'
           <li><a href="/dj-mariage-castres/">DJ mariage Castres</a></li>
           <li><span>Ramonville &middot; Haute-Garonne</span></li>
           <li><span>Tarn</span></li>
-          <li><span>Aude</span></li>
+          <li><span>Aude &middot; Tarn-et-Garonne</span></li>
           <li><span>Séville, Budapest, Tenerife, Singapour</span></li>
         </ul>
       </div>
@@ -365,7 +371,7 @@ cat <<'HTML'
       <details>
         <summary>Y a-t-il des frais de déplacement&nbsp;?</summary>
         <div class="faq__answer">
-          <p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre et figure dans le devis.</p>
+          <p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre aller-retour et figure dans le devis.</p>
         </div>
       </details>
       <details>
