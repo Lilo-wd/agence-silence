@@ -6,8 +6,8 @@ source "$(dirname "$0")/common.sh"
 {
 page_open \
  "Galerie — mariages et événements signés Agence Silence" \
- "Photos et vidéos de mariages, d’événements d’entreprise et de soirées privées sonorisés par Agence Silence, à Toulouse, en Occitanie et partout en France." \
- "/galerie/" "galerie-01.svg"
+ "Photos et vidéos des mariages, événements d’entreprise et soirées privées animés par l’Agence Silence en Haute-Garonne, dans le Tarn et l’Aude." \
+ "/galerie/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Galerie|/galerie/')</script>"
 page_head_close
 cat <<'HTML'
@@ -19,40 +19,39 @@ cat <<'HTML'
     <p class="eyebrow">Galerie</p>
     <h1>Mariages et événements signés Agence Silence</h1>
     <p class="lead">
-      Des soirées réelles, photographiées par les photographes des mariés.
-      Aucune image de banque, aucun néon.
+      Mariages, événements d’entreprise et soirées privées, en région toulousaine et au-delà.
     </p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
+    <!-- Visuels provisoires : a remplacer par les photos de Leo (questionnaire,
+         section 13). Adapter les alt a ce que montre reellement chaque photo. -->
     <div class="gallery reveal">
-      <figure><img src="/assets/img/galerie-01.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Toulouse — ouverture de bal dans un domaine du Lauragais, Haute-Garonne"><figcaption>Mariage &middot; Lauragais, Haute-Garonne</figcaption></figure>
-      <figure><img src="/assets/img/galerie-02.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Gers — piste de danse pleine en fin de soirée près d’Auch"><figcaption>Mariage &middot; Auch, Gers</figcaption></figure>
-      <figure><img src="/assets/img/galerie-03.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Tarn — vin d’honneur sonorisé dans un château près d’Albi"><figcaption>Mariage &middot; Albi, Tarn</figcaption></figure>
-      <figure class="is-wide"><img src="/assets/img/galerie-09.svg" loading="lazy" decoding="async" width="1400" height="933" alt="DJ mariage Bordeaux — soirée dansante dans un chai du Médoc, Gironde"><figcaption>Mariage &middot; Médoc, Gironde</figcaption></figure>
-      <figure><img src="/assets/img/galerie-04.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ événementiel Toulouse — soirée de gala d’entreprise sonorisée par Agence Silence"><figcaption>Corporate &middot; Toulouse</figcaption></figure>
-      <figure><img src="/assets/img/galerie-05.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Montpellier — cérémonie laïque en extérieur dans un mas de l’Hérault"><figcaption>Mariage &middot; Pic Saint-Loup, Hérault</figcaption></figure>
-      <figure><img src="/assets/img/galerie-06.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Aude — fin de soirée dansante dans un domaine près de Carcassonne"><figcaption>Mariage &middot; Carcassonne, Aude</figcaption></figure>
-      <figure class="is-wide"><img src="/assets/img/galerie-10.svg" loading="lazy" decoding="async" width="1400" height="933" alt="DJ mariage Paris — soirée dansante dans une orangerie des Yvelines"><figcaption>Mariage &middot; Yvelines, Île-de-France</figcaption></figure>
-      <figure><img src="/assets/img/galerie-07.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ soirée privée Toulouse — anniversaire sonorisé dans une propriété de Haute-Garonne"><figcaption>Soirée privée &middot; Haute-Garonne</figcaption></figure>
-      <figure><img src="/assets/img/galerie-08.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Lot-et-Garonne — installation son et lumière avant l’arrivée des invités près d’Agen"><figcaption>Mariage &middot; Agen, Lot-et-Garonne</figcaption></figure>
+      <figure><img src="/assets/img/galerie-01.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Toulouse — ouverture de bal en Haute-Garonne"><figcaption>Mariage &middot; Haute-Garonne</figcaption></figure>
+      <figure><img src="/assets/img/galerie-02.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Castres — piste de danse pleine dans le Tarn"><figcaption>Mariage &middot; Tarn</figcaption></figure>
+      <figure><img src="/assets/img/galerie-03.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Ramonville — soirée dansante près de Toulouse"><figcaption>Mariage &middot; Ramonville</figcaption></figure>
+      <figure class="is-wide"><img src="/assets/img/galerie-09.svg" loading="lazy" decoding="async" width="1400" height="933" alt="DJ mariage Toulouse — piste de danse dans un domaine de Haute-Garonne"><figcaption>Mariage &middot; Toulouse</figcaption></figure>
+      <figure><img src="/assets/img/galerie-04.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ événementiel Toulouse — soirée de gala d’entreprise sonorisée par Agence Silence"><figcaption>Événement d’entreprise</figcaption></figure>
+      <figure><img src="/assets/img/galerie-05.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Toulouse — cérémonie laïque sonorisée"><figcaption>Cérémonie laïque</figcaption></figure>
+      <figure><img src="/assets/img/galerie-06.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Aude — fin de soirée dansante"><figcaption>Mariage &middot; Aude</figcaption></figure>
+      <figure class="is-wide"><img src="/assets/img/galerie-10.svg" loading="lazy" decoding="async" width="1400" height="933" alt="DJ mariage Castres — ouverture de bal avec fumée lourde"><figcaption>Ouverture de bal</figcaption></figure>
+      <figure><img src="/assets/img/galerie-07.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ soirée privée Toulouse — anniversaire sonorisé en Haute-Garonne"><figcaption>Soirée privée</figcaption></figure>
+      <figure><img src="/assets/img/galerie-08.svg" loading="lazy" decoding="async" width="900" height="1200" alt="DJ mariage Toulouse — photobooth vintage lors d’un mariage"><figcaption>Photobooth</figcaption></figure>
     </div>
-    <p class="form-note" style="margin-top:2.5rem">
-      Toutes les photographies sont publiées avec l’accord écrit des mariés et de leur photographe.
-    </p>
   </div>
 </section>
 
 <!-- ============================================================== VIDEOS
-     Pour ajouter une vidéo, remplacer ce bloc par une balise <video> locale :
-     <video controls preload="none" poster="/assets/img/galerie-09.svg" width="1400" height="788">
+     Leo dispose d'extraits de 20 s a 2 min en MP4 4K. Les reencoder en 1080p
+     (quelques Mo) avant de les ajouter ici, en balise <video> locale :
+     <video controls preload="none" poster="/assets/img/..." width="1920" height="1080">
        <source src="/assets/video/mariage-toulouse.mp4" type="video/mp4">
      </video>
-     Ne pas utiliser d’iframe YouTube : cela ferait chuter le score Lighthouse. -->
+     Pas d'iframe YouTube : score Lighthouse et politique de securite (CSP). -->
 HTML
-bande_cta "Vous vous projetez&nbsp;?" "Dites-nous la date, le lieu et le nombre d’invités. Nous vous répondons sous 24 heures ouvrées."
+bande_cta "Vous vous projetez&nbsp;?" "Dites-nous la date, le lieu et le nombre d’invités. Nous vous répondons sous 24 heures."
 page_close
 } | page_write "galerie/index.html"
 
@@ -60,42 +59,17 @@ page_close
 # =========================================================== TEMOIGNAGES ====
 {
 page_open \
- "Témoignages — avis des mariés sur Agence Silence, DJ Toulouse" \
- "Les avis des mariés et des entreprises sur les prestations d’Agence Silence : DJ mariage à Toulouse, en Occitanie et partout en France. Témoignages complets, publiés sur le site." \
- "/temoignages/" "galerie-02.svg"
+ "Avis des mariés — Agence Silence, DJ mariage Toulouse" \
+ "Les 8 avis des mariés sur l’Agence Silence, tous notés 5/5 sur Mariages.net : ambiance, piste pleine, préparation, photobooth. Reproduits en entier." \
+ "/temoignages/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Témoignages|/temoignages/')</script>"
 cat <<'HTML'
-<!-- =====================================================================
-     DONNEES STRUCTUREES AVIS — A ACTIVER UNIQUEMENT AVEC DE VRAIS AVIS
-
-     Les témoignages ci-dessous sont des exemples de mise en page.
-     Publier un balisage Review / AggregateRating sur de faux avis est une
-     violation des regles Google sur les donnees structurees, sanctionnee par
-     une action manuelle. Ne decommentez ce bloc qu'une fois les vrais avis
-     de Leo integres, et alignez les valeurs sur les avis reellement affiches.
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://agence-silence.fr/#organisation",
-  "name": "Agence Silence",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "63",
-    "bestRating": "5"
-  },
-  "review": [{
-    "@type": "Review",
-    "author": { "@type": "Person", "name": "Prenom N." },
-    "datePublished": "2025-06-21",
-    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-    "reviewBody": "Texte exact de l avis, recopie sans modification."
-  }]
-}
-</script>
-     ===================================================================== -->
+<!-- Pas de balisage Review / AggregateRating sur cette page, volontairement.
+     1. Les avis portent sur l'entreprise qui publie le site : Google n'affiche
+        pas d'etoiles pour ces avis « auto-publies » (LocalBusiness/Organization).
+     2. Ils proviennent de Mariages.net ; les consignes de Google demandent de
+        ne pas reprendre dans son balisage des avis collectes sur un autre site.
+     Les etoiles dans Google viendront de la fiche Google Business Profile. -->
 HTML
 page_head_close
 cat <<'HTML'
@@ -105,74 +79,122 @@ HTML
 breadcrumb "Témoignages|/temoignages/"
 cat <<'HTML'
     <p class="eyebrow">Témoignages</p>
-    <h1>Ce que disent les mariés et les entreprises</h1>
+    <h1>Les avis des mariés</h1>
     <p class="lead">
-      Des retours complets, publiés ici et non renvoyés vers une page externe.
-      Chaque témoignage précise le lieu et la date de l’événement.
+      Huit avis publiés sur Mariages.net, tous notés 5&nbsp;sur&nbsp;5. Reproduits en entier,
+      tels que leurs auteurs les ont écrits, avec leur accord.
     </p>
   </div>
 </section>
 
 <section class="section">
-  <div class="wrap">
-    <div class="grid grid--2">
-      <figure class="quote reveal">
+  <div class="wrap wrap--narrow">
+    <div class="grid" style="gap:1.5rem">
+
+      <figure class="quote quote--long reveal">
         <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Merci à l’agence pour cette prestation&nbsp;:)</p>
         <blockquote>
-          <p>Nous avions peur d’un DJ qui prenne le micro toutes les dix minutes. Léo n’a parlé que deux fois de la soirée, aux deux bons moments. Le reste du temps, il a simplement lu la salle. À 4 h du matin, il restait quarante personnes sur la piste.</p>
+          <p>Nous avons été très contents de la prestation pour notre mariage<br>
+          Léo est très réactif et à l’écoute.<br>
+          Mention spéciale à Laurie (azla) qui a mis le feu à la soirée<br>
+          Sans regret pour le choix de ce prestataire qui propose plusieurs options<br>
+          À recommander sans hésiter&nbsp;!</p>
         </blockquote>
-        <figcaption><strong>Camille &amp; Antoine</strong>Mariage &middot; Lauragais, Haute-Garonne &middot; Juin 2025</figcaption>
+        <figcaption><strong>Serbellone</strong>Mariage du 5 septembre 2026</figcaption>
       </figure>
 
-      <figure class="quote reveal">
+      <figure class="quote quote--long reveal">
         <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Super prestataire&nbsp;!</p>
         <blockquote>
-          <p>Notre domaine avait un limiteur sonore réputé impossible. Léo est venu le repérer un mois avant, a échangé avec le régisseur, et a calé son système en conséquence. Aucune coupure de toute la nuit, alors que le mariage précédent en avait eu quatre.</p>
+          <p>Nous avons fait appel à l’agence de Léo pour notre mariage, un succès&nbsp;! Très à l’écoute de nos gouts musicaux, Laurie a sû capter l’attention de nos invités du vin d’honneur à la soirée, dynamisant des moments clés de notre mariage. L’ambiance de la soirée était au rendez-vous, un grand MERCI à eux.</p>
         </blockquote>
-        <figcaption><strong>Léa &amp; Thomas</strong>Mariage &middot; Coteaux du nord toulousain &middot; Septembre 2025</figcaption>
+        <figcaption><strong>Mathilde</strong>Mariage du 27 juin 2026</figcaption>
       </figure>
 
-      <figure class="quote reveal">
+      <figure class="quote quote--long reveal">
         <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Mariage 23/05/2026</p>
         <blockquote>
-          <p>Mariage franco-britannique avec deux publics qui n’écoutent pas la même chose. Nous ne voyions pas comment ça pouvait fonctionner. Léo a construit la soirée par vagues, et personne n’a eu l’impression d’attendre son tour.</p>
+          <p>Nous avons beaucoup apprécié travailler avec Léo pour notre mariage. Professionnel et à l’écoute, les préparatifs se sont bien passés grâce à son accompagnement sur la partie DJ.</p>
+          <p>Nous avons eu le plaisir d’avoir Romain aux platines du vin d’honneur jusqu’au lever du soleil. Très discret et à l’écoute, nous avons passé la meilleure soirée de notre vie et c’est en partie grâce à ses qualités de DJ mais aussi sa flexibilité et sa gentillesse. C’est sans hésitation que nous solliciterons à nouveau l’agence Silence pour de futurs événements&nbsp;!</p>
+          <p>Emilie et Raphaël</p>
         </blockquote>
-        <figcaption><strong>Marie &amp; James</strong>Mariage &middot; Médoc, Gironde &middot; Août 2025</figcaption>
+        <figcaption><strong>Emilie</strong>Mariage du 23 mai 2026</figcaption>
       </figure>
 
-      <figure class="quote reveal">
+      <figure class="quote quote--long reveal">
         <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Léo, un allié précieux pour la réussite de votre mariage&nbsp;!</p>
         <blockquote>
-          <p>Nous faisons appel à l’Agence Silence pour notre soirée annuelle depuis trois ans. Devis clair, facture conforme, attestation d’assurance envoyée sans qu’on la redemande, et zéro incident technique sur trois éditions. Pour un service événementiel, c’est rare.</p>
+          <p>J’adore danser, donc le DJ était pour moi le choix de prestataire le plus critique pour mon mariage. Mais le talent de Léo ne s’arrête pas à la piste de danse. Il a été une pièce maîtresse de l’ensemble de notre mariage&nbsp;:</p>
+          <ul>
+            <li>Il a conseillé et rassuré nos témoins et amis intervenant lors de notre cérémonie laïque, avec beaucoup de bienveillance</li>
+            <li>Il a géré avec nos témoins le timing et le déroulé de l’ensemble de la journée</li>
+            <li>Il a fourni tout le matériel audio et vidéo pour les animations prévues par nos témoins. Il s’est aussi démené pour que le photobooth ne manque jamais de papier, malgré un grand nombre d’impressions…</li>
+            <li>Et bien sûr, il nous a assuré une piste de danse pleine du début à la fin, faisant danser toutes les générations tout en s’adaptant à nos goûts.</li>
+          </ul>
+          <p>Et tout cela avec un grand professionnalisme, mais aussi tout en gentillesse et sourire, c’était un vrai plaisir&nbsp;! Tous nos invités étaient ravis et nous les premiers&nbsp;!</p>
+          <p>Bref, je ne peux que recommander Léo et, si un jour je dois à nouveau faire appel à un DJ, j’espèrerai très fort qu’il soit disponible&nbsp;!</p>
         </blockquote>
-        <figcaption><strong>Sophie D.</strong>Responsable événementiel &middot; Groupe toulousain &middot; Décembre 2025</figcaption>
+        <figcaption><strong>Sabrina</strong>Mariage du 15 mai 2026</figcaption>
       </figure>
 
-      <figure class="quote reveal">
+      <figure class="quote quote--long reveal">
         <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Une ambiance de folie&nbsp;!</p>
         <blockquote>
-          <p>Mariage entièrement en extérieur dans l’Hérault, avec un vent qui s’est levé vers 21 h. Léo avait prévu le repli, le matériel était bâché, et le basculement s’est fait sans que les invités ne s’en rendent compte.</p>
+          <p>Grâce à Léo et Laurie nous avons eu une ambiance de fou pour notre soirée de mariage.<br>
+          La piste de danse est restée full jusqu’au petit matin, avec des convives plus déchainés les uns que les autres.<br>
+          Notre choix d’avoir pris Léo et son équipe pour ambiancer notre soirée de mariage à clairement été l’un des meilleurs choix.<br>
+          Du photobooth au téléphone d’or en passant par la musique, tout a été parfait.<br>
+          Merci pour tout Léo et Laurie, on espère avoir l’occasion de refaire appel à vous pour d’autres événements&nbsp;!</p>
+          <p>Charline et Gilles.</p>
         </blockquote>
-        <figcaption><strong>Chloé &amp; Nicolas</strong>Mariage &middot; Pic Saint-Loup, Hérault &middot; Juillet 2025</figcaption>
+        <figcaption><strong>Charline</strong>Mariage du 18 octobre 2025</figcaption>
       </figure>
 
-      <figure class="quote reveal">
+      <figure class="quote quote--long reveal">
         <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Un DJ au top</p>
         <blockquote>
-          <p>Pour les 70 ans de mon père, je voulais autre chose qu’une enceinte posée dans un coin. Le repérage du jardin a servi&nbsp;: le son portait partout sans jamais gêner les conversations à table.</p>
+          <p>Nous avons engagé Léo comme DJ pour notre mariage le 13/09/25.<br>
+          Nous recommandons Léo, il est très pro et fait un super travail.<br>
+          Le choix du DJ est très important pour l’ambiance d’un mariage et nous avons fait le bon choix.<br>
+          Merci pour ta gentillesse, ton écoute et ton accompagnement depuis la cérémonie laïque jusqu’à la soirée.<br>
+          Nous avons dansé jusqu’à l’heure de fermeture sans arrêt&nbsp;! Une soirée inoubliable grâce à Léo.</p>
         </blockquote>
-        <figcaption><strong>Julien M.</strong>Soirée privée &middot; Haute-Garonne &middot; Mai 2025</figcaption>
+        <figcaption><strong>Audrey</strong>Mariage du 13 septembre 2025</figcaption>
       </figure>
+
+      <figure class="quote quote--long reveal">
+        <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Merci&nbsp;!!!!</p>
+        <blockquote>
+          <p>Léo, merci infiniment pour ta disponibilité, ton écoute, ta gentillesse et ta patience tout au long de la préparation. Et un immense merci à Laurie, présente le jour J, qui a littéralement mis le feu à la piste&nbsp;! Toujours souriante, à l’écoute et pleine d’énergie, elle a réussi à me faire danser sans m’arrêter pendant 4 heures. Tout était incroyable&nbsp;! Je voulais absolument éviter les DJs qui enchaînent animations lourdes et musiques banales&nbsp;: je cherchais un vrai DJ capable de créer une ambiance et de faire danser tout le monde. Pari réussi&nbsp;! Laurie a su adapter les styles musicaux selon les invités présents sur la piste, et le résultat a dépassé toutes nos attentes. Nos proches n’arrivaient plus à quitter la piste de danse tant l’ambiance était parfaite. Un souvenir inoubliable, merci encore à vous deux&nbsp;!</p>
+        </blockquote>
+        <figcaption><strong>Margaux</strong>Mariage du 6 septembre 2025</figcaption>
+      </figure>
+
+      <figure class="quote quote--long reveal">
+        <p class="stars" aria-label="Note de 5 sur 5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="quote__titre">Mémorable&nbsp;!</p>
+        <blockquote>
+          <p>Léo est une personne agréable, souriant et disponible des le premier contact. Il est extrement peofessionnel et maîtrise le déroulement des mariages à la perfection. Il a su gerer toutes nos attentes et surtout tout mon stress et mes angoisses ce qui n’était pas gagné. Il propose une offre complète… et un large panel d’option qui nous a ravi et nous a permis de ne pas faire appel à d’autre prestataires.. Comme le livre d’or audio et le photobooth. Son photobooth sort de l’ordinaire, se fond dans le décor amenant une touche personnalisée, vintage et tres classe. Le matériel est haut de gamme, le son est parfait, le jeu de lumière et création d’ambiance etait exactement comme nous l’avons imaginé. Pour l’ouverture de bal nous avons eu un vrai tapis de fumée au sol. Nous avons déjà été à des mariages où la fumée au sol etait succinct mais avec Léo nous avons compris pourquoi. Il a demandé à obtenir les conditions favorables avant de lancer l’ouverture de bal afin qu’on puisse avoir cet effet de fumée à la perfection. Ça en dit long sur son professionnalisme jusqu’au moindre détails. Il a été présent de la cérémonie laïque à la fin de soirée. A la ceremonie laique il fut d’une aide précieuse pour notre officiante tant pour le déroulement, le matériel, la musique mais aussi par sa qualité professionnelle et humaine pour aider et gerer les imprévus qui ont déstabiliser notre officiante (amie)</p>
+          <p>Il a ete présent pour les temoins et surtout de précieux conseils pour nos temoins dans leur organisation du déroulé de leur animations. N’oublions pas que c’est une tache délicate pour les temoins et grâce à Leo, nos temoins sont passés pour des experts d’animation de mariage&#128521; Leo est très impliqué dans son rôle. Il a une écoute attentive à la demande des mariés et respecte parfaitement les souhaits des mariés sur le déroulé et le style de musique pour la soirée. Léo a grandement participer à la réussite de notre mariage. Et je l’en remercie encore énormément car j’avais beaucoup d’appréhension sur l’ambiance. Léo est un professionnel hors pair qui gère tout. Et est doté d’un œil d’expert sur toute la journée du mariage.</p>
+        </blockquote>
+        <figcaption><strong>Florine</strong>Mariage du 23 août 2025</figcaption>
+      </figure>
+
     </div>
-
-    <p class="form-note" style="margin-top:3rem">
-      Ces témoignages sont des exemples de mise en page, en attente des avis réels de Léo.
-      Ils devront être remplacés par les avis authentiques avant la mise en ligne.
+    <p class="form-note" style="margin-top:2.5rem">
+      Avis publiés sur Mariages.net et reproduits sans modification, avec l’accord de leurs auteurs.
     </p>
   </div>
 </section>
 HTML
-bande_cta "Le prochain témoignage sera peut-être le vôtre" "Commencez par la question la plus simple : votre date est-elle libre&nbsp;?"
+bande_cta "Le prochain avis sera peut-être le vôtre" "Commencez par la question la plus simple&nbsp;: votre date est-elle libre&nbsp;?"
 page_close
 } | page_write "temoignages/index.html"
 
@@ -180,9 +202,9 @@ page_close
 # ====================================================== ZONE INTERVENTION ====
 {
 page_open \
- "Zone d’intervention — DJ Toulouse, Occitanie, France" \
- "Agence Silence intervient à Toulouse, en Haute-Garonne et dans toute l’Occitanie, ainsi que partout en France et à l’étranger sur demande. Déplacement chiffré dès le devis." \
- "/zone-intervention/" "ville-toulouse.svg"
+ "Zone d’intervention — DJ Toulouse, Tarn, Aude" \
+ "L’Agence Silence intervient en Haute-Garonne, dans le Tarn et l’Aude depuis Lauzerville, près de Toulouse. Déplacement gratuit dans 50 km, puis 0,60 € du kilomètre." \
+ "/zone-intervention/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Zone d’intervention|/zone-intervention/')</script>"
 page_head_close
 cat <<'HTML'
@@ -192,10 +214,10 @@ HTML
 breadcrumb "Zone d’intervention|/zone-intervention/"
 cat <<'HTML'
     <p class="eyebrow">Zone d’intervention</p>
-    <h1>DJ à Toulouse, en Occitanie et dans toute la France</h1>
+    <h1>DJ à Toulouse, dans le Tarn, l’Aude et au-delà</h1>
     <p class="lead">
-      L’ancrage est toulousain, la couverture est nationale. Le déplacement est
-      chiffré dès le premier devis, jamais ajouté après coup.
+      L’agence est installée à Lauzerville, à côté de Toulouse. Le déplacement est gratuit
+      dans un rayon de 50&nbsp;km, et indiqué dès le devis au-delà.
     </p>
   </div>
 </section>
@@ -205,71 +227,60 @@ cat <<'HTML'
     <div class="zone-grid">
       <div class="reveal">
         <p class="eyebrow">Le cœur d’activité</p>
-        <h2>Toulouse et les départements voisins</h2>
+        <h2>Haute-Garonne, Tarn et Aude</h2>
         <p>
-          Environ trois quarts des mariages de la saison se déroulent à moins de deux heures
-          de Toulouse. Sur ce périmètre, le repérage du lieu se fait sans supplément et
-          souvent dès la signature du devis.
+          Les mariages de l’agence se déroulent principalement en Haute-Garonne, dans le
+          Tarn et dans l’Aude. Les trois secteurs qui génèrent le plus de demandes&nbsp;:
+          Toulouse, Castres et Ramonville.
         </p>
-        <h3 style="font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);margin-top:2.5rem">Sans frais de déplacement — 50 km autour de Toulouse</h3>
-        <ul class="city-list" style="margin-top:1.25rem">
-          <li><span>Toulouse</span></li><li><span>Blagnac</span></li>
-          <li><span>Colomiers</span></li><li><span>Tournefeuille</span></li>
-          <li><span>Balma</span></li><li><span>Muret</span></li>
-          <li><span>Castanet-Tolosan</span></li><li><span>Ramonville</span></li>
-          <li><span>Grenade</span></li><li><span>Villefranche-de-Lauragais</span></li>
+        <h3 style="font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);margin-top:2.5rem">Pages dédiées</h3>
+        <ul class="city-list" style="margin-top:1.25rem;columns:1">
+          <li><a href="/dj-mariage-toulouse/">DJ mariage Toulouse et Haute-Garonne</a></li>
+          <li><a href="/dj-mariage-castres/">DJ mariage Castres et Tarn</a></li>
         </ul>
-        <h3 style="font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);margin-top:2.5rem">Occitanie et Sud-Ouest</h3>
-        <ul class="city-list" style="margin-top:1.25rem">
-          <li><span>Albi &middot; Tarn</span></li><li><span>Castres &middot; Tarn</span></li>
-          <li><span>Auch &middot; Gers</span></li><li><span>Condom &middot; Gers</span></li>
-          <li><span>Carcassonne &middot; Aude</span></li><li><span>Narbonne &middot; Aude</span></li>
-          <li><span>Agen &middot; Lot-et-Garonne</span></li><li><span>Montauban &middot; Tarn-et-Garonne</span></li>
-          <li><span>Cahors &middot; Lot</span></li><li><span>Rodez &middot; Aveyron</span></li>
-          <li><span>Foix &middot; Ariège</span></li><li><span>Tarbes &middot; Hautes-Pyrénées</span></li>
-          <li><span>Pau &middot; Pyrénées-Atlantiques</span></li><li><span>Perpignan &middot; Pyrénées-Orientales</span></li>
+        <h3 style="font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);margin-top:2.5rem">Lieux où l’agence joue régulièrement</h3>
+        <ul class="city-list" style="margin-top:1.25rem;columns:1">
+          <li><span>Domaine de Preissac &middot; Castelmaurou</span></li>
+          <li><span>Domaine de Montjoie &middot; Ramonville-Saint-Agne</span></li>
+          <li><span>Domaine de la Baronnie</span></li>
         </ul>
       </div>
 
       <div class="reveal">
         <p class="eyebrow">Au-delà</p>
-        <h2>Partout en France</h2>
+        <h2>Plus loin, et à l’étranger</h2>
         <p>
-          Léo se déplace toute l’année sur l’ensemble du territoire, et à l’étranger sur
-          demande (Espagne, Italie, Portugal notamment). Au-delà de deux heures de route,
-          il arrive systématiquement la veille&nbsp;: aucune prestation ne démarre après
-          une longue conduite.
+          L’agence se déplace aussi hors de la région, et à l’étranger&nbsp;: Séville,
+          Budapest, Tenerife et Singapour, notamment pour des événements d’entreprise.
         </p>
-        <h3 style="font-family:var(--sans);font-size:.9rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40);margin-top:2.5rem">Pages dédiées</h3>
-        <ul class="city-list" style="margin-top:1.25rem;columns:1">
-          <li><a href="/dj-mariage-toulouse/">DJ mariage Toulouse</a></li>
-          <li><a href="/dj-mariage-bordeaux/">DJ mariage Bordeaux</a></li>
-          <li><a href="/dj-mariage-montpellier/">DJ mariage Montpellier</a></li>
-          <li><a href="/dj-mariage-paris/">DJ mariage Paris</a></li>
-        </ul>
+        <p>
+          Au-delà d’une heure vingt de route, le DJ dort à proximité la veille. Vous n’avez
+          pas à prévoir de nuit sur le lieu de réception.
+        </p>
 
         <div class="card" style="margin-top:2.5rem;background:var(--ecru-deep);border-color:var(--line)">
           <h3>Comment le déplacement est facturé</h3>
-          <p><strong>0 à 50 km de Toulouse :</strong> inclus dans la prestation.</p>
-          <p><strong>50 à 200 km :</strong> une ligne « déplacement » calculée sur le trajet réel.</p>
-          <p><strong>Au-delà de 200 km :</strong> forfait unique couvrant trajet, transport du matériel et hébergement de la veille. Montant fixé au devis, sans révision.</p>
+          <p><strong>Jusqu’à 50&nbsp;km&nbsp;:</strong> gratuit.</p>
+          <p><strong>Au-delà&nbsp;:</strong> 0,60&nbsp;€ du kilomètre, indiqué dans le devis.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 HTML
-bande_cta "Où se déroule votre événement&nbsp;?" "Quel que soit le département, commencez par vérifier la disponibilité de votre date."
+bande_cta "Où se déroule votre événement&nbsp;?" "Quel que soit le lieu, commencez par vérifier la disponibilité de votre date."
 page_close
 } | page_write "zone-intervention/index.html"
 
 
 # =================================================================== FAQ ====
+# Les questions reprennent celles que les clients posent reellement a Leo
+# (questionnaire, section 8), avec ses reponses.
 {
 page_open \
- "FAQ — tarifs, matériel, déplacement et réservation d’un DJ" \
- "Toutes les réponses avant de réserver un DJ : tarifs d’un DJ de mariage à Toulouse, délai de réservation, matériel, déplacement, SACEM, acompte et annulation." \
- "/faq/" "prestation-mariage.svg"
+ "FAQ — tarifs, déroulé, matériel et déplacement d’un DJ" \
+ "Les questions que l’on pose vraiment à l’Agence Silence : prix d’un DJ de mariage, frais de déplacement, heure de fin, lumière, micros, rallonges, réservation et annulation." \
+ "/faq/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'FAQ|/faq/')</script>"
 cat <<'HTML'
 <script type="application/ld+json">
@@ -277,26 +288,40 @@ cat <<'HTML'
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Combien coûte un DJ de mariage à Toulouse ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Une prestation de mariage complète démarre autour de 1 200 € TTC et se situe le plus souvent entre 1 500 € et 2 500 € selon la durée, le nombre d’espaces à sonoriser et l’éclairage souhaité. Le devis est détaillé ligne par ligne, déplacement inclus." } },
-    { "@type": "Question", "name": "Combien de temps à l’avance faut-il réserver un DJ de mariage ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pour un samedi entre juin et septembre, il faut compter douze à dix-huit mois. Les dates de haute saison sont réservées très tôt. Hors saison, trois à six mois suffisent généralement." } },
-    { "@type": "Question", "name": "Le déplacement hors de Toulouse est-il facturé ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Le déplacement est inclus dans un rayon de 50 km autour de Toulouse. Entre 50 et 200 km, il apparaît comme une ligne distincte calculée sur le trajet réel. Au-delà de 200 km, un forfait unique couvre le trajet, le transport du matériel et l’hébergement de la veille." } },
-    { "@type": "Question", "name": "Quel matériel de sonorisation est utilisé ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un système d’enceintes actives dimensionné selon la salle, avec caissons de basses dédiés, complété par un éclairage LED architectural. Les éléments critiques — contrôleur, table de mixage, ordinateur, câblage — sont doublés sur chaque prestation." } },
-    { "@type": "Question", "name": "Que se passe-t-il en cas de panne de matériel ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un doublon des éléments critiques est présent sur chaque prestation. Le basculement prend moins de deux minutes et reste inaudible pour les invités." } },
-    { "@type": "Question", "name": "Faut-il déclarer la SACEM pour un mariage ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Oui, la diffusion de musique lors d’un événement privé avec prestataire fait l’objet d’une déclaration SACEM. Elle incombe à l’organisateur de l’événement. Nous vous indiquons la procédure et les éléments à fournir." } },
-    { "@type": "Question", "name": "Quel acompte faut-il verser pour réserver une date ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un acompte de 30 % à la signature du contrat bloque définitivement la date. Le solde est réglé le jour de l’événement pour les particuliers, à trente jours pour les entreprises." } },
-    { "@type": "Question", "name": "Peut-on choisir les musiques du mariage ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Oui. Une liste de morceaux souhaités et une liste de morceaux à éviter sont construites avec vous lors du rendez-vous de préparation. Les demandes des invités le jour J sont acceptées si elles servent la soirée." } },
-    { "@type": "Question", "name": "Le DJ prend-il le micro pendant la soirée ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Uniquement aux moments convenus avec vous : annonce de l’entrée des mariés, ouverture de bal, pièce montée. Agence Silence n’assure pas de rôle d’animateur." } },
-    { "@type": "Question", "name": "Que se passe-t-il en cas d’annulation ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Les conditions figurent au contrat. En cas de report pour cause de force majeure, la date est transférée sans frais sous réserve de disponibilité, et l’acompte reste acquis à la nouvelle date." } }
+    { "@type": "Question", "name": "Combien coûte un DJ de mariage ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le pack mariage (cocktail, dîner et soirée, avec son, lumière, micros, vidéoprojecteur et écran) est à 1 600 €, hors déplacement. Le prix varie selon la durée, la saison et le jour. TVA non applicable." } },
+    { "@type": "Question", "name": "Combien coûte un DJ pour un anniversaire ou une entreprise ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un anniversaire de 20 h à 2 h est à partir de 600 €. Une soirée d’entreprise est à partir de 500 €. Le pack son et lumière est toujours complet." } },
+    { "@type": "Question", "name": "Y a-t-il des frais de déplacement ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Le déplacement est gratuit dans un rayon de 50 km. Au-delà, il est facturé 0,60 € du kilomètre et figure dans le devis." } },
+    { "@type": "Question", "name": "Combien de temps à l’avance faut-il réserver ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Idéalement un à deux ans à l’avance, les dates de haute saison partant très vite." } },
+    { "@type": "Question", "name": "Quel acompte faut-il verser ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Un acompte de 30 % bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés." } },
+    { "@type": "Question", "name": "Que se passe-t-il en cas d’annulation ou de report ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif." } },
+    { "@type": "Question", "name": "À quelle heure se termine la prestation ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "À 4 h 30 du matin. Pour prolonger, des heures supplémentaires sont possibles et facturées." } },
+    { "@type": "Question", "name": "Quel style de musique jouez-vous ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "L’agence est spécialisée dans l’événementiel et joue tous les styles, à l’exception des musiques façon Patrick Sébastien." } },
+    { "@type": "Question", "name": "Pouvez-vous mixer en extérieur ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, avec une sonorisation conçue pour l’extérieur." } },
+    { "@type": "Question", "name": "Y a-t-il un jeu de lumière ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, dans tous les devis : huit projecteurs PAR LED. Un éclairage plus dynamique, avec lyres, est disponible en option." } },
+    { "@type": "Question", "name": "Combien de micros sont fournis ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Deux micros sans fil." } },
+    { "@type": "Question", "name": "Faut-il prévoir des rallonges ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non. Rallonges et multiprises sont comprises dans la prestation ; une prise 16 A suffit." } },
+    { "@type": "Question", "name": "Le DJ vient-il seul ou accompagné ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Seul : un DJ est présent pour votre soirée." } },
+    { "@type": "Question", "name": "Faut-il prévoir une nuit sur place pour le DJ ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Non, il n’y a jamais de nuit à prévoir sur le lieu de réception." } },
+    { "@type": "Question", "name": "Le DJ a-t-il des allergies alimentaires ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Aucune." } },
+    { "@type": "Question", "name": "Assurez-vous la cérémonie laïque ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, en supplément du pack mariage." } },
+    { "@type": "Question", "name": "Intervenez-vous à l’étranger ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui. L’agence a notamment joué à Séville, Budapest, Tenerife et Singapour." } }
   ]
 }
 </script>
@@ -309,10 +334,10 @@ HTML
 breadcrumb "FAQ|/faq/"
 cat <<'HTML'
     <p class="eyebrow">Questions fréquentes</p>
-    <h1>Tout ce qu’il faut savoir avant de réserver un DJ</h1>
+    <h1>Les questions que l’on nous pose vraiment</h1>
     <p class="lead">
-      Tarifs, délais, matériel, déplacement, SACEM et conditions d’annulation.
-      Si votre question n’y figure pas, elle mérite un appel.
+      Tarifs, déroulé, matériel et déplacement. La première question, elle, est toujours
+      la même&nbsp;: votre date est-elle libre&nbsp;?
     </p>
   </div>
 </section>
@@ -321,39 +346,45 @@ cat <<'HTML'
   <div class="wrap">
     <h2 style="margin-bottom:1.75rem">Tarifs et réservation</h2>
     <div class="faq reveal" style="margin-bottom:4rem">
-      <details><summary>Combien coûte un DJ de mariage à Toulouse&nbsp;?</summary><div class="faq__answer"><p>Une prestation de mariage complète démarre autour de 1&nbsp;200&nbsp;€ TTC et se situe le plus souvent entre 1&nbsp;500&nbsp;€ et 2&nbsp;500&nbsp;€ selon la durée, le nombre d’espaces à sonoriser et l’éclairage souhaité.</p><p>Le devis est détaillé ligne par ligne, déplacement inclus. Le montant du devis est celui de la facture&nbsp;: il n’y a pas d’option ajoutée en cours de route.</p></div></details>
-      <details><summary>Combien de temps à l’avance faut-il réserver&nbsp;?</summary><div class="faq__answer"><p>Pour un samedi entre juin et septembre, comptez douze à dix-huit mois. Les dates de haute saison partent très tôt, souvent avant même que le lieu de réception ne soit confirmé.</p><p>Hors saison, trois à six mois suffisent généralement. Une demande à trois semaines n’est jamais absurde&nbsp;: il arrive qu’une date se libère.</p></div></details>
-      <details><summary>Quel acompte faut-il verser&nbsp;?</summary><div class="faq__answer"><p>Un acompte de 30&nbsp;% à la signature du contrat bloque définitivement la date. Le solde est réglé le jour de l’événement pour les particuliers, à trente jours après l’événement pour les entreprises.</p></div></details>
-      <details><summary>Que se passe-t-il en cas d’annulation ou de report&nbsp;?</summary><div class="faq__answer"><p>Les conditions figurent noir sur blanc au contrat. En cas de report pour cause de force majeure, la date est transférée sans frais sous réserve de disponibilité, et l’acompte reste acquis à la nouvelle date.</p></div></details>
+      <details><summary>Combien coûte un DJ de mariage&nbsp;?</summary><div class="faq__answer"><p>Le pack mariage — cocktail, dîner et soirée, avec son, lumière, micros, vidéoprojecteur et écran — est à 1&nbsp;600&nbsp;€, hors déplacement. Le prix varie selon la durée, la saison et le jour.</p><p>TVA non applicable, article 293&nbsp;B du CGI. Les tarifs des options figurent dans la brochure envoyée avec le devis. <a href="/prestations/dj-mariage/">Voir le pack mariage</a></p></div></details>
+      <details><summary>Et pour un anniversaire ou une entreprise&nbsp;?</summary><div class="faq__answer"><p>Un anniversaire de 20&nbsp;h à 2&nbsp;h est à partir de 600&nbsp;€. Une soirée d’entreprise est à partir de 500&nbsp;€. Le pack son et lumière est toujours complet.</p></div></details>
+      <details><summary>Y a-t-il des frais de déplacement&nbsp;?</summary><div class="faq__answer"><p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre et figure dans le devis. <a href="/zone-intervention/">Voir la zone d’intervention</a></p></div></details>
+      <details><summary>Combien de temps à l’avance faut-il réserver&nbsp;?</summary><div class="faq__answer"><p>Idéalement un à deux ans à l’avance&nbsp;: les dates de haute saison partent très vite.</p></div></details>
+      <details><summary>Quel acompte faut-il verser&nbsp;?</summary><div class="faq__answer"><p>Un acompte de 30&nbsp;% bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p></div></details>
+      <details><summary>Que se passe-t-il en cas d’annulation ou de report&nbsp;?</summary><div class="faq__answer"><p>En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif.</p></div></details>
     </div>
 
-    <h2 style="margin-bottom:1.75rem">Matériel et technique</h2>
+    <h2 style="margin-bottom:1.75rem">Le déroulé et la musique</h2>
     <div class="faq reveal" style="margin-bottom:4rem">
-      <details><summary>Quel matériel de sonorisation est utilisé&nbsp;?</summary><div class="faq__answer"><p>Un système d’enceintes actives dimensionné selon la salle — de deux à six points de diffusion — avec caissons de basses dédiés, et un éclairage LED architectural qui met en valeur le lieu.</p><p>Aucun laser ni stroboscope, sauf demande explicite de votre part.</p></div></details>
-      <details><summary>Que se passe-t-il si le matériel tombe en panne&nbsp;?</summary><div class="faq__answer"><p>Les éléments critiques — contrôleur, table de mixage, ordinateur, alimentation, câblage — sont doublés sur chaque prestation, sans supplément. Le basculement prend moins de deux minutes et reste inaudible pour vos invités.</p></div></details>
-      <details><summary>Notre lieu a un limiteur sonore, est-ce un problème&nbsp;?</summary><div class="faq__answer"><p>Non, à condition de le savoir en amont. Nous relevons le modèle et le seuil lors du repérage, puis calibrons le système en conséquence. Un limiteur bien anticipé ne coupe jamais.</p></div></details>
-      <details><summary>Faut-il prévoir une alimentation électrique particulière&nbsp;?</summary><div class="faq__answer"><p>Une simple prise 16&nbsp;A dédiée suffit dans la grande majorité des cas. Pour les lieux atypiques — grange, jardin, propriété isolée — le point est fait au repérage, avec le loueur de groupe électrogène si nécessaire.</p></div></details>
+      <details><summary>À quelle heure se termine la prestation&nbsp;?</summary><div class="faq__answer"><p>À 4&nbsp;h&nbsp;30 du matin. Pour prolonger, des heures supplémentaires sont possibles et facturées.</p></div></details>
+      <details><summary>Quel style de musique jouez-vous&nbsp;?</summary><div class="faq__answer"><p>L’agence est spécialisée dans l’événementiel&nbsp;: elle joue tous les styles, à l’exception des musiques façon Patrick Sébastien.</p></div></details>
+      <details><summary>Peut-on choisir les musiques&nbsp;?</summary><div class="faq__answer"><p>Oui. Un questionnaire complet sert à cerner vos goûts, et vos playlists sont les bienvenues. Le jour J, les demandes des invités sont acceptées.</p></div></details>
+      <details><summary>Le DJ prend-il le micro&nbsp;?</summary><div class="faq__answer"><p>Oui, pour les annonces de la soirée.</p></div></details>
+      <details><summary>Assurez-vous la cérémonie laïque&nbsp;?</summary><div class="faq__answer"><p>Oui, en supplément du pack mariage. <a href="/prestations/options-mariage/">Voir les options</a></p></div></details>
+      <details><summary>Pouvez-vous mixer en extérieur&nbsp;?</summary><div class="faq__answer"><p>Oui, avec une sonorisation conçue pour l’extérieur.</p></div></details>
     </div>
 
-    <h2 style="margin-bottom:1.75rem">Déroulé et musique</h2>
+    <h2 style="margin-bottom:1.75rem">Matériel et logistique</h2>
     <div class="faq reveal" style="margin-bottom:4rem">
-      <details><summary>Peut-on choisir les musiques&nbsp;?</summary><div class="faq__answer"><p>Oui. Une liste de morceaux souhaités et — tout aussi important — une liste de morceaux à éviter sont construites avec vous lors du rendez-vous de préparation.</p><p>Les demandes des invités le jour J sont acceptées quand elles servent la soirée. C’est le rôle du DJ d’arbitrer.</p></div></details>
-      <details><summary>Le DJ prend-il le micro&nbsp;?</summary><div class="faq__answer"><p>Uniquement aux moments convenus avec vous&nbsp;: annonce de l’entrée des mariés, ouverture de bal, pièce montée. Agence Silence n’assure pas de rôle d’animateur, et n’intervient jamais entre deux morceaux.</p></div></details>
-      <details><summary>Jusqu’à quelle heure la soirée peut-elle durer&nbsp;?</summary><div class="faq__answer"><p>Cela dépend de votre lieu et de l’arrêté municipal applicable. La plupart des domaines autorisent la musique amplifiée jusqu’à 3&nbsp;h ou 4&nbsp;h. L’heure limite figure au devis.</p></div></details>
-      <details><summary>Assurez-vous la cérémonie laïque&nbsp;?</summary><div class="faq__answer"><p>Oui, elle est incluse dans la formule Journée&nbsp;: sonorisation en extérieur, micros HF pour l’officiant et les témoins, entrées et sorties musicales calées au signal.</p></div></details>
+      <details><summary>Y a-t-il un jeu de lumière&nbsp;?</summary><div class="faq__answer"><p>Oui, dans tous les devis&nbsp;: huit projecteurs PAR LED. Un éclairage plus dynamique, avec lyres, est disponible en option.</p></div></details>
+      <details><summary>Combien de micros sont fournis&nbsp;?</summary><div class="faq__answer"><p>Deux micros sans fil.</p></div></details>
+      <details><summary>Faut-il prévoir des rallonges&nbsp;?</summary><div class="faq__answer"><p>Non. Rallonges et multiprises sont comprises dans la prestation&nbsp;: une prise 16&nbsp;A suffit, il n’y a rien à prévoir.</p></div></details>
+      <details><summary>Notre salle a un limiteur de son, est-ce un problème&nbsp;?</summary><div class="faq__answer"><p>Non&nbsp;: la limite de décibels de la salle est respectée.</p></div></details>
+      <details><summary>Le DJ vient-il seul ou accompagné&nbsp;?</summary><div class="faq__answer"><p>Seul&nbsp;: un DJ est présent pour votre soirée.</p></div></details>
+      <details><summary>Faut-il prévoir une nuit sur place pour le DJ&nbsp;?</summary><div class="faq__answer"><p>Non, il n’y a jamais de nuit à prévoir sur le lieu de réception.</p></div></details>
+      <details><summary>Le DJ a-t-il des allergies alimentaires&nbsp;?</summary><div class="faq__answer"><p>Aucune.</p></div></details>
+      <details><summary>Le matériel est-il assuré&nbsp;?</summary><div class="faq__answer"><p>Oui. L’attestation d’assurance est fournie sur demande.</p></div></details>
     </div>
 
-    <h2 style="margin-bottom:1.75rem">Déplacement et administratif</h2>
+    <h2 style="margin-bottom:1.75rem">Au-delà de Toulouse</h2>
     <div class="faq reveal">
-      <details><summary>Le déplacement hors de Toulouse est-il facturé&nbsp;?</summary><div class="faq__answer"><p>Il est inclus dans un rayon de 50&nbsp;km autour de Toulouse. Entre 50 et 200&nbsp;km, il apparaît comme une ligne distincte du devis, calculée sur le trajet réel. Au-delà, un forfait unique couvre trajet, transport du matériel et hébergement de la veille.</p><p><a href="/zone-intervention/">Voir la zone d’intervention détaillée</a></p></div></details>
-      <details><summary>Intervenez-vous à l’étranger&nbsp;?</summary><div class="faq__answer"><p>Oui, sur demande, principalement en Espagne, en Italie et au Portugal. Le devis intègre alors le transport du matériel et les contraintes douanières éventuelles.</p></div></details>
-      <details><summary>Faut-il déclarer la SACEM&nbsp;?</summary><div class="faq__answer"><p>Oui. La diffusion de musique lors d’un événement privé avec prestataire fait l’objet d’une déclaration SACEM, qui incombe à l’organisateur. Nous vous indiquons la procédure et les éléments à fournir.</p></div></details>
-      <details><summary>Êtes-vous assuré&nbsp;?</summary><div class="faq__answer"><p>Oui, responsabilité civile professionnelle. L’attestation est fournie sur simple demande&nbsp;: la plupart des domaines et des lieux de réception l’exigent avant votre événement.</p></div></details>
+      <details><summary>Intervenez-vous à l’étranger&nbsp;?</summary><div class="faq__answer"><p>Oui. L’agence a notamment joué à Séville, Budapest, Tenerife et Singapour.</p></div></details>
+      <details><summary>Parlez-vous anglais&nbsp;?</summary><div class="faq__answer"><p>Oui, Léo parle anglais&nbsp;: pratique pour les mariages franco-étrangers.</p></div></details>
     </div>
   </div>
 </section>
 HTML
-bande_cta "Une question qui n’est pas ici&nbsp;?" "Posez-la directement. Léo répond lui-même, sous 24 heures ouvrées."
+bande_cta "Une question qui n’est pas ici&nbsp;?" "Posez-la directement&nbsp;: réponse sous 24 heures, week-end compris."
 page_close
 } | page_write "faq/index.html"
 
@@ -362,8 +393,8 @@ page_close
 {
 page_open \
  "Contact &amp; devis — DJ mariage Toulouse, Agence Silence" \
- "Vérifiez la disponibilité de votre date et demandez un devis à Agence Silence, DJ mariage et événementiel à Toulouse. Réponse sous 24 heures ouvrées." \
- "/contact/" "prestation-mariage.svg"
+ "Vérifiez la disponibilité de votre date et demandez un devis à l’Agence Silence. Réponse sous 24 heures, week-end compris. Tél. 06.20.25.66.63." \
+ "/contact/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Contact|/contact/')</script>"
 cat <<JSON
 <script type="application/ld+json">
@@ -399,8 +430,8 @@ cat <<'HTML'
     <p class="eyebrow">Contact</p>
     <h1>Vérifier ma date et demander un devis</h1>
     <p class="lead">
-      Une réponse sous 24 heures ouvrées, avec la disponibilité de votre date
-      et une proposition chiffrée si le créneau est libre.
+      Réponse sous 24 heures, week-end compris, avec la disponibilité de votre date
+      et une proposition chiffrée.
     </p>
   </div>
 </section>
@@ -411,13 +442,14 @@ cat <<'HTML'
       <div class="reveal">
         <h2 style="margin-bottom:2rem">Votre demande</h2>
 
-        <!-- FORMULAIRE
-             Remplacer l'attribut action par votre endpoint reel :
-             - Formspree : https://formspree.io/f/xxxxxxxx
-             - Netlify Forms : action="/contact/" + attribut netlify sur le <form>
-             Tant que "VOTRE_ID" est present, le JS affiche un message
-             invitant a passer par le telephone plutot que de perdre la demande. -->
-        <form data-devis-form action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+        <!-- FORMULAIRE — Netlify Forms
+             Detecte par Netlify au deploiement grace a data-netlify. Les demandes
+             apparaissent dans Netlify (Forms > devis) ; activer une notification
+             e-mail vers leomalhie@yahoo.fr dans Site configuration > Forms.
+             Sans JavaScript, le navigateur poste le formulaire et Netlify affiche
+             /contact/merci/. Avec JavaScript, l'envoi se fait sans quitter la page. -->
+        <form name="devis" method="POST" action="/contact/merci/" data-netlify="true" netlify-honeypot="bot-field" data-devis-form novalidate>
+          <input type="hidden" name="form-name" value="devis">
           <div class="form-grid">
             <div class="field">
               <label for="prenom">Prénom <span class="req">*</span></label>
@@ -459,13 +491,13 @@ cat <<'HTML'
             </div>
             <div class="field field--full">
               <label for="message">Votre projet</label>
-              <textarea id="message" name="message" placeholder="Le déroulé envisagé, l’ambiance recherchée, vos contraintes de lieu…"></textarea>
+              <textarea id="message" name="message" placeholder="Le déroulé envisagé, l’ambiance recherchée, les options qui vous intéressent…"></textarea>
               <p class="field__hint">Plus votre message est précis, plus le devis le sera.</p>
             </div>
             <!-- piege a robots : invisible pour les humains -->
             <p style="position:absolute;left:-9999px" aria-hidden="true">
-              <label for="site-web">Ne pas remplir</label>
-              <input type="text" id="site-web" name="_gotcha" tabindex="-1" autocomplete="off">
+              <label for="bot-field">Ne pas remplir</label>
+              <input type="text" id="bot-field" name="bot-field" tabindex="-1" autocomplete="off">
             </p>
             <div class="consent">
               <input type="checkbox" id="rgpd" name="consentement_rgpd" required>
@@ -488,26 +520,30 @@ cat <<'HTML'
 
       <div class="reveal">
         <h2 style="margin-bottom:2rem">Directement</h2>
+HTML
+cat <<HTML
         <!-- NAP : identique au footer et a la fiche Google Business Profile -->
         <dl class="contact-block">
           <dt>Téléphone</dt>
-          <dd><a href="tel:+33612345678">06 12 34 56 78</a></dd>
+          <dd><a href="tel:$TEL_URI">$TEL_AFF</a></dd>
           <dt>E-mail</dt>
-          <dd><a href="mailto:contact@agence-silence.fr">contact@agence-silence.fr</a></dd>
+          <dd><a href="mailto:$MAIL">$MAIL</a></dd>
           <dt>Adresse</dt>
-          <dd>Agence Silence<br>12 rue de la Pomme<br>31000 Toulouse</dd>
+          <dd>Agence Silence<br>$RUE<br>$CP $VILLE</dd>
           <dt>Disponibilité</dt>
-          <dd>Du lundi au samedi, 9 h – 19 h</dd>
+          <dd>Tous les jours, de 10&nbsp;h à 22&nbsp;h</dd>
         </dl>
+HTML
+cat <<'HTML'
 
         <div class="card" style="margin-top:2.75rem;background:var(--ecru-deep);border-color:var(--line)">
           <h3>Ce qui accélère la réponse</h3>
-          <p style="font-size:.95rem">La <strong>date exacte</strong>, le <strong>lieu de réception</strong> et le <strong>nombre d’invités</strong>. Avec ces trois éléments, le devis part souvent dans la journée.</p>
+          <p style="font-size:.95rem">La <strong>date exacte</strong>, le <strong>lieu de réception</strong> et le <strong>nombre d’invités</strong>. Avec ces trois éléments, le devis est prêt rapidement.</p>
         </div>
 
         <div class="card" style="margin-top:1.25rem">
-          <h3>Haute saison</h3>
-          <p style="font-size:.95rem">De mai à septembre, Léo est en prestation le week-end. Une demande envoyée le samedi reçoit sa réponse le lundi.</p>
+          <h3>La question qu’on nous pose en premier</h3>
+          <p style="font-size:.95rem">«&nbsp;Êtes-vous disponible&nbsp;?&nbsp;» Les dates se réservent un à deux ans à l’avance&nbsp;: autant vérifier la vôtre dès maintenant.</p>
         </div>
       </div>
     </div>
@@ -518,22 +554,46 @@ page_close
 } | page_write "contact/index.html"
 
 
+# ========================================================= CONTACT : MERCI ==
+# Page affichee par Netlify apres un envoi sans JavaScript.
+{
+page_open "Demande envoyée — Agence Silence" "Votre demande de devis a bien été envoyée à l’Agence Silence." "/contact/merci/" "og-agence-silence.jpg"
+echo '<meta name="robots" content="noindex, follow">'
+page_head_close
+cat <<'HTML'
+<section class="page-hero" style="text-align:center">
+  <div class="wrap">
+    <p class="eyebrow" style="justify-content:center">Demande envoyée</p>
+    <h1 style="max-width:22ch;margin-inline:auto">Merci, votre demande est bien partie</h1>
+    <p class="lead" style="margin-inline:auto">
+      Vous recevrez une réponse sous 24 heures, avec la disponibilité de votre date
+      et une proposition chiffrée.
+    </p>
+    <div class="btn-row btn-row--center">
+      <a class="btn" href="/">Retour à l’accueil</a>
+      <a class="btn btn--ghost" href="/temoignages/">Lire les avis des mariés</a>
+    </div>
+  </div>
+</section>
+HTML
+page_close
+} | page_write "contact/merci/index.html"
+
+
 # ======================================================== MENTIONS LEGALES ==
 {
 page_open \
  "Mentions légales — Agence Silence" \
- "Mentions légales, éditeur, hébergeur et politique de confidentialité du site de l’Agence Silence, DJ événementiel à Toulouse." \
- "/mentions-legales/" "prestation-corporate.svg"
-cat <<'HTML'
-<meta name="robots" content="noindex, follow">
-HTML
+ "Mentions légales du site de l’Agence Silence : éditeur, hébergeur, propriété intellectuelle et données personnelles." \
+ "/mentions-legales/" "og-agence-silence.jpg"
+echo '<meta name="robots" content="noindex, follow">'
 page_head_close
 cat <<'HTML'
 <section class="page-hero">
   <div class="wrap">
 HTML
 breadcrumb "Mentions légales|/mentions-legales/"
-cat <<'HTML'
+cat <<HTML
     <p class="eyebrow">Informations légales</p>
     <h1>Mentions légales</h1>
   </div>
@@ -542,50 +602,49 @@ cat <<'HTML'
 <section class="section">
   <div class="wrap wrap--narrow">
     <div class="prose">
-      <!-- A COMPLETER avec les informations reelles de l entreprise de Leo -->
-      <p style="background:var(--lavande-pale);border-left:2px solid var(--lavande);padding:1rem 1.25rem">
-        <strong>À compléter</strong> avec les informations réelles de l’entreprise&nbsp;:
-        raison sociale, statut juridique, SIRET, numéro de TVA, adresse du siège et
-        nom du directeur de la publication.
-      </p>
-
       <h2 class="mt-0">Éditeur du site</h2>
       <p>
-        Agence Silence<br>
-        12 rue de la Pomme, 31000 Toulouse, France<br>
-        Téléphone&nbsp;: <a href="tel:+33612345678">06 12 34 56 78</a><br>
-        E-mail&nbsp;: <a href="mailto:contact@agence-silence.fr">contact@agence-silence.fr</a><br>
-        SIRET&nbsp;: [à compléter] &mdash; TVA intracommunautaire&nbsp;: [à compléter]<br>
-        Directeur de la publication&nbsp;: [à compléter]
+        Agence Silence &mdash; $NOM_LEGAL, entrepreneur individuel (micro-entreprise)<br>
+        $RUE, $CP $VILLE, France<br>
+        Téléphone&nbsp;: <a href="tel:$TEL_URI">$TEL_AFF</a><br>
+        E-mail&nbsp;: <a href="mailto:$MAIL">$MAIL</a><br>
+        SIRET&nbsp;: $SIRET_AFF<br>
+        TVA non applicable, article 293&nbsp;B du Code général des impôts<br>
+        Directeur de la publication&nbsp;: $NOM_LEGAL
+      </p>
+      <p>
+        Responsabilité civile professionnelle souscrite auprès d’Allianz.
       </p>
 
       <h2>Hébergement</h2>
       <p>
-        Le site est hébergé par Netlify, Inc., 512 2nd Street, Suite 200,
-        San Francisco, CA 94107, États-Unis.
+        Le site est hébergé par Netlify, Inc., 101 2nd Street, San Francisco,
+        CA 94105, États-Unis.
       </p>
 
       <h2>Propriété intellectuelle</h2>
       <p>
-        L’ensemble des contenus du site — textes, photographies, identité visuelle
-        et code — est protégé par le droit d’auteur. Les photographies publiées
-        dans la galerie le sont avec l’accord des mariés et de leurs photographes,
-        et restent la propriété de ces derniers.
+        L’ensemble des contenus du site — textes, visuels, identité visuelle et code —
+        est protégé par le droit d’auteur. Les avis clients sont reproduits avec l’accord
+        de leurs auteurs&nbsp;; ils ont été publiés à l’origine sur Mariages.net.
       </p>
 
       <h2>Données personnelles</h2>
       <p>
         Les données transmises via le formulaire de contact — nom, prénom, e-mail,
-        téléphone, date, lieu et description de l’événement — sont utilisées
-        exclusivement pour répondre à votre demande de devis. Elles ne sont ni
+        téléphone, date, lieu, nombre d’invités et description de l’événement — sont
+        utilisées exclusivement pour répondre à votre demande de devis. Elles ne sont ni
         cédées, ni louées, ni transmises à un tiers à des fins commerciales.
       </p>
       <p>
-        Elles sont conservées trois ans à compter du dernier contact. Conformément
-        au RGPD, vous disposez d’un droit d’accès, de rectification, d’effacement,
-        de limitation et d’opposition&nbsp;: écrivez à
-        <a href="mailto:contact@agence-silence.fr">contact@agence-silence.fr</a>.
-        Vous pouvez également introduire une réclamation auprès de la CNIL.
+        Le formulaire est traité par l’hébergeur du site, Netlify, Inc. (États-Unis).
+        Les données sont conservées trois ans à compter du dernier contact.
+      </p>
+      <p>
+        Conformément au RGPD, vous disposez d’un droit d’accès, de rectification,
+        d’effacement, de limitation et d’opposition&nbsp;: écrivez à
+        <a href="mailto:$MAIL">$MAIL</a>. Vous pouvez également introduire une
+        réclamation auprès de la CNIL.
       </p>
 
       <h2>Cookies</h2>
@@ -599,7 +658,7 @@ cat <<'HTML'
         Le site est conçu pour rester utilisable au clavier, avec un contraste
         conforme aux recommandations WCAG&nbsp;AA et un contenu intégralement
         lisible sans JavaScript. Si vous rencontrez une difficulté d’accès,
-        signalez-la à <a href="mailto:contact@agence-silence.fr">contact@agence-silence.fr</a>.
+        signalez-la à <a href="mailto:$MAIL">$MAIL</a>.
       </p>
     </div>
   </div>
@@ -611,7 +670,7 @@ page_close
 
 # ================================================================== 404 ====
 {
-page_open "Page introuvable — Agence Silence" "La page demandée n’existe pas ou a été déplacée." "/404.html" "hero-mariage.svg"
+page_open "Page introuvable — Agence Silence" "La page demandée n’existe pas ou a été déplacée." "/404.html" "og-agence-silence.jpg"
 echo '<meta name="robots" content="noindex, follow">'
 page_head_close
 cat <<'HTML'
@@ -633,8 +692,8 @@ cat <<'HTML'
   <div class="wrap">
     <div class="grid grid--3">
       <article class="card"><h3>Prestations</h3><p>Mariage, entreprise, soirée privée.</p><a class="link-arrow" href="/prestations/">Voir</a></article>
-      <article class="card"><h3>Galerie</h3><p>Les soirées déjà signées.</p><a class="link-arrow" href="/galerie/">Voir</a></article>
-      <article class="card"><h3>Zone d’intervention</h3><p>Toulouse et toute la France.</p><a class="link-arrow" href="/zone-intervention/">Voir</a></article>
+      <article class="card"><h3>Avis des mariés</h3><p>Huit avis, tous notés 5 sur 5.</p><a class="link-arrow" href="/temoignages/">Voir</a></article>
+      <article class="card"><h3>Zone d’intervention</h3><p>Toulouse, Tarn, Aude et au-delà.</p><a class="link-arrow" href="/zone-intervention/">Voir</a></article>
     </div>
   </div>
 </section>

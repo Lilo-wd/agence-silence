@@ -119,9 +119,13 @@
   }
 
   /* --------------------------------------------------- Formulaire de devis
-     Envoi en AJAX vers l'endpoint declare dans l'attribut action du <form>.
-     Compatible Formspree / Netlify Forms / Resend via fonction serverless.
-     Si l'envoi AJAX echoue, on laisse le navigateur soumettre normalement. */
+     Netlify Forms. Envoi en AJAX, encode en application/x-www-form-urlencoded
+     comme l'exige Netlify, vers la racine du site. Le champ cache form-name
+     identifie le formulaire. Sans JavaScript, le navigateur poste directement
+     et Netlify affiche /contact/merci/.
+
+     Le formulaire porte novalidate pour garder la main sur l'affichage : la
+     validation native est donc declenchee ici, avant tout envoi. */
   var form = document.querySelector('[data-devis-form]');
   if (form) {
     var status = form.querySelector('[data-form-status]');
@@ -136,31 +140,29 @@
     };
 
     form.addEventListener('submit', function (e) {
-      var endpoint = form.getAttribute('action') || '';
-      // Endpoint non configure : on previent au lieu de perdre la demande.
-      if (endpoint.indexOf('VOTRE_ID') !== -1 || endpoint === '' || endpoint === '#') {
-        e.preventDefault();
-        say('Le formulaire n’est pas encore relié à une boîte mail. ' +
-            'Écrivez directement à contact@agence-silence.fr ou appelez le 06 12 34 56 78.', true);
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        say('Il manque une information : les champs marqués d’un astérisque sont obligatoires.', true);
         return;
       }
 
-      e.preventDefault();
       if (submit) { submit.disabled = true; submit.dataset.label = submit.textContent; submit.textContent = 'Envoi en cours…'; }
       say('Envoi de votre demande…', false);
 
-      fetch(endpoint, {
+      fetch('/', {
         method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         form.reset();
-        say('Merci, votre demande est bien partie. Léo vous répond sous 24 h ouvrées ' +
+        say('Merci, votre demande est bien partie. Réponse sous 24 heures, ' +
             'avec la disponibilité de votre date et une proposition chiffrée.', false);
       }).catch(function () {
-        say('L’envoi a échoué. Écrivez-nous à contact@agence-silence.fr ' +
-            'ou appelez le 06 12 34 56 78, nous reprenons la main tout de suite.', true);
+        say('L’envoi a échoué. Écrivez à leomalhie@yahoo.fr ' +
+            'ou appelez le 06.20.25.66.63 : la demande sera traitée tout de suite.', true);
       }).then(function () {
         if (submit) { submit.disabled = false; submit.textContent = submit.dataset.label || 'Envoyer ma demande'; }
       });

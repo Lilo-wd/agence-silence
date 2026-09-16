@@ -14,6 +14,8 @@ desktop.ini
 *.docx
 *.xlsx
 Questionnaire*
+# Verrous LibreOffice quand un document est ouvert
+.~lock.*
 
 # Images de demonstration trouvees sur le web — ne pas publier
 /tools/demo-assets/

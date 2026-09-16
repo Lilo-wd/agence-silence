@@ -1,4 +1,5 @@
-$root = "C:\Users\lilos\OneDrive\Documents\agence-silence"
+# Racine du site = dossier parent de tools/, quel que soit l'emplacement du projet.
+$root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $prefix = "http://localhost:8791/"
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add($prefix)

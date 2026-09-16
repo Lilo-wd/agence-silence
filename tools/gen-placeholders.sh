@@ -2,7 +2,7 @@
 # Genere des visuels d'attente SVG sobres pour Agence Silence.
 # A supprimer / remplacer par les vraies photos de DJ Leo.
 set -e
-OUT="C:/Users/lilos/OneDrive/Documents/agence-silence/assets/img"
+OUT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/assets/img"
 mkdir -p "$OUT"
 
 # make <fichier> <largeur> <hauteur> <couleur1> <couleur2> <couleur3> <opacite-grain>
@@ -39,10 +39,7 @@ make hero-corporate.svg         2000 1250 "#F3F2F0" "#DFDDEA" "#C2C0D8" ".07"
 
 # --- Villes (une nuance par ville pour differencier les pages) ---
 make ville-toulouse.svg    1800 1000 "#F6F1E9" "#E5DCEF" "#C6BDE0" ".07"
-make ville-bordeaux.svg    1800 1000 "#F4F0EA" "#E2DCEB" "#C2BBD9" ".07"
-make ville-montpellier.svg 1800 1000 "#F3F2EC" "#DEDFEE" "#BDBEDD" ".07"
-make ville-paris.svg       1800 1000 "#F2F1EC" "#DFDCEC" "#BFBBD8" ".07"
-make ville-lyon.svg        1800 1000 "#F5F1EB" "#E4DDEE" "#C4BCDD" ".07"
+make ville-castres.svg     1800 1000 "#F5F1EB" "#E4DDEE" "#C4BCDD" ".07"
 
 # --- Prestations (clair, lumiere naturelle) ---
 make prestation-mariage.svg   1400 1050 "#F6F1EA" "#E4DCEF" "#CFC8E6" ".07"

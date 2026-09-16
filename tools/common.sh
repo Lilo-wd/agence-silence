@@ -2,40 +2,43 @@
 # Briques communes a toutes les pages du site Agence Silence.
 set -e
 
-ROOT="C:/Users/lilos/OneDrive/Documents/agence-silence"
-SITE="https://agence-silence.fr"
+# Racine du projet deduite de l'emplacement de ce fichier : le dossier peut
+# etre deplace ou clone ailleurs sans que les generateurs n'ecrivent vers un
+# ancien chemin (c'etait le cas quand ROOT etait code en dur).
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
-TEL_AFF="06 12 34 56 78"
-TEL_URI="+33612345678"
-MAIL="contact@agence-silence.fr"
-RUE="12 rue de la Pomme"
-CP="31000"
-VILLE="Toulouse"
+# Nom de domaine retenu par Leo dans le questionnaire (septembre 2026).
+# Pas encore achete : il etait libre au registre le 16 sept. 2026.
+SITE="https://agence-silence.com"
+
+# ------------------------------------------------------------------- NAP --
+# Nom / adresse / telephone : strictement identiques partout (site, fiche
+# Google Business Profile, Mariages.net, Instagram). Le telephone est ecrit
+# comme Leo l'a demande, avec des points.
+TEL_AFF="06.20.25.66.63"
+TEL_URI="+33620256663"
+MAIL="leomalhie@yahoo.fr"
+RUE="53 impasse du Communal"
+CP="31650"
+VILLE="Lauzerville"
+NOM_LEGAL="Léo Malhie"
+SIRET_AFF="848 624 722 00015"
 
 # ---------------------------------------------------------------- PREPROD --
-# 1 = le site est en ligne mais invisible pour Google, et affiche un bandeau
-#     d'avertissement. C'est l'etat a garder tant que les temoignages, le
-#     telephone et l'adresse sont des exemples.
+# 1 = le site est en ligne mais invisible pour Google, avec un bandeau.
 #
-# Pourquoi ce garde-fou : laisser Google indexer un NAP (nom / adresse /
-# telephone) faux, puis le corriger plus tard, cree une incoherence entre
-# l'index et la fiche Google Business Profile. C'est precisement le signal
-# sur lequel repose tout le referencement local du projet — l'abimer des le
-# depart coute plus cher que d'attendre quelques semaines.
-#
-# A passer a 0 le jour ou le contenu reel remplace les exemples, puis
-# relancer la generation (voir README §4).
+# Les coordonnees, tarifs et temoignages sont desormais reels. Le site reste
+# ferme aux moteurs pour deux raisons :
+#   - le domaine agence-silence.com n'est pas encore achete ; les balises
+#     canoniques pointeraient vers une adresse qui ne repond pas ;
+#   - les photos sont encore provisoires (et l'image du hero generee par IA).
+# A passer a 0 une fois le domaine branche et les vraies photos en place.
 PREPROD=${PREPROD:-1}
 
 # ------------------------------------------------------- CACHE DES ASSETS --
-# _headers sert /assets/* avec `immutable, max-age=31536000` : un navigateur
-# qui a deja charge style.css ne le redemandera pas pendant un an. Sans
-# empreinte dans l'URL, toute modification du CSS ou du JS reste invisible
-# pour les visiteurs deja venus — le HTML se met a jour, la mise en forme non.
-#
-# On accroche donc une empreinte du contenu a l'URL : elle change des que le
-# fichier change, ce qui force le rechargement, tout en gardant le cache long
-# tant que rien ne bouge.
+# _headers sert /assets/* en `immutable, max-age=31536000`. Sans empreinte
+# dans l'URL, un CSS ou un JS modifie n'atteint jamais les visiteurs deja
+# venus. L'empreinte change des que le fichier change.
 empreinte () {
   if [ -f "$1" ]; then md5sum "$1" | cut -c1-8; else echo "0"; fi
 }
@@ -46,7 +49,7 @@ if [ "$PREPROD" = "1" ]; then
   ROBOTS="noindex, nofollow"
   BANDEAU='<aside class="bandeau-apercu">
   <b>Aperçu</b>
-  <span>Site en cours de construction. Les photos, témoignages, tarifs et coordonnées sont des exemples provisoires&nbsp;: aucun n’est réel.</span>
+  <span>Site en cours de finalisation&nbsp;: les photos sont encore provisoires.</span>
 </aside>'
 else
   ROBOTS="index, follow, max-image-preview:large, max-snippet:-1"
@@ -101,8 +104,7 @@ cat <<HTML
 <header class="site-header">
   <div class="wrap site-header__inner">
     <!-- Verrou horizontal : icone + wordmark, extrait du logo fourni.
-         Dimensions natives 430x120, affiche a 46 px de haut (2,6x pour les
-         ecrans haute densite). Fichier maitre : tools/logo-source/ -->
+         Dimensions natives 430x120, affiche a 46 px de haut. -->
     <a class="brand" href="/" aria-label="Agence Silence, retour à l’accueil">
       <img src="/assets/img/logo.webp" width="430" height="120"
            alt="Agence Silence, DJ mariage et événementiel à Toulouse">
@@ -159,11 +161,13 @@ schema_breadcrumb () {
 }
 
 # bande_cta <titre> <paragraphe>
+# Leo recommande de reserver 1 a 2 ans a l'avance : on affiche les deux
+# saisons qui se reservent en ce moment.
 bande_cta () {
 cat <<HTML
 <section class="section cta-band">
   <div class="wrap">
-    <p class="eyebrow" style="justify-content:center">Disponibilités 2026 &middot; 2027</p>
+    <p class="eyebrow" style="justify-content:center">Réservations 2027 &middot; 2028</p>
     <h2>$1</h2>
     <p>$2</p>
     <div class="btn-row btn-row--center">
@@ -183,31 +187,27 @@ cat <<HTML
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <!-- Version empilee, parties noires passees en blanc pour le fond sombre.
-             Le violet est conserve : 4,8:1 sur #1A1A1A, conforme AA. -->
         <img src="/assets/img/logo-empile-blanc.webp" width="284" height="230"
              alt="Agence Silence, DJ mariage et événementiel à Toulouse" loading="lazy" decoding="async">
-        <p>DJ événementiel à Toulouse. Mariages, événements d’entreprise et soirées privées, partout en France.</p>
+        <p>Agence de DJ événementiel en région toulousaine, fondée en 2019 par Léo Malhie. Mariages, événements d’entreprise et soirées privées.</p>
       </div>
 
       <div>
         <p class="footer-title">Prestations</p>
         <ul class="footer-list">
           <li><a href="/prestations/dj-mariage/">DJ mariage</a></li>
+          <li><a href="/prestations/options-mariage/">Options mariage</a></li>
           <li><a href="/prestations/dj-entreprise/">DJ événement d’entreprise</a></li>
           <li><a href="/prestations/dj-soiree-privee/">DJ soirée privée</a></li>
-          <li><a href="/prestations/">Toutes les prestations</a></li>
         </ul>
       </div>
 
       <div>
-        <p class="footer-title">Où intervient Léo</p>
+        <p class="footer-title">Où intervient l’agence</p>
         <ul class="footer-list">
           <li><a href="/dj-mariage-toulouse/">DJ mariage Toulouse</a></li>
-          <li><a href="/dj-mariage-bordeaux/">DJ mariage Bordeaux</a></li>
-          <li><a href="/dj-mariage-montpellier/">DJ mariage Montpellier</a></li>
-          <li><a href="/dj-mariage-paris/">DJ mariage Paris</a></li>
-          <li><a href="/zone-intervention/">Toute la France</a></li>
+          <li><a href="/dj-mariage-castres/">DJ mariage Castres</a></li>
+          <li><a href="/zone-intervention/">Zone d’intervention</a></li>
         </ul>
       </div>
 
@@ -224,7 +224,7 @@ cat <<HTML
     </div>
 
     <div class="footer-bottom">
-      <p style="margin:0">&copy; <span data-annee>2026</span> Agence Silence &mdash; DJ mariage et événementiel, Toulouse.</p>
+      <p style="margin:0">&copy; <span data-annee>2026</span> Agence Silence &mdash; Léo Malhie, DJ mariage et événementiel en région toulousaine.</p>
       <nav aria-label="Liens de bas de page">
         <a href="/contact/">Contact</a>
         <a href="/faq/">FAQ</a>

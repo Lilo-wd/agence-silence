@@ -568,6 +568,14 @@ em{font-style:italic}
 .stars{color:var(--lavande);letter-spacing:.18em;font-size:.8rem;margin-bottom:1.1rem}
 .quote figcaption{margin-top:auto;font-size:.82rem;color:var(--ink-40);letter-spacing:.04em}
 .quote figcaption strong{display:block;color:var(--ink);font-weight:500;letter-spacing:0;font-size:.95rem;margin-bottom:.15rem}
+/* Avis longs (page Temoignages) : le texte integral en serif large serait
+   indigeste. Titre en serif, corps en sans-serif a taille de lecture. */
+.quote__titre{font-family:var(--serif);font-size:clamp(1.15rem,1.05rem + .4vw,1.4rem);line-height:1.3;color:var(--ink);margin:0 0 1rem;max-width:none}
+.quote--long blockquote p{font-family:var(--sans);font-size:1rem;line-height:1.72;color:var(--ink-80);max-width:none}
+.quote--long blockquote p + p{margin-top:1rem}
+.quote--long blockquote ul{margin:1rem 0;padding-left:1.15rem;color:var(--ink-80);font-size:1rem;line-height:1.7}
+.quote--long blockquote li{margin-bottom:.5rem}
+.quote--long blockquote li::marker{color:var(--lavande)}
 
 /* ------------------------------------------------------- Section sombre --- */
 .dark{background:var(--ink);color:rgba(255,255,255,.78)}
