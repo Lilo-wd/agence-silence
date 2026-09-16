@@ -76,7 +76,7 @@ $CORPS
       <h2>La prestation en détail</h2>
     </div>
     <ul class="city-list reveal" style="columns:2">
-      <li><a href="/prestations/dj-mariage/">Le pack mariage à 1&nbsp;600&nbsp;€</a></li>
+      <li><a href="/tarifs/">Tous les tarifs</a></li>
       <li><a href="/prestations/options-mariage/">Les options mariage</a></li>
       <li><a href="/dj-mariage-toulouse/">DJ mariage Toulouse</a></li>
       <li><a href="/dj-mariage-castres/">DJ mariage Castres</a></li>
@@ -86,25 +86,16 @@ $CORPS
   </div>
 </section>
 HTML
-bande_cta "Votre mariage à $VILLE_N&nbsp;?" "Donnez-nous la date et le lieu de réception&nbsp;: nous confirmons la disponibilité sous 24 heures, avec le déplacement indiqué dans le devis."
+bande_cta "Votre mariage à $VILLE_N&nbsp;?" "Indiquez-nous la date et le lieu. Vous avez une réponse sous 24 heures, avec un devis complet."
 page_close
 } | page_write "$SLUG/index.html"
 }
 
-# Encadre « pack compris », partage par les pages villes
-read -r -d '' PACK <<'HTML' || true
-        <h3 style="font-size:.95rem;font-family:var(--sans);font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-40)">Le pack mariage, 1&nbsp;600&nbsp;€</h3>
-        <ul class="city-list" style="margin-top:1.5rem;columns:1">
-          <li><span>Cocktail, dîner et soirée jusqu’à 4&nbsp;h&nbsp;30</span></li>
-          <li><span>Sonorisation et huit projecteurs PAR LED</span></li>
-          <li><span>Deux micros sans fil</span></li>
-          <li><span>Vidéoprojecteur et écran</span></li>
-          <li><span>Rallonges et multiprises fournies</span></li>
-        </ul>
-        <p style="margin-top:1.5rem;font-size:.9rem;color:var(--ink-40)">
-          Hors déplacement&nbsp;: gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour.
-        </p>
-HTML
+# Encadre tarif des pages villes : blocs communs de common.sh
+FORFAIT="<div class=\"tarifs\" style=\"grid-template-columns:1fr\">
+$TARIF_MARIAGE
+$BLOC_DEPLACEMENT
+</div>"
 
 # ============================================================== TOULOUSE ====
 read -r -d '' C_TLS <<HTML || true
@@ -125,16 +116,15 @@ read -r -d '' C_TLS <<HTML || true
           au Domaine de Montjoie à Ramonville-Saint-Agne.
         </p>
         <p>
-          Pas de contrainte technique particulière à signaler&nbsp;: la limite de décibels
-          fixée par chaque salle est simplement respectée.
+          Beaucoup de salles limitent le volume sonore. Cette limite est toujours respectée.
         </p>
         <p>
-          Et un détail que l’on apprend avec l’expérience&nbsp;: penser à éteindre les
-          lumières du domaine au bon moment, pour que l’éclairage de la soirée prenne le relais.
+          Un détail qui compte&nbsp;: éteindre les lumières du domaine au bon moment.
+          L’éclairage de la soirée prend alors toute sa place.
         </p>
       </div>
       <div class="reveal">
-$PACK
+$FORFAIT
       </div>
     </div>
   </div>
@@ -164,7 +154,7 @@ HTML
 
 ville "dj-mariage-toulouse" "Toulouse" \
  "DJ mariage Toulouse et Haute-Garonne — Agence Silence" \
- "DJ mariage à Toulouse : une centaine de mariages dans les domaines, châteaux et chais de la région. Pack cocktail, dîner et soirée à 1 600 €, déplacement gratuit dans 50 km." \
+ "DJ mariage à Toulouse : une centaine de mariages dans les domaines, châteaux et chais de la région. Forfait cocktail, dîner et soirée à 1 600 €. Déplacement offert jusqu’à 50 km." \
  "DJ mariage à Toulouse et en Haute-Garonne" \
  "Une centaine de mariages dans la région toulousaine, dans les domaines, les châteaux et les chais. L’agence est installée à Lauzerville, aux portes de Toulouse." \
  "ville-toulouse.svg" "Haute-Garonne" "$C_TLS"
@@ -183,17 +173,16 @@ read -r -d '' C_CAS <<HTML || true
           tout le Tarn.
         </p>
         <p>
-          Castres est à environ une heure de route de l’agence. Les mariés du Tarn
-          bénéficient du même pack et des mêmes options qu’à Toulouse.
+          Castres est à environ une heure de route de l’agence.
+          Le forfait et les options sont les mêmes qu’à Toulouse.
         </p>
         <p>
-          Selon votre lieu de réception, le trajet peut dépasser le rayon de 50&nbsp;km
-          inclus&nbsp;: le déplacement est alors facturé 0,60&nbsp;€ du kilomètre aller-retour, et
-          figure dès le devis.
+          Selon votre lieu, des frais de déplacement peuvent s’ajouter.
+          Ils sont détaillés ci-contre et écrits sur votre devis.
         </p>
       </div>
       <div class="reveal">
-$PACK
+$FORFAIT
       </div>
     </div>
   </div>
@@ -223,7 +212,7 @@ HTML
 
 ville "dj-mariage-castres" "Castres" \
  "DJ mariage Castres et Tarn — Agence Silence" \
- "DJ mariage à Castres et dans le Tarn : l’un des secteurs les plus demandés de l’Agence Silence. Pack cocktail, dîner et soirée à 1 600 €, son et lumière compris." \
+ "DJ mariage à Castres et dans le Tarn : l’un des secteurs les plus demandés de l’Agence Silence. Forfait cocktail, dîner et soirée à 1 600 €, son et lumière compris." \
  "DJ mariage à Castres et dans le Tarn" \
  "Avec Toulouse et Ramonville, Castres fait partie des secteurs où l’Agence Silence reçoit le plus de demandes de mariage." \
  "ville-castres.svg" "Tarn" "$C_CAS"

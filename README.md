@@ -1,7 +1,7 @@
 # Agence Silence — site vitrine
 
 Site statique multi-pages (HTML / CSS / JS, aucune dépendance, aucun build).
-21 pages. Dépôt `Lilo-wd/agence-silence`, déployé en continu sur
+22 pages. Dépôt `Lilo-wd/agence-silence`, déployé en continu sur
 https://agence-silence.netlify.app (un `git push` suffit).
 
 Le contenu est celui du **questionnaire rempli par Léo Malhie (septembre 2026)** :
@@ -85,6 +85,25 @@ Puis pousser, et **seulement ensuite** déclarer le site dans Google Search Cons
 
 ## 3. Choix de contenu à connaître
 
+### Les tarifs : un seul endroit, une information par ligne
+
+Retour de Léo (septembre 2026) : les prix étaient incompréhensibles. Ils étaient
+éparpillés dans des phrases qui mélangeaient durées, distances et montants, et
+« 0,60 € du kilomètre » se lisait « 60 € ».
+
+Désormais :
+- une page **`/tarifs/`** (dans le menu) réunit tout ;
+- les prix ne s'écrivent **que** dans les blocs de `common.sh` : `TARIF_MARIAGE`,
+  `TARIF_PRIVEE`, `TARIF_ENTREPRISE`, `BLOC_DEPLACEMENT`, `BLOC_RESERVATION`,
+  `BLOC_OPTIONS`. Un changement de prix se fait là, et nulle part ailleurs ;
+- chaque bloc présente une ligne par information : libellé au-dessus, valeur en
+  dessous (`.lignes`) ;
+- les autres pages affichent au plus le prix du forfait et renvoient vers `/tarifs/`.
+  Exceptions à tenir à jour à la main : la FAQ (texte et données structurées),
+  l'article budget et les meta descriptions.
+
+Vocabulaire : on écrit « forfait », jamais « pack ».
+
 ### Pages villes : Toulouse et Castres uniquement
 
 Les anciennes pages Bordeaux, Montpellier et Paris ont été **supprimées** : Léo n'y
@@ -135,7 +154,7 @@ ne fait que 3,4:1 et ne doit jamais porter de texte sur fond clair.
 
 ## 5. Modifier le site
 
-Les 21 pages sont **générées** par les scripts de `tools/`. Ne pas éditer le HTML à
+Les 22 pages sont **générées** par les scripts de `tools/`. Ne pas éditer le HTML à
 la main : la prochaine génération l'écraserait.
 
 ```bash
@@ -144,7 +163,7 @@ cd tools && for s in p1-accueil p2-prestations p3-villes p4-pages p5-blog p6-tec
 
 - `common.sh` — coordonnées (NAP), domaine, PREPROD, en-tête, pied de page, bandeau CTA
 - `p1-accueil.sh` — accueil
-- `p2-prestations.sh` — « Le DJ », prestations, mariage, options, entreprise, soirée privée
+- `p2-prestations.sh` — « Le DJ », prestations, tarifs, mariage, options, entreprise, soirée privée
 - `p3-villes.sh` — Toulouse et Castres
 - `p4-pages.sh` — galerie, avis, zone, FAQ, contact (+ merci), mentions légales, 404
 - `p5-blog.sh` — le journal et ses 3 articles

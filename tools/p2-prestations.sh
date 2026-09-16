@@ -40,7 +40,7 @@ cat <<'HTML'
         </p>
         <p>
           Son premier mariage date de 2019. «&nbsp;C’était stressant, mais l’ambiance était
-          incroyable.&nbsp;» Sept ans plus tard, l’agence a animé plus de 500 mariages et plus
+          incroyable.&nbsp;» Depuis, l’agence a animé plus de 500 mariages et plus
           de 200 événements d’entreprise.
         </p>
 
@@ -114,8 +114,8 @@ cat <<'HTML'
     <div class="stat-row reveal">
       <div class="stat"><span class="stat__value">500+</span><span class="stat__label">Mariages</span></div>
       <div class="stat"><span class="stat__value">200+</span><span class="stat__label">Événements d’entreprise</span></div>
-      <div class="stat"><span class="stat__value">7</span><span class="stat__label">Ans d’activité</span></div>
-      <div class="stat"><span class="stat__value">4,9/5</span><span class="stat__label">Sur 59 avis Mariages.net</span></div>
+      <div class="stat"><span class="stat__value">2019</span><span class="stat__label">Création de l’agence</span></div>
+      <div class="stat"><span class="stat__value">4,9/5</span><span class="stat__label">Note Mariages.net</span></div>
       <div class="stat"><span class="stat__value">100&nbsp;%</span><span class="stat__label">Dates honorées</span></div>
       <div class="stat"><span class="stat__value">3</span><span class="stat__label">Wedding Awards</span></div>
     </div>
@@ -131,7 +131,7 @@ page_close
 {
 page_open \
  "Prestations DJ à Toulouse : mariage, entreprise, privé" \
- "Les prestations de l’Agence Silence : DJ mariage à 1 600 €, événement d’entreprise dès 500 €, soirée privée dès 600 €. Pack son et lumière complet, tarifs affichés." \
+ "Les prestations de l’Agence Silence : DJ mariage à 1 600 €, événement d’entreprise dès 500 €, soirée privée dès 600 €. Son et lumière toujours inclus, prix affichés." \
  "/prestations/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Prestations|/prestations/')</script>"
 page_head_close
@@ -144,7 +144,7 @@ cat <<'HTML'
     <p class="eyebrow">Prestations</p>
     <h1>Prestations DJ à Toulouse : mariage, entreprise, soirée privée</h1>
     <p class="lead">
-      Trois formats, le même pack complet son et lumière, et des tarifs affichés dès le départ.
+      Trois formats. Le son et la lumière sont toujours inclus, et les prix sont affichés.
     </p>
   </div>
 </section>
@@ -159,12 +159,13 @@ cat <<'HTML'
         </div>
         <div class="service-card__body">
           <h2 style="font-size:clamp(1.25rem,1.1rem + .7vw,1.6rem);margin-bottom:.75rem">DJ mariage</h2>
-          <p>Cocktail, dîner et soirée jusqu’à 4&nbsp;h&nbsp;30. Plus de 500 mariages depuis 2019.</p>
+          <p>Du cocktail à la fin de soirée. Plus de 500 mariages depuis 2019.</p>
           <ul>
-            <li>Pack complet&nbsp;: 1&nbsp;600&nbsp;€</li>
+            <li>Cocktail, dîner et soirée</li>
             <li>Vidéoprojecteur et écran inclus</li>
             <li>Cérémonie laïque en option</li>
           </ul>
+          <p class="prix-ligne"><span>Forfait</span><strong>1&nbsp;600&nbsp;€</strong></p>
           <a class="link-arrow" href="/prestations/dj-mariage/">Voir le détail</a>
         </div>
       </article>
@@ -176,12 +177,13 @@ cat <<'HTML'
         </div>
         <div class="service-card__body">
           <h2 style="font-size:clamp(1.25rem,1.1rem + .7vw,1.6rem);margin-bottom:.75rem">DJ événement d’entreprise</h2>
-          <p>Tous les formats, de la conférence à la soirée de gala. Plus de 200 événements.</p>
+          <p>De la conférence à la soirée de gala. Plus de 200 événements.</p>
           <ul>
             <li>Sonorisation de conférence</li>
             <li>Soirée dansante de clôture</li>
-            <li>À partir de 500&nbsp;€</li>
+            <li>Un seul prestataire</li>
           </ul>
+          <p class="prix-ligne"><span>À partir de</span><strong>500&nbsp;€</strong></p>
           <a class="link-arrow" href="/prestations/dj-entreprise/">Voir le détail</a>
         </div>
       </article>
@@ -193,17 +195,22 @@ cat <<'HTML'
         </div>
         <div class="service-card__body">
           <h2 style="font-size:clamp(1.25rem,1.1rem + .7vw,1.6rem);margin-bottom:.75rem">DJ soirée privée</h2>
-          <p>Anniversaires, fiançailles, fêtes de famille&nbsp;: toutes les soirées privées.</p>
+          <p>Anniversaires, fiançailles et fêtes de famille.</p>
           <ul>
-            <li>Anniversaire de 20&nbsp;h à 2&nbsp;h</li>
+            <li>Le même matériel qu’un mariage</li>
             <li>Aucun minimum d’invités</li>
-            <li>À partir de 600&nbsp;€</li>
+            <li>Toutes les occasions</li>
           </ul>
+          <p class="prix-ligne"><span>À partir de</span><strong>600&nbsp;€</strong></p>
           <a class="link-arrow" href="/prestations/dj-soiree-privee/">Voir le détail</a>
         </div>
       </article>
     </div>
-    <p style="margin-top:2.5rem"><a class="link-arrow" href="/prestations/options-mariage/">Photobooth, fumée lourde, livre d’or audio&nbsp;: les options</a></p>
+    <p style="margin-top:2.5rem;color:var(--ink-60)">Prix hors déplacement. Le déplacement est offert jusqu’à 50&nbsp;km.</p>
+    <div class="btn-row" style="margin-top:1.25rem">
+      <a class="btn btn--ghost" href="/tarifs/">Tous les tarifs</a>
+      <a class="btn btn--ghost" href="/prestations/options-mariage/">Les options mariage</a>
+    </div>
   </div>
 </section>
 
@@ -214,12 +221,12 @@ cat <<'HTML'
       <h2>Ce qui est toujours compris</h2>
     </div>
     <div class="grid grid--3">
-      <article class="card reveal"><h3>Le pack son et lumière</h3><p>Enceintes Yamaha, console Pioneer DJ et huit projecteurs PAR LED, dans tous les devis.</p></article>
+      <article class="card reveal"><h3>Le son et la lumière</h3><p>Enceintes Yamaha, console Pioneer DJ et huit projecteurs PAR LED, dans tous les devis.</p></article>
       <article class="card reveal"><h3>Deux micros sans fil</h3><p>Pour les discours, les annonces et les interventions de vos proches.</p></article>
       <article class="card reveal"><h3>Rien à prévoir</h3><p>Une prise 16&nbsp;A suffit. Rallonges et multiprises sont fournies, l’installation prend deux heures.</p></article>
       <article class="card reveal"><h3>Une préparation sur mesure</h3><p>Autant de rendez-vous que vous le souhaitez, et un questionnaire musical complet.</p></article>
       <article class="card reveal"><h3>Matériel assuré</h3><p>Attestation d’assurance fournie sur demande, pour les lieux de réception qui l’exigent.</p></article>
-      <article class="card reveal"><h3>Des tarifs clairs</h3><p>Prix affichés, acompte de 30&nbsp;% pour réserver, solde une semaine avant. TVA non applicable.</p></article>
+      <article class="card reveal"><h3>Des prix affichés</h3><p>Tous nos tarifs sont en ligne. Le devis ne réserve pas de surprise.</p><a class="link-arrow" href="/tarifs/">Voir les tarifs</a></article>
     </div>
   </div>
 </section>
@@ -227,6 +234,66 @@ HTML
 bande_cta "Quelle prestation pour votre événement&nbsp;?" "Donnez-nous la date, le lieu et le nombre d’invités&nbsp;: nous revenons vers vous sous 24 heures avec un devis."
 page_close
 } | page_write "prestations/index.html"
+
+
+# ================================================================ TARIFS ==
+# Page demandee apres le retour de Leo : tous les prix au meme endroit, en
+# blocs separes (forfaits / deplacement / reservation / options).
+{
+page_open \
+ "Tarifs DJ mariage et soirées à Toulouse — Agence Silence" \
+ "Les tarifs de l’Agence Silence : mariage 1 600 €, soirée privée dès 600 €, entreprise dès 500 €. Déplacement offert jusqu’à 50 km. Acompte de 30 % pour réserver." \
+ "/tarifs/" "og-agence-silence.jpg"
+echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Tarifs|/tarifs/')</script>"
+page_head_close
+cat <<HTML
+<section class="page-hero">
+  <div class="wrap">
+$(breadcrumb "Tarifs|/tarifs/")
+    <p class="eyebrow">Tarifs</p>
+    <h1>Nos tarifs, sans surprise</h1>
+    <p class="lead">
+      Trois forfaits. Le son et la lumière sont toujours inclus.
+      Le déplacement et les options sont indiqués à part.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tarifs reveal">
+$TARIF_MARIAGE
+$TARIF_PRIVEE
+$TARIF_ENTREPRISE
+    </div>
+    <p style="margin-top:2rem;color:var(--ink-60)">
+      Le prix peut évoluer selon la date et la durée. Le montant exact figure sur votre devis, avant toute réservation.
+    </p>
+  </div>
+</section>
+
+<section class="section section--white">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">En plus du forfait</p>
+      <h2>Déplacement et réservation</h2>
+    </div>
+    <div class="grid grid--2 reveal">
+$BLOC_DEPLACEMENT
+$BLOC_RESERVATION
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap--narrow reveal">
+$BLOC_OPTIONS
+  </div>
+</section>
+HTML
+bande_cta "Un devis pour votre date&nbsp;?" "Indiquez-nous la date et le lieu. Vous recevez un devis complet sous 24 heures."
+page_close
+} | page_write "tarifs/index.html"
 
 
 # ================================================ PAGES PRESTATION DETAIL ==
@@ -289,16 +356,26 @@ page_close
 } | page_write "prestations/$SLUG/index.html"
 }
 
-# Bloc « conditions » partage par les pages avec un tarif
-read -r -d '' CONDITIONS <<'HTML' || true
-      <article class="card reveal">
-        <p class="card__num">Conditions</p>
-        <h3>Réservation et paiement</h3>
-        <p>Un acompte de 30&nbsp;% bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p>
-        <p>En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif.</p>
-        <p>Déplacement gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour. Au-delà d’1&nbsp;h&nbsp;20 de route, l’hébergement de la veille est à la charge des clients. TVA non applicable, article 293&nbsp;B du CGI.</p>
-      </article>
+# Section « tarif » des pages prestation : le forfait, puis le deplacement et
+# la reservation, chacun dans son propre bloc (voir TARIFS dans common.sh).
+# section_tarif <eyebrow> <titre> <bloc-forfait>
+section_tarif () {
+cat <<HTML
+<section class="section" id="tarif">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">$1</p>
+      <h2>$2</h2>
+    </div>
+    <div class="tarifs reveal">
+$3
+$BLOC_DEPLACEMENT
+$BLOC_RESERVATION
+    </div>
+  </div>
+</section>
 HTML
+}
 
 # ------------------------------------------------------------- DJ MARIAGE --
 read -r -d '' CORPS_MARIAGE <<HTML || true
@@ -345,29 +422,11 @@ read -r -d '' CORPS_MARIAGE <<HTML || true
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Tarif</p>
-      <h2>Le pack mariage</h2>
-      <p>Un prix affiché plutôt qu’une fourchette&nbsp;: c’est l’une des raisons pour lesquelles les mariés choisissent l’agence.</p>
-    </div>
-    <div class="grid grid--2">
-      <article class="card reveal">
-        <p class="card__num">Cocktail, dîner et soirée</p>
-        <h3>1&nbsp;600&nbsp;€</h3>
-        <p>Hors déplacement. Le prix peut varier selon la durée, la saison et le jour de la semaine.</p>
-        <ul style="margin:0 0 0;padding-left:1.1rem;color:var(--ink-60);font-size:.95rem">
-          <li>Sonorisation complète, enceintes Yamaha</li>
-          <li>Huit projecteurs PAR LED</li>
-          <li>Deux micros sans fil</li>
-          <li>Vidéoprojecteur et écran</li>
-          <li>Soirée jusqu’à 4&nbsp;h&nbsp;30</li>
-        </ul>
-      </article>
-$CONDITIONS
-    </div>
-    <p style="margin-top:2.5rem"><a class="link-arrow" href="/prestations/options-mariage/">Cérémonie laïque, photobooth, fumée lourde&nbsp;: voir les options</a></p>
+$(section_tarif "Tarif" "Le prix d’un mariage" "$TARIF_MARIAGE")
+
+<section class="section section--white">
+  <div class="wrap wrap--narrow">
+$BLOC_OPTIONS
   </div>
 </section>
 
@@ -390,10 +449,10 @@ $CONDITIONS
 HTML
 
 presta "dj-mariage" \
- "Prestation DJ mariage : pack à 1 600 € et options" \
- "Le pack mariage de l’Agence Silence : cocktail, dîner et soirée jusqu’à 4 h 30, son, lumière, micros, vidéoprojecteur et écran pour 1 600 € hors déplacement. Cérémonie laïque en option." \
+ "Prestation DJ mariage : forfait à 1 600 € et options" \
+ "Le forfait mariage de l’Agence Silence : 1 600 € pour le cocktail, le dîner et la soirée. Son, lumière, micros, vidéoprojecteur et écran inclus. Cérémonie laïque en option." \
  "La prestation DJ mariage, du cocktail au bout de la nuit" \
- "Plus de 500 mariages depuis 2019. Un pack complet et clair, une quinzaine d’heures de présence le jour J, et des options pour aller plus loin." \
+ "Plus de 500 mariages depuis 2019. Un forfait complet, une quinzaine d’heures de présence le jour J, et des options si vous le souhaitez." \
  "og-agence-silence.jpg" \
  "DJ mariage" \
  "$CORPS_MARIAGE" \
@@ -433,7 +492,7 @@ presta "options-mariage" \
  "Options mariage : photobooth, fumée lourde, livre d’or audio" \
  "Les options de l’Agence Silence pour votre mariage : cérémonie laïque, photobooth, livre d’or audio, fumée lourde pour l’ouverture de bal, feux de couleur, ciel étoilé, éclairage dynamique et musiciens." \
  "Les options pour votre mariage" \
- "Le pack comprend déjà le son, la lumière, les micros, le vidéoprojecteur et l’écran. Les options réunissent le reste chez un même prestataire." \
+ "Le forfait comprend déjà le son, la lumière, les micros, le vidéoprojecteur et l’écran. Les options ajoutent le reste, sans autre prestataire." \
  "og-agence-silence.jpg" \
  "Options mariage" \
  "$CORPS_OPTIONS" \
@@ -459,7 +518,7 @@ read -r -d '' CORPS_CORPO <<HTML || true
       <div class="reveal">
         <div class="grid" style="gap:1.25rem">
           <article class="card"><h3>Conférences et séminaires</h3><p>Sonorisation de la plénière et micros sans fil pour les intervenants.</p></article>
-          <article class="card"><h3>Galas et soirées de fin d’année</h3><p>Du cocktail à la soirée dansante, avec le pack complet son et lumière.</p></article>
+          <article class="card"><h3>Galas et soirées de fin d’année</h3><p>Du cocktail à la soirée dansante, avec le son et la lumière inclus.</p></article>
           <article class="card"><h3>Tous les secteurs</h3><p>Défense, aéronautique, cosmétique, coiffure, BTP&nbsp;: de la start-up à la multinationale.</p></article>
           <article class="card"><h3>Des clients fidèles</h3><p>Certaines entreprises font appel à l’agence chaque année depuis cinq ans.</p></article>
         </div>
@@ -474,16 +533,16 @@ read -r -d '' CORPS_CORPO <<HTML || true
       <p class="eyebrow">En pratique</p>
       <h2>Ce qu’il faut savoir avant de réserver</h2>
     </div>
-    <div class="grid grid--3">
-      <article class="card reveal"><h3>À partir de 500&nbsp;€</h3><p>Le tarif varie selon la durée, la saison et le jour. Déplacement gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour.</p></article>
-      <article class="card reveal"><h3>Micro-entreprise immatriculée</h3><p>SIRET $SIRET_AFF. TVA non applicable, article 293&nbsp;B du CGI.</p></article>
-      <article class="card reveal"><h3>Paiement</h3><p>Un acompte bloque la date, le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p></article>
-      <article class="card reveal"><h3>Matériel assuré</h3><p>Attestation d’assurance fournie sur demande.</p></article>
-      <article class="card reveal"><h3>Jusqu’à 600 personnes</h3><p>Le matériel couvre les événements jusqu’à 600 invités&nbsp;; au-delà, du matériel complémentaire est loué.</p></article>
-      <article class="card reveal"><h3>En anglais</h3><p>Léo parle anglais, pour les événements internationaux et les équipes étrangères.</p></article>
+    <div class="grid grid--2">
+      <article class="card reveal"><h3>Micro-entreprise</h3><p>SIRET $SIRET_AFF. TVA non applicable, article 293&nbsp;B du CGI.</p></article>
+      <article class="card reveal"><h3>Matériel assuré</h3><p>L’attestation d’assurance est fournie sur demande.</p></article>
+      <article class="card reveal"><h3>Grands événements</h3><p>Le matériel suffit pour 600 invités. Au-delà, du matériel est loué en plus.</p></article>
+      <article class="card reveal"><h3>En anglais</h3><p>Léo parle anglais, pour les événements internationaux.</p></article>
     </div>
   </div>
 </section>
+
+$(section_tarif "Tarif" "Le prix d’un événement d’entreprise" "$TARIF_ENTREPRISE")
 HTML
 
 presta "dj-entreprise" \
@@ -509,7 +568,7 @@ read -r -d '' CORPS_PRIVE <<HTML || true
           toutes les soirées privées, sans minimum d’invités ni de durée.
         </p>
         <p>
-          Le pack est le même qu’un mariage&nbsp;: son, lumière et micros. Et le même objectif,
+          Le matériel est le même qu’un mariage&nbsp;: son, lumière et micros. Et le même objectif,
           faire danser toutes les générations.
         </p>
       </div>
@@ -524,29 +583,14 @@ read -r -d '' CORPS_PRIVE <<HTML || true
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Tarif</p>
-      <h2>La soirée anniversaire</h2>
-    </div>
-    <div class="grid grid--2">
-      <article class="card reveal">
-        <p class="card__num">De 20 h à 2 h</p>
-        <h3>À partir de 600&nbsp;€</h3>
-        <p>Pack son et lumière complet, hors déplacement. Aucun minimum d’invités.</p>
-      </article>
-$CONDITIONS
-    </div>
-  </div>
-</section>
+$(section_tarif "Tarif" "Le prix d’une soirée privée" "$TARIF_PRIVEE")
 HTML
 
 presta "dj-soiree-privee" \
  "DJ soirée privée à Toulouse — anniversaires et fêtes" \
- "DJ pour anniversaire, fiançailles ou fête de famille près de Toulouse : pack son et lumière complet, soirée de 20 h à 2 h à partir de 600 €. Aucun minimum d’invités." \
+ "DJ pour anniversaire, fiançailles ou fête de famille près de Toulouse : son et lumière inclus, à partir de 600 €. Aucun minimum d’invités." \
  "DJ soirée privée à Toulouse" \
- "Anniversaires, fiançailles, fêtes de famille&nbsp;: toutes les soirées privées, avec le même pack son et lumière qu’un mariage." \
+ "Anniversaires, fiançailles, fêtes de famille&nbsp;: toutes les soirées privées, avec le même matériel qu’un mariage." \
  "og-agence-silence.jpg" \
  "DJ soirée privée" \
  "$CORPS_PRIVE" \

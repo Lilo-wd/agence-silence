@@ -16,6 +16,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
 url "/"                                  "1.0" "monthly"
 url "/dj-mariage-toulouse/"              "0.9" "monthly"
 url "/prestations/dj-mariage/"           "0.9" "monthly"
+url "/tarifs/"                           "0.9" "monthly"
 url "/contact/"                          "0.9" "yearly"
 url "/dj-mariage-castres/"               "0.8" "monthly"
 url "/prestations/"                      "0.8" "monthly"

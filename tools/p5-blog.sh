@@ -42,7 +42,7 @@ cat <<'HTML'
         <p class="post-item__date"><time datetime="2026-06-24">24 juin 2026</time></p>
         <div>
           <h2 style="font-size:clamp(1.25rem,1.1rem + .7vw,1.6rem);margin-bottom:.5rem">Quel budget prévoir pour un DJ de mariage ?</h2>
-          <p>Un tarif réel plutôt qu’une fourchette&nbsp;: ce que comprend un pack, ce qui fait varier le prix, et ce qu’il faut vérifier dans un devis.</p>
+          <p>Un tarif réel plutôt qu’une fourchette&nbsp;: ce que comprend un forfait, ce qui fait varier le prix, et ce qu’il faut vérifier dans un devis.</p>
         </div>
       </a>
 
@@ -193,7 +193,7 @@ read -r -d '' A1 <<'HTML' || true
 
 <hr style="border:none;border-top:1px solid var(--line);margin:3.5rem 0">
 <p>
-  <a href="/prestations/dj-mariage/">Voir le pack mariage</a> &middot;
+  <a href="/prestations/dj-mariage/">Voir le forfait mariage</a> &middot;
   <a href="/dj-mariage-toulouse/">DJ mariage à Toulouse</a> &middot;
   <a href="/faq/">Toutes les questions fréquentes</a>
 </p>
@@ -213,10 +213,10 @@ read -r -d '' A2 <<'HTML' || true
   voici un tarif réel, et ce qu’il recouvre.
 </p>
 
-<h2>Un exemple concret&nbsp;: le pack de l’Agence Silence</h2>
+<h2>Un exemple concret&nbsp;: le forfait de l’Agence Silence</h2>
 <p>
-  Pour un mariage — cocktail, dîner et soirée — le pack est à <strong>1&nbsp;600&nbsp;€</strong>,
-  hors déplacement. Il comprend&nbsp;:
+  Le forfait mariage de l’agence coûte <strong>1&nbsp;600&nbsp;€</strong>. Il couvre le
+  cocktail, le dîner et la soirée. Il comprend&nbsp;:
 </p>
 <ul>
   <li>la sonorisation complète, avec des enceintes professionnelles&nbsp;;</li>
@@ -235,14 +235,15 @@ read -r -d '' A2 <<'HTML' || true
 <ul>
   <li><strong>La durée</strong>&nbsp;: prolonger au-delà de l’heure de fin se paie en heures supplémentaires.</li>
   <li><strong>La saison et le jour</strong>&nbsp;: un samedi de juin ne se négocie pas comme un vendredi de novembre.</li>
-  <li><strong>Le déplacement</strong>&nbsp;: gratuit dans un rayon de 50&nbsp;km, puis 0,60&nbsp;€ du kilomètre aller-retour.</li>
+  <li><strong>Le déplacement</strong>&nbsp;: offert jusqu’à 50&nbsp;km, puis compté au kilomètre. Le montant est écrit sur le devis.</li>
   <li><strong>Les options</strong>&nbsp;: cérémonie laïque, photobooth, livre d’or audio, fumée lourde pour l’ouverture de bal, éclairage dynamique, musiciens.</li>
 </ul>
 
 <h2>Et pour les autres événements</h2>
 <p>
-  Un anniversaire de 20&nbsp;h à 2&nbsp;h démarre à 600&nbsp;€, une soirée d’entreprise à
-  500&nbsp;€, avec le même pack son et lumière.
+  Une soirée privée coûte à partir de 600&nbsp;€. Un événement d’entreprise coûte à partir
+  de 500&nbsp;€. Le son et la lumière sont inclus dans les deux cas.
+  <a href="/tarifs/">Voir tous les tarifs</a>
 </p>
 
 <h2>Ce qu’il faut vérifier dans un devis</h2>
@@ -250,7 +251,7 @@ read -r -d '' A2 <<'HTML' || true
   <li><strong>Ce qui est inclus.</strong> Un prix bas qui n’inclut ni la lumière ni les micros finit rarement bas.</li>
   <li><strong>L’heure de fin</strong> et le tarif d’une heure supplémentaire.</li>
   <li><strong>Le déplacement</strong>, chiffré noir sur blanc.</li>
-  <li><strong>L’acompte et l’annulation.</strong> À l’Agence Silence&nbsp;: 30&nbsp;% à la réservation, solde une semaine avant&nbsp;; en cas d’annulation l’acompte est conservé, un report reste possible au même tarif.</li>
+  <li><strong>L’acompte et l’annulation.</strong> À l’Agence Silence, l’acompte est de 30&nbsp;%. Le solde se paie une semaine avant. En cas d’annulation, l’acompte n’est pas remboursé.</li>
   <li><strong>La TVA.</strong> Une micro-entreprise non assujettie facture sans TVA&nbsp;: le prix affiché est le prix payé.</li>
 </ul>
 
@@ -263,7 +264,7 @@ read -r -d '' A2 <<'HTML' || true
 
 <hr style="border:none;border-top:1px solid var(--line);margin:3.5rem 0">
 <p>
-  <a href="/prestations/dj-mariage/">Le pack mariage en détail</a> &middot;
+  <a href="/prestations/dj-mariage/">Le forfait mariage en détail</a> &middot;
   <a href="/prestations/options-mariage/">Les options</a> &middot;
   <a href="/blog/choisir-dj-mariage-toulouse/">Comment choisir son DJ de mariage</a>
 </p>
@@ -273,7 +274,7 @@ article "budget-dj-mariage" \
  "Quel budget pour un DJ de mariage ? Un tarif réel, détaillé" \
  "Combien coûte un DJ de mariage près de Toulouse : un tarif réel détaillé, ce qu’il comprend, ce qui fait varier le prix et les points à vérifier dans un devis." \
  "Quel budget prévoir pour un DJ de mariage ?" \
- "Un tarif réel plutôt qu’une fourchette&nbsp;: ce que comprend un pack mariage, ce qui fait varier le prix, et les points à vérifier avant de signer." \
+ "Un tarif réel plutôt qu’une fourchette&nbsp;: ce que comprend un forfait mariage, ce qui fait varier le prix, et les points à vérifier avant de signer." \
  "blog-budget-dj.svg" "2026-06-24" "24 juin 2026" "$A2"
 
 # ------------------------------------------------------------- ARTICLE 3 --
@@ -342,7 +343,7 @@ read -r -d '' A3 <<'HTML' || true
 <hr style="border:none;border-top:1px solid var(--line);margin:3.5rem 0">
 <p>
   <a href="/prestations/options-mariage/">Les options mariage</a> &middot;
-  <a href="/prestations/dj-mariage/">Le pack mariage</a> &middot;
+  <a href="/prestations/dj-mariage/">Le forfait mariage</a> &middot;
   <a href="/blog/choisir-dj-mariage-toulouse/">Comment choisir son DJ de mariage</a>
 </p>
 HTML

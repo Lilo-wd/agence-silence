@@ -534,6 +534,42 @@ em{font-style:italic}
 .service-card ul li::before{content:"";position:absolute;left:0;top:.68em;width:5px;height:1px;background:var(--lavande)}
 .service-card .link-arrow{margin-top:auto;align-self:flex-start}
 
+/* ---------------------------------------------------------------- Tarifs --- */
+/* Une information par ligne : libelle a gauche, valeur a droite. */
+.prix-ligne{
+  display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+  margin:0 0 1.75rem;padding:1rem 0;border-block:1px solid var(--line-soft);
+}
+.prix-ligne span{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40)}
+.prix-ligne strong{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1;color:var(--ink);white-space:nowrap}
+
+.tarifs{display:grid;gap:clamp(1.25rem,2.5vw,2rem);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.tarif{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line-soft);padding:clamp(1.6rem,3vw,2.25rem)}
+.tarif--phare{border-color:var(--lavande)}
+.tarif__nom{font-size:.76rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--lavande-deep);margin:0}
+.tarif__depuis{display:block;margin-top:1.4rem;font-size:.85rem;color:var(--ink-60)}
+.tarif__prix{font-family:var(--serif);font-size:clamp(2.4rem,2rem + 1.6vw,3.1rem);line-height:1.05;color:var(--ink);margin:.2rem 0 .5rem;white-space:nowrap}
+.tarif__depuis + .tarif__prix{margin-top:.1rem}
+.tarif__nom + .tarif__prix{margin-top:1.4rem}
+.tarif__note{font-size:.9rem;color:var(--ink-60);margin:0}
+.tarif .link-arrow{margin-top:auto;padding-top:1.75rem;align-self:flex-start}
+.service-card .prix-ligne{margin-top:auto}
+.service-card .prix-ligne + .link-arrow{margin-top:0}
+
+.lignes{list-style:none;margin:1.5rem 0 0;padding:0;border-top:1px solid var(--line-soft)}
+/* Libelle au-dessus, valeur en dessous : lecture identique sur mobile et
+   dans les cartes etroites (en ligne, seules les lignes longues cassaient). */
+.lignes li{display:block;padding:.8rem 0;border-bottom:1px solid var(--line-soft)}
+.lignes li > span{display:block;font-size:.8rem;letter-spacing:.02em;line-height:1.4;color:var(--ink-60)}
+.lignes li > strong{display:block;margin-top:.15rem;font-size:1rem;font-weight:500;line-height:1.4;color:var(--ink)}
+.lignes--seule{margin-top:0}
+.tableau-prix{background:var(--white);border:1px solid var(--line-soft);padding:clamp(1.6rem,3vw,2.25rem)}
+.tableau-prix .tarif__nom{margin-bottom:.75rem}
+.tableau-prix h3{margin-bottom:.4rem}
+.tableau-prix > p{color:var(--ink-60);font-size:.95rem}
+.tableau-prix .lignes{margin-top:1.25rem}
+@media (max-width:560px){.tarif,.tableau-prix{padding:1.5rem 1.25rem}}
+
 /* -------------------------------------------------------------- Galerie --- */
 .gallery{display:grid;gap:clamp(.6rem,1.4vw,1.1rem);grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
 .gallery figure{margin:0;position:relative;overflow:hidden;background:var(--ecru-deep)}

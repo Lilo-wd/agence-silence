@@ -56,6 +56,112 @@ else
   BANDEAU=""
 fi
 
+# ================================================================ TARIFS ==
+# Retour de Leo (sept. 2026) : les prix etaient disperses dans des phrases
+# qui melangeaient durees, distances et montants (« 0,60 € du kilometre
+# aller-retour au-dela de 50 km… »), et « 0,60 € » se lisait « 60 € ».
+# Regle desormais : les tarifs ne s'ecrivent QUE dans ces blocs, une
+# information par ligne (libelle a gauche, valeur a droite). Les autres
+# pages y renvoient (/tarifs/) au lieu de recopier les chiffres.
+
+read -r -d '' TARIF_MARIAGE <<'HTML' || true
+<article class="tarif tarif--phare">
+  <p class="tarif__nom">Mariage</p>
+  <p class="tarif__prix">1&nbsp;600&nbsp;€</p>
+  <p class="tarif__note">Forfait complet, hors déplacement.</p>
+  <ul class="lignes">
+    <li><span>Moments couverts</span><strong>Cocktail, dîner, soirée</strong></li>
+    <li><span>Fin de soirée</span><strong>4&nbsp;h&nbsp;30</strong></li>
+    <li><span>Son et lumière</span><strong>Inclus</strong></li>
+    <li><span>Deux micros sans fil</span><strong>Inclus</strong></li>
+    <li><span>Vidéoprojecteur et écran</span><strong>Inclus</strong></li>
+  </ul>
+  <a class="link-arrow" href="/prestations/dj-mariage/">La prestation mariage</a>
+</article>
+HTML
+
+read -r -d '' TARIF_PRIVEE <<'HTML' || true
+<article class="tarif">
+  <p class="tarif__nom">Soirée privée</p>
+  <span class="tarif__depuis">À partir de</span>
+  <p class="tarif__prix">600&nbsp;€</p>
+  <p class="tarif__note">Hors déplacement.</p>
+  <ul class="lignes">
+    <li><span>Occasions</span><strong>Anniversaire, fête de famille</strong></li>
+    <li><span>Horaires</span><strong>De 20&nbsp;h à 2&nbsp;h</strong></li>
+    <li><span>Nombre d’invités</span><strong>Aucun minimum</strong></li>
+    <li><span>Son et lumière</span><strong>Inclus</strong></li>
+  </ul>
+  <a class="link-arrow" href="/prestations/dj-soiree-privee/">La prestation soirée privée</a>
+</article>
+HTML
+
+read -r -d '' TARIF_ENTREPRISE <<'HTML' || true
+<article class="tarif">
+  <p class="tarif__nom">Entreprise</p>
+  <span class="tarif__depuis">À partir de</span>
+  <p class="tarif__prix">500&nbsp;€</p>
+  <p class="tarif__note">Hors déplacement.</p>
+  <ul class="lignes">
+    <li><span>Formats</span><strong>Soirée, gala, séminaire</strong></li>
+    <li><span>Conférence sonorisée</span><strong>Possible</strong></li>
+    <li><span>Son et lumière</span><strong>Inclus</strong></li>
+    <li><span>Micros sans fil</span><strong>Inclus</strong></li>
+  </ul>
+  <a class="link-arrow" href="/prestations/dj-entreprise/">La prestation entreprise</a>
+</article>
+HTML
+
+read -r -d '' BLOC_DEPLACEMENT <<'HTML' || true
+<div class="tableau-prix" id="deplacement">
+  <p class="tarif__nom">Déplacement</p>
+  <h3>Les frais de déplacement</h3>
+  <p>Calculés depuis l’agence, à Lauzerville, près de Toulouse.</p>
+  <ul class="lignes">
+    <li><span>Jusqu’à 50&nbsp;km</span><strong>Offert</strong></li>
+    <li><span>Au-delà de 50&nbsp;km</span><strong>0,60&nbsp;€ le kilomètre</strong></li>
+    <li><span>Trajet compté</span><strong>Aller et retour</strong></li>
+    <li><span>Plus d’1&nbsp;h&nbsp;20 de route</span><strong>Nuit de la veille à votre charge</strong></li>
+    <li><span>Montant exact</span><strong>Écrit sur le devis</strong></li>
+  </ul>
+</div>
+HTML
+
+read -r -d '' BLOC_RESERVATION <<'HTML' || true
+<div class="tableau-prix" id="reservation">
+  <p class="tarif__nom">Réservation</p>
+  <h3>Réserver et payer</h3>
+  <p>Le prix affiché est le prix payé&nbsp;: pas de TVA en plus.</p>
+  <ul class="lignes">
+    <li><span>Pour bloquer la date</span><strong>Acompte de 30&nbsp;%</strong></li>
+    <li><span>Le solde</span><strong>Une semaine avant</strong></li>
+    <li><span>Moyens de paiement</span><strong>Tous acceptés</strong></li>
+    <li><span>Changement de date</span><strong>Possible, même prix</strong></li>
+    <li><span>Annulation</span><strong>Acompte non remboursé</strong></li>
+  </ul>
+</div>
+HTML
+
+read -r -d '' BLOC_OPTIONS <<'HTML' || true
+<div class="tableau-prix" id="options">
+  <p class="tarif__nom">Options</p>
+  <h3>Les options mariage</h3>
+  <p>À ajouter au forfait si vous le souhaitez. Leurs prix sont dans la brochure, envoyée avec votre devis.</p>
+  <ul class="city-list" style="margin-top:1.5rem">
+    <li><span>Cérémonie laïque</span></li>
+    <li><span>Heures supplémentaires</span></li>
+    <li><span>Photobooth</span></li>
+    <li><span>Livre d’or audio</span></li>
+    <li><span>Fumée lourde</span></li>
+    <li><span>Feux de couleur</span></li>
+    <li><span>Ciel étoilé</span></li>
+    <li><span>Éclairage dynamique</span></li>
+    <li><span>Saxophoniste ou pianiste</span></li>
+  </ul>
+  <p style="margin-top:1rem"><a class="link-arrow" href="/prestations/options-mariage/">Le détail des options</a></p>
+</div>
+HTML
+
 # page_open <titre> <description> <chemin-canonique> <image-og>
 page_open () {
 local TITRE=$1 DESC=$2 CANON=$3 OGIMG=$4
@@ -120,7 +226,7 @@ cat <<HTML
       <a href="/galerie/">Galerie</a>
       <a href="/temoignages/">Témoignages</a>
       <a href="/zone-intervention/">Zone d’intervention</a>
-      <a href="/blog/">Journal</a>
+      <a href="/tarifs/">Tarifs</a>
       <a class="btn header-cta" href="/contact/">Vérifier ma date</a>
     </nav>
   </div>
@@ -203,6 +309,7 @@ cat <<HTML
           <li><a href="/prestations/options-mariage/">Options mariage</a></li>
           <li><a href="/prestations/dj-entreprise/">DJ événement d’entreprise</a></li>
           <li><a href="/prestations/dj-soiree-privee/">DJ soirée privée</a></li>
+          <li><a href="/tarifs/">Tarifs</a></li>
         </ul>
       </div>
 
@@ -232,6 +339,7 @@ cat <<HTML
       <nav aria-label="Liens de bas de page">
         <a href="/contact/">Contact</a>
         <a href="/faq/">FAQ</a>
+        <a href="/blog/">Journal</a>
         <a href="/mentions-legales/">Mentions légales</a>
       </nav>
     </div>

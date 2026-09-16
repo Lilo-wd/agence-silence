@@ -6,7 +6,7 @@ source "$(dirname "$0")/common.sh"
 {
 page_open \
  "DJ mariage Toulouse &amp; événementiel — Agence Silence" \
- "Agence Silence, DJ mariage à Toulouse depuis 2019 : plus de 500 mariages, note de 4,9/5 sur 59 avis Mariages.net. Pack cocktail, dîner et soirée à 1 600 €, son et lumière compris." \
+ "Agence Silence, DJ mariage à Toulouse depuis 2019 : plus de 500 mariages, note de 4,9/5 sur 59 avis Mariages.net. Forfait cocktail, dîner et soirée à 1 600 €, son et lumière compris." \
  "/" "og-agence-silence.jpg"
 
 # Pas de balisage AggregateRating / Review : les avis viennent de Mariages.net
@@ -98,8 +98,7 @@ cat <<HTML
 HTML
 
 page_head_close
-
-cat <<'HTML'
+cat <<HTML
 <section class="bande-fixe bande-fixe--sombre">
   <div class="bande-fixe__media" aria-hidden="true">
     <img src="/assets/img/hero-dj-platines.webp"
@@ -108,18 +107,17 @@ cat <<'HTML'
   </div>
   <div class="wrap bande-fixe__contenu">
     <p class="eyebrow">Agence Silence &middot; Léo Malhie &middot; Toulouse</p>
-    <h1>DJ de mariage à Toulouse, pour des fêtes que l’on raconte encore dix ans après.</h1>
+    <h1>DJ de mariage à Toulouse, pour une piste pleine jusqu’au bout de la nuit.</h1>
     <p class="bande-fixe__lead">
-      Un son haut de gamme, des tarifs clairs et une piste qui fait danser
-      toutes les générations, du cocktail jusqu’au bout de la nuit.
+      Un son haut de gamme, des prix affichés, et toutes les générations qui dansent ensemble.
     </p>
     <div class="btn-row">
-      <a class="btn btn--light" href="/contact/">Vérifier la disponibilité de ma date</a>
-      <a class="btn btn--outline-light" href="/temoignages/">Lire les avis des mariés</a>
+      <a class="btn btn--light" href="/contact/">Vérifier ma date</a>
+      <a class="btn btn--outline-light" href="/tarifs/">Voir les tarifs</a>
     </div>
     <p class="bande-fixe__meta">
       <span>+500 mariages depuis 2019</span>
-      <span>4,9/5 sur 59 avis Mariages.net</span>
+      <span>4,9/5 sur Mariages.net</span>
       <span>Wedding Awards 2024, 2025, 2026</span>
     </p>
   </div>
@@ -130,21 +128,19 @@ cat <<'HTML'
   <div class="wrap">
     <div class="split">
       <div class="reveal">
-        <p class="eyebrow">La façon de travailler</p>
-        <h2>À l’écoute, discret, mais toujours présent.</h2>
+        <p class="eyebrow">Notre façon de travailler</p>
+        <h2>Une soirée préparée avec vous, pas pour vous.</h2>
       </div>
       <div class="reveal">
         <p class="lead">
-          Autant de rendez-vous que vous le souhaitez pour préparer la journée,
-          un questionnaire musical complet, vos playlists si vous en avez&nbsp;:
-          la soirée se construit avec vous.
+          On prépare votre soirée ensemble, en autant de rendez-vous qu’il vous faut.
+          Un questionnaire vous aide à choisir la musique. Vos playlists sont les bienvenues.
         </p>
         <p>
-          Le jour J, le DJ prend le micro pour les annonces, lit la piste en continu
-          et accepte les demandes de vos invités. Un seul objectif, celui dont Léo
-          est le plus fier&nbsp;: voir toutes les générations danser ensemble.
+          Le jour J, le DJ fait les annonces au micro et prend les demandes de vos invités.
+          Son objectif&nbsp;: voir toutes les générations sur la piste.
         </p>
-        <p><a class="link-arrow" href="/a-propos/">Découvrir Léo et l’agence</a></p>
+        <p><a class="link-arrow" href="/a-propos/">Découvrir Léo et l’équipe</a></p>
       </div>
     </div>
   </div>
@@ -155,10 +151,10 @@ cat <<'HTML'
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Prestations</p>
-      <h2>Trois formats, des tarifs affichés</h2>
+      <h2>Mariages, entreprises, soirées privées</h2>
       <p>
-        L’Agence Silence ne joue ni en club ni en bar&nbsp;: c’est une agence
-        d’événementiel. Chaque prestation comprend le pack complet, son et lumière.
+        Ni club, ni bar&nbsp;: l’agence se consacre à l’événementiel.
+        Le son et la lumière sont toujours inclus.
       </p>
     </div>
 
@@ -170,12 +166,13 @@ cat <<'HTML'
         </div>
         <div class="service-card__body">
           <h3>Mariages</h3>
-          <p>Le cœur du métier&nbsp;: plus de 500 mariages depuis 2019, du cocktail jusqu’à 4&nbsp;h&nbsp;30.</p>
+          <p>Notre cœur de métier. Plus de 500 mariages depuis 2019.</p>
           <ul>
-            <li>Cocktail, dîner et soirée&nbsp;: 1&nbsp;600&nbsp;€</li>
+            <li>Cocktail, dîner et soirée</li>
             <li>Vidéoprojecteur et écran inclus</li>
             <li>Cérémonie laïque en option</li>
           </ul>
+          <p class="prix-ligne"><span>Forfait</span><strong>1&nbsp;600&nbsp;€</strong></p>
           <a class="link-arrow" href="/prestations/dj-mariage/">DJ mariage</a>
         </div>
       </article>
@@ -187,12 +184,13 @@ cat <<'HTML'
         </div>
         <div class="service-card__body">
           <h3>Événements d’entreprise</h3>
-          <p>Plus de 200 événements d’entreprise, en France comme à Singapour ou Budapest.</p>
+          <p>Plus de 200 événements, en France et à l’étranger.</p>
           <ul>
-            <li>Conférence et soirée, un seul prestataire</li>
+            <li>Conférence et soirée</li>
             <li>Gala, séminaire, fin d’année</li>
-            <li>À partir de 500&nbsp;€</li>
+            <li>Un seul prestataire</li>
           </ul>
+          <p class="prix-ligne"><span>À partir de</span><strong>500&nbsp;€</strong></p>
           <a class="link-arrow" href="/prestations/dj-entreprise/">DJ entreprise</a>
         </div>
       </article>
@@ -204,16 +202,21 @@ cat <<'HTML'
         </div>
         <div class="service-card__body">
           <h3>Soirées privées</h3>
-          <p>Anniversaires, fiançailles, fêtes de famille, avec le même pack son et lumière.</p>
+          <p>Anniversaires, fiançailles et fêtes de famille.</p>
           <ul>
-            <li>Anniversaire de 20&nbsp;h à 2&nbsp;h&nbsp;: dès 600&nbsp;€</li>
+            <li>Le même matériel qu’un mariage</li>
             <li>Aucun minimum d’invités</li>
-            <li>Toutes les soirées privées</li>
+            <li>Toutes les occasions</li>
           </ul>
+          <p class="prix-ligne"><span>À partir de</span><strong>600&nbsp;€</strong></p>
           <a class="link-arrow" href="/prestations/dj-soiree-privee/">DJ soirée privée</a>
         </div>
       </article>
     </div>
+    <p style="margin-top:2.5rem;color:var(--ink-60)">
+      Prix hors déplacement. Le déplacement est offert jusqu’à 50&nbsp;km.
+    </p>
+    <p><a class="link-arrow" href="/tarifs/">Tous les tarifs en détail</a></p>
   </div>
 </section>
 
@@ -222,28 +225,28 @@ cat <<'HTML'
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Comment ça se passe</p>
-      <h2>De la première question au dernier morceau</h2>
+      <h2>Quatre étapes, sans surprise</h2>
     </div>
     <div class="grid grid--4" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))">
       <article class="card reveal">
         <p class="card__num">01</p>
-        <h3>Vérification de la date</h3>
-        <p>Donnez-nous la date et le lieu&nbsp;: réponse sous 24&nbsp;h, week-end compris.</p>
+        <h3>Vous demandez votre date</h3>
+        <p>Indiquez la date et le lieu. Nous répondons sous 24&nbsp;heures, même le week-end.</p>
       </article>
       <article class="card reveal">
         <p class="card__num">02</p>
-        <h3>Devis et réservation</h3>
-        <p>Un devis clair, aux tarifs affichés. Un acompte de 30&nbsp;% bloque la date, le solde se règle une semaine avant.</p>
+        <h3>Vous recevez le devis</h3>
+        <p>Tout y est chiffré, déplacement compris. Un acompte suffit pour réserver la date.</p>
       </article>
       <article class="card reveal">
         <p class="card__num">03</p>
-        <h3>Préparation</h3>
-        <p>Questionnaire musical, playlists, ouverture de bal&nbsp;: en autant de rendez-vous que vous le souhaitez.</p>
+        <h3>On prépare ensemble</h3>
+        <p>Musique, ouverture de bal, déroulé&nbsp;: autant de rendez-vous que vous voulez.</p>
       </article>
       <article class="card reveal">
         <p class="card__num">04</p>
         <h3>Le jour J</h3>
-        <p>Deux heures d’installation avant vos invités. Soirée jusqu’à 4&nbsp;h&nbsp;30, heures supplémentaires possibles.</p>
+        <p>Le DJ s’installe avant l’arrivée des invités. Vous n’avez rien à gérer.</p>
       </article>
     </div>
   </div>
@@ -254,7 +257,7 @@ cat <<'HTML'
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">En images</p>
-      <h2>Quelques soirées signées Agence Silence</h2>
+      <h2>Quelques soirées de l’agence</h2>
     </div>
     <div class="gallery reveal">
       <figure>
@@ -290,7 +293,7 @@ cat <<'HTML'
     <div class="section-head section-head--center reveal">
       <p class="eyebrow">Ils ont dansé</p>
       <h2>Ce que disent les mariés</h2>
-      <p>4,9&nbsp;sur&nbsp;5 sur 59 avis Mariages.net, et trois Wedding Awards consécutifs.</p>
+      <p>Note de 4,9/5 sur Mariages.net. Trois Wedding Awards d’affilée.</p>
     </div>
     <div class="grid grid--3">
       <figure class="quote reveal">
@@ -321,17 +324,16 @@ cat <<'HTML'
     <div class="zone-grid">
       <div class="reveal">
         <p class="eyebrow">Zone d’intervention</p>
-        <h2>Installé aux portes de Toulouse, jusqu’à l’étranger</h2>
+        <h2>Près de Toulouse, et partout ailleurs</h2>
         <p>
-          L’agence est basée à Lauzerville, à côté de Toulouse. Les mariages se
-          concentrent en Haute-Garonne, dans le Tarn et dans l’Aude&nbsp;: Toulouse,
-          Castres et Ramonville en tête.
+          L’agence est installée à Lauzerville, juste à côté de Toulouse.
+          La plupart des mariages ont lieu en Haute-Garonne, dans le Tarn et dans l’Aude.
         </p>
         <p>
-          Déplacement gratuit dans un rayon de 50&nbsp;km. Au-delà, 0,60&nbsp;€ du
-          kilomètre aller-retour, indiqué dès le devis.
+          Le déplacement est offert jusqu’à 50&nbsp;km.
+          Au-delà, son prix est écrit sur votre devis.
         </p>
-        <p><a class="link-arrow" href="/zone-intervention/">Voir la zone détaillée</a></p>
+        <p><a class="link-arrow" href="/tarifs/#deplacement">Les frais de déplacement</a></p>
       </div>
       <div class="reveal">
         <h3 style="font-size:1.05rem;font-family:var(--sans);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-40);margin-bottom:1.5rem">Où l’agence joue</h3>
@@ -353,31 +355,33 @@ cat <<'HTML'
   <div class="wrap">
     <div class="section-head section-head--center reveal">
       <p class="eyebrow">Questions fréquentes</p>
-      <h2>Les réponses que l’on nous demande le plus</h2>
+      <h2>Ce que l’on nous demande le plus</h2>
     </div>
     <div class="faq faq--center reveal">
       <details>
         <summary>Combien coûte un DJ de mariage&nbsp;?</summary>
         <div class="faq__answer">
-          <p>Le pack mariage — cocktail, dîner et soirée, avec son, lumière, micros, vidéoprojecteur et écran — est à 1&nbsp;600&nbsp;€, hors déplacement. Le prix varie selon la durée, la saison et le jour. TVA non applicable.</p>
+          <p>Le forfait mariage coûte 1&nbsp;600&nbsp;€. Il couvre le cocktail, le dîner et la soirée. Le son, la lumière et les micros sont inclus.</p>
+          <p><a href="/tarifs/">Voir tous les tarifs</a></p>
         </div>
       </details>
       <details>
         <summary>Combien de temps à l’avance faut-il réserver&nbsp;?</summary>
         <div class="faq__answer">
-          <p>Idéalement un à deux ans à l’avance&nbsp;: les dates de haute saison partent très vite.</p>
+          <p>Un à deux ans avant, idéalement. Les dates de haute saison partent vite.</p>
         </div>
       </details>
       <details>
         <summary>Y a-t-il des frais de déplacement&nbsp;?</summary>
         <div class="faq__answer">
-          <p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre aller-retour et figure dans le devis.</p>
+          <p>Pas jusqu’à 50&nbsp;km. Au-delà, oui, et le montant exact est écrit sur votre devis.</p>
+          <p><a href="/tarifs/#deplacement">Le détail des frais de déplacement</a></p>
         </div>
       </details>
       <details>
         <summary>À quelle heure se termine la soirée&nbsp;?</summary>
         <div class="faq__answer">
-          <p>À 4&nbsp;h&nbsp;30 du matin. Pour prolonger, des heures supplémentaires sont possibles et facturées.</p>
+          <p>À 4&nbsp;h&nbsp;30 du matin. Vous voulez prolonger&nbsp;? C’est possible, en option.</p>
         </div>
       </details>
     </div>
@@ -390,7 +394,7 @@ HTML
 
 bande_cta \
  "Votre date est-elle encore libre&nbsp;?" \
- "Donnez-nous la date et le lieu de votre événement&nbsp;: nous vous répondons sous 24 heures, avec une proposition chiffrée si le créneau est disponible."
+ "Indiquez-nous la date et le lieu. Vous avez une réponse sous 24 heures, avec un devis si la date est libre."
 
 page_close
 } | page_write "index.html"

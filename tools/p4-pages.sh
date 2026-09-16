@@ -207,7 +207,7 @@ page_close
 {
 page_open \
  "Zone d’intervention — DJ Toulouse, Tarn, Aude" \
- "L’Agence Silence intervient en Haute-Garonne, dans le Tarn et l’Aude depuis Lauzerville, près de Toulouse. Déplacement gratuit dans 50 km, puis 0,60 € du kilomètre aller-retour." \
+ "L’Agence Silence intervient en Haute-Garonne, dans le Tarn et l’Aude depuis Lauzerville, près de Toulouse. Déplacement offert jusqu’à 50 km." \
  "/zone-intervention/" "og-agence-silence.jpg"
 echo "<script type=\"application/ld+json\">$(schema_breadcrumb 'Zone d’intervention|/zone-intervention/')</script>"
 page_head_close
@@ -220,8 +220,8 @@ cat <<'HTML'
     <p class="eyebrow">Zone d’intervention</p>
     <h1>DJ à Toulouse, dans le Tarn, l’Aude et au-delà</h1>
     <p class="lead">
-      L’agence est installée à Lauzerville, à côté de Toulouse. Le déplacement est gratuit
-      dans un rayon de 50&nbsp;km, et indiqué dès le devis au-delà.
+      L’agence est installée à Lauzerville, à côté de Toulouse.
+      Le déplacement est offert jusqu’à 50&nbsp;km.
     </p>
   </div>
 </section>
@@ -258,17 +258,10 @@ cat <<'HTML'
           L’agence se déplace aussi hors de la région, et à l’étranger&nbsp;: Séville,
           Budapest, Tenerife et Singapour, notamment pour des événements d’entreprise.
         </p>
-        <p>
-          Au-delà d’une heure vingt de route, le DJ dort à proximité la veille&nbsp;;
-          l’hébergement est alors à la charge des clients.
-        </p>
 
-        <div class="card" style="margin-top:2.5rem;background:var(--ecru-deep);border-color:var(--line)">
-          <h3>Comment le déplacement est facturé</h3>
-          <p><strong>Jusqu’à 50&nbsp;km&nbsp;:</strong> gratuit.</p>
-          <p><strong>Au-delà&nbsp;:</strong> 0,60&nbsp;€ du kilomètre aller-retour, indiqué dans le devis.</p>
-          <p><strong>Au-delà d’1&nbsp;h&nbsp;20 de route&nbsp;:</strong> le DJ dort à proximité la veille, hébergement à la charge des clients.</p>
-        </div>
+HTML
+echo "<div style=\"margin-top:2.5rem\">$BLOC_DEPLACEMENT</div>"
+cat <<'HTML'
       </div>
     </div>
   </div>
@@ -295,19 +288,19 @@ cat <<'HTML'
   "@type": "FAQPage",
   "mainEntity": [
     { "@type": "Question", "name": "Combien coûte un DJ de mariage ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Le pack mariage (cocktail, dîner et soirée, avec son, lumière, micros, vidéoprojecteur et écran) est à 1 600 €, hors déplacement. Le prix varie selon la durée, la saison et le jour. TVA non applicable." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Le forfait mariage coûte 1 600 €. Il couvre le cocktail, le dîner et la soirée. Le son, la lumière, les micros, le vidéoprojecteur et l’écran sont inclus. Le déplacement est compté à part." } },
     { "@type": "Question", "name": "Combien coûte un DJ pour un anniversaire ou une entreprise ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un anniversaire de 20 h à 2 h est à partir de 600 €. Une soirée d’entreprise est à partir de 500 €. Le pack son et lumière est toujours complet." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Une soirée privée coûte à partir de 600 €. Un événement d’entreprise coûte à partir de 500 €. Le son et la lumière sont toujours inclus." } },
     { "@type": "Question", "name": "Y a-t-il des frais de déplacement ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Le déplacement est gratuit dans un rayon de 50 km. Au-delà, il est facturé 0,60 € du kilomètre aller-retour et figure dans le devis." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Le déplacement est offert jusqu’à 50 km. Au-delà, il coûte 0,60 € par kilomètre. L’aller et le retour sont comptés. Le montant exact est écrit sur votre devis." } },
     { "@type": "Question", "name": "Combien de temps à l’avance faut-il réserver ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Idéalement un à deux ans à l’avance, les dates de haute saison partant très vite." } },
     { "@type": "Question", "name": "Quel acompte faut-il verser ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Un acompte de 30 % bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Un acompte de 30 % réserve votre date. Le solde se paie une semaine avant. Tous les moyens de paiement sont acceptés." } },
     { "@type": "Question", "name": "Que se passe-t-il en cas d’annulation ou de report ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "En cas d’annulation, l’acompte n’est pas remboursé. Vous pouvez aussi changer de date, au même prix." } },
     { "@type": "Question", "name": "À quelle heure se termine la prestation ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "À 4 h 30 du matin. Pour prolonger, des heures supplémentaires sont possibles et facturées." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "À 4 h 30 du matin. Vous pouvez prolonger avec des heures supplémentaires, en option." } },
     { "@type": "Question", "name": "Quel style de musique jouez-vous ?",
       "acceptedAnswer": { "@type": "Answer", "text": "L’agence est spécialisée dans l’événementiel et joue tous les styles, à l’exception des musiques façon Patrick Sébastien." } },
     { "@type": "Question", "name": "Pouvez-vous mixer en extérieur ?",
@@ -321,11 +314,11 @@ cat <<'HTML'
     { "@type": "Question", "name": "Le DJ vient-il seul ou accompagné ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Seul : un DJ est présent pour votre soirée." } },
     { "@type": "Question", "name": "Faut-il prévoir une nuit sur place pour le DJ ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Pas sur le lieu de réception. En revanche, au-delà d’1 h 20 de route, le DJ dort à proximité la veille et l’hébergement est à la charge des clients." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Pas sur le lieu de réception. Si le lieu est à plus d’1 h 20 de route, le DJ dort à proximité la veille. Cet hébergement est à votre charge." } },
     { "@type": "Question", "name": "Le DJ a-t-il des allergies alimentaires ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Aucune." } },
     { "@type": "Question", "name": "Assurez-vous la cérémonie laïque ?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Oui, en supplément du pack mariage." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, en option du forfait mariage." } },
     { "@type": "Question", "name": "Intervenez-vous à l’étranger ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Oui. L’agence a notamment joué à Séville, Budapest, Tenerife et Singapour." } }
   ]
@@ -352,21 +345,21 @@ cat <<'HTML'
   <div class="wrap">
     <h2 style="margin-bottom:1.75rem">Tarifs et réservation</h2>
     <div class="faq reveal" style="margin-bottom:4rem">
-      <details><summary>Combien coûte un DJ de mariage&nbsp;?</summary><div class="faq__answer"><p>Le pack mariage — cocktail, dîner et soirée, avec son, lumière, micros, vidéoprojecteur et écran — est à 1&nbsp;600&nbsp;€, hors déplacement. Le prix varie selon la durée, la saison et le jour.</p><p>TVA non applicable, article 293&nbsp;B du CGI. Les tarifs des options figurent dans la brochure envoyée avec le devis. <a href="/prestations/dj-mariage/">Voir le pack mariage</a></p></div></details>
-      <details><summary>Et pour un anniversaire ou une entreprise&nbsp;?</summary><div class="faq__answer"><p>Un anniversaire de 20&nbsp;h à 2&nbsp;h est à partir de 600&nbsp;€. Une soirée d’entreprise est à partir de 500&nbsp;€. Le pack son et lumière est toujours complet.</p></div></details>
-      <details><summary>Y a-t-il des frais de déplacement&nbsp;?</summary><div class="faq__answer"><p>Le déplacement est gratuit dans un rayon de 50&nbsp;km. Au-delà, il est facturé 0,60&nbsp;€ du kilomètre aller-retour et figure dans le devis. <a href="/zone-intervention/">Voir la zone d’intervention</a></p></div></details>
+      <details><summary>Combien coûte un DJ de mariage&nbsp;?</summary><div class="faq__answer"><p>Le forfait mariage coûte 1&nbsp;600&nbsp;€. Il couvre le cocktail, le dîner et la soirée.</p><p>Le son, la lumière, les micros, le vidéoprojecteur et l’écran sont inclus. Le déplacement est compté à part. <a href="/tarifs/">Voir tous les tarifs</a></p></div></details>
+      <details><summary>Et pour un anniversaire ou une entreprise&nbsp;?</summary><div class="faq__answer"><p>Une soirée privée coûte à partir de 600&nbsp;€. Un événement d’entreprise coûte à partir de 500&nbsp;€. Le son et la lumière sont toujours inclus.</p></div></details>
+      <details><summary>Y a-t-il des frais de déplacement&nbsp;?</summary><div class="faq__answer"><p>Le déplacement est offert jusqu’à 50&nbsp;km. Au-delà, il coûte 0,60&nbsp;€ par kilomètre. L’aller et le retour sont comptés.</p><p>Le montant exact est écrit sur votre devis. <a href="/tarifs/#deplacement">Le détail des frais</a></p></div></details>
       <details><summary>Combien de temps à l’avance faut-il réserver&nbsp;?</summary><div class="faq__answer"><p>Idéalement un à deux ans à l’avance&nbsp;: les dates de haute saison partent très vite.</p></div></details>
-      <details><summary>Quel acompte faut-il verser&nbsp;?</summary><div class="faq__answer"><p>Un acompte de 30&nbsp;% bloque la date. Le solde se règle une semaine avant l’événement. Tous les moyens de paiement sont acceptés.</p></div></details>
-      <details><summary>Que se passe-t-il en cas d’annulation ou de report&nbsp;?</summary><div class="faq__answer"><p>En cas d’annulation, l’acompte est conservé. Un report reste possible, au même tarif.</p></div></details>
+      <details><summary>Quel acompte faut-il verser&nbsp;?</summary><div class="faq__answer"><p>Un acompte de 30&nbsp;% réserve votre date. Le solde se paie une semaine avant. Tous les moyens de paiement sont acceptés.</p></div></details>
+      <details><summary>Que se passe-t-il en cas d’annulation ou de report&nbsp;?</summary><div class="faq__answer"><p>En cas d’annulation, l’acompte n’est pas remboursé. Vous pouvez aussi changer de date, au même prix.</p></div></details>
     </div>
 
     <h2 style="margin-bottom:1.75rem">Le déroulé et la musique</h2>
     <div class="faq reveal" style="margin-bottom:4rem">
-      <details><summary>À quelle heure se termine la prestation&nbsp;?</summary><div class="faq__answer"><p>À 4&nbsp;h&nbsp;30 du matin. Pour prolonger, des heures supplémentaires sont possibles et facturées.</p></div></details>
+      <details><summary>À quelle heure se termine la prestation&nbsp;?</summary><div class="faq__answer"><p>À 4&nbsp;h&nbsp;30 du matin. Vous pouvez prolonger avec des heures supplémentaires, en option.</p></div></details>
       <details><summary>Quel style de musique jouez-vous&nbsp;?</summary><div class="faq__answer"><p>L’agence est spécialisée dans l’événementiel&nbsp;: elle joue tous les styles, à l’exception des musiques façon Patrick Sébastien.</p></div></details>
       <details><summary>Peut-on choisir les musiques&nbsp;?</summary><div class="faq__answer"><p>Oui. Un questionnaire complet sert à cerner vos goûts, et vos playlists sont les bienvenues. Le jour J, les demandes des invités sont acceptées.</p></div></details>
       <details><summary>Le DJ prend-il le micro&nbsp;?</summary><div class="faq__answer"><p>Oui, pour les annonces de la soirée.</p></div></details>
-      <details><summary>Assurez-vous la cérémonie laïque&nbsp;?</summary><div class="faq__answer"><p>Oui, en supplément du pack mariage. <a href="/prestations/options-mariage/">Voir les options</a></p></div></details>
+      <details><summary>Assurez-vous la cérémonie laïque&nbsp;?</summary><div class="faq__answer"><p>Oui, en option du forfait mariage. <a href="/prestations/options-mariage/">Voir les options</a></p></div></details>
       <details><summary>Pouvez-vous mixer en extérieur&nbsp;?</summary><div class="faq__answer"><p>Oui, avec une sonorisation conçue pour l’extérieur.</p></div></details>
     </div>
 
@@ -377,7 +370,7 @@ cat <<'HTML'
       <details><summary>Faut-il prévoir des rallonges&nbsp;?</summary><div class="faq__answer"><p>Non. Rallonges et multiprises sont comprises dans la prestation&nbsp;: une prise 16&nbsp;A suffit, il n’y a rien à prévoir.</p></div></details>
       <details><summary>Notre salle a un limiteur de son, est-ce un problème&nbsp;?</summary><div class="faq__answer"><p>Non&nbsp;: la limite de décibels de la salle est respectée.</p></div></details>
       <details><summary>Le DJ vient-il seul ou accompagné&nbsp;?</summary><div class="faq__answer"><p>Seul&nbsp;: un DJ est présent pour votre soirée.</p></div></details>
-      <details><summary>Faut-il prévoir une nuit sur place pour le DJ&nbsp;?</summary><div class="faq__answer"><p>Pas sur le lieu de réception. En revanche, au-delà d’1&nbsp;h&nbsp;20 de route, le DJ dort à proximité la veille et l’hébergement est à la charge des clients.</p></div></details>
+      <details><summary>Faut-il prévoir une nuit sur place pour le DJ&nbsp;?</summary><div class="faq__answer"><p>Pas sur le lieu de réception. Si le lieu est à plus d’1&nbsp;h&nbsp;20 de route, le DJ dort à proximité la veille. Cet hébergement est à votre charge.</p></div></details>
       <details><summary>Le DJ a-t-il des allergies alimentaires&nbsp;?</summary><div class="faq__answer"><p>Aucune.</p></div></details>
       <details><summary>Le matériel est-il assuré&nbsp;?</summary><div class="faq__answer"><p>Oui. L’attestation d’assurance est fournie sur demande.</p></div></details>
     </div>
